@@ -1,0 +1,6 @@
+cellbender:remove-background: Command:
+cellbender remove-background --input /home/dennis00/Yi_lab/raw_h5_data/Jorstad_h5/set_C19.32.001.h5.h5 --output /home/dennis00/Yi_lab/cellbent_output_RAW/Jorstad/set_C19.32.001.h5.h5 --cuda --expected-cells 25000 --total-droplets-included 40000 --low-count-threshold 15 --learning-rate 1e-4 --fpr 0.01 --epochs 150
+cellbender:remove-background: 2023-10-15 15:12:29
+cellbender:remove-background: Running remove-background
+cellbender:remove-background: Loading data from file /home/dennis00/Yi_lab/raw_h5_data/Jorstad_h5/set_C19.32.001.h5.h5
+cellbender:remove-background: OSError: Unable to open file /home/dennis00/Yi_lab/raw_h5_data/Jorstad_h5/set_C19.32.001.h5.h5.

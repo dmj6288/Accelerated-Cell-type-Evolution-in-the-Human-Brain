@@ -1,0 +1,13 @@
+cellbender:remove-background: Command:
+cellbender remove-background --input /home/dennis00/Yi_lab/raw_h5_data/Jorstad_h5/set_H19.30.002.h5 --output /home/dennis00/Yi_lab/cellbent_output_RAW/Jorstad/set_H19.30.002.h5 --cuda --expected-cells 25000 --total-droplets-included 30000 --low-count-threshold 15 --learning-rate 1e-4 --fpr 0.01 --epochs 150
+cellbender:remove-background: 2023-10-15 16:32:37
+cellbender:remove-background: Running remove-background
+cellbender:remove-background: Loading data from file /home/dennis00/Yi_lab/raw_h5_data/Jorstad_h5/set_H19.30.002.h5
+cellbender:remove-background: CellRanger v2 format
+cellbender:remove-background: Trimming dataset for inference.
+cellbender:remove-background: Including 31734 genes that have nonzero counts.
+cellbender:remove-background: Prior on counts in empty droplets is 19929
+cellbender:remove-background: Prior on counts for cells is 19173
+cellbender:remove-background: Excluding barcodes with counts below 9964
+cellbender:remove-background: Using 25000 probable cell barcodes, plus an additional 5000 barcodes, and 1549 empty droplets.
+cellbender:remove-background: Largest surely-empty droplet has 15706.0 UMI counts.

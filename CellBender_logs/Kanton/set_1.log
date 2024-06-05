@@ -1,0 +1,42 @@
+cellbender:remove-background: Command:
+cellbender remove-background --input /home/dennis00/Yi_lab/raw_h5_data/Kanton_h5/set_1.h5 --output /home/dennis00/Yi_lab/cellbent_output_RAW/Kanton/set_1.h5 --cuda --expected-cells 10000 --total-droplets-included 25000 --low-count-threshold 5 --learning-rate 1e-4 --fpr 0.01 --epochs 20
+cellbender:remove-background: 2023-10-14 21:04:56
+cellbender:remove-background: Running remove-background
+cellbender:remove-background: Loading data from file /home/dennis00/Yi_lab/raw_h5_data/Kanton_h5/set_1.h5
+cellbender:remove-background: CellRanger v2 format
+cellbender:remove-background: Trimming dataset for inference.
+cellbender:remove-background: Including 24949 genes that have nonzero counts.
+cellbender:remove-background: Prior on counts in empty droplets is 1634
+cellbender:remove-background: Prior on counts for cells is 2609
+cellbender:remove-background: Excluding barcodes with counts below 817
+cellbender:remove-background: Using 10000 probable cell barcodes, plus an additional 15000 barcodes, and 8678 empty droplets.
+cellbender:remove-background: Largest surely-empty droplet has 1189.0 UMI counts.
+cellbender:remove-background: Running inference...
+cellbender:remove-background: [epoch 001]  average training loss: 4107.6763
+cellbender:remove-background: [epoch 002]  average training loss: 3957.0289  (10.2 seconds per epoch)
+cellbender:remove-background: [epoch 003]  average training loss: 4026.6957
+cellbender:remove-background: [epoch 004]  average training loss: 4013.9572
+cellbender:remove-background: [epoch 005]  average training loss: 4026.3887
+cellbender:remove-background: [epoch 005] average test loss: 3999.8126
+cellbender:remove-background: [epoch 006]  average training loss: 4027.0329
+cellbender:remove-background: [epoch 007]  average training loss: 4026.3826
+cellbender:remove-background: [epoch 008]  average training loss: 4027.8768
+cellbender:remove-background: [epoch 009]  average training loss: 4028.2417
+cellbender:remove-background: [epoch 010]  average training loss: 4028.7695
+cellbender:remove-background: [epoch 010] average test loss: 3999.8556
+cellbender:remove-background: [epoch 011]  average training loss: 4028.9170
+cellbender:remove-background: [epoch 012]  average training loss: 4028.2877
+cellbender:remove-background: [epoch 013]  average training loss: 4029.3649
+cellbender:remove-background: [epoch 014]  average training loss: 4030.7432
+cellbender:remove-background: [epoch 015]  average training loss: 4030.3800
+cellbender:remove-background: [epoch 015] average test loss: 4002.6663
+cellbender:remove-background: [epoch 016]  average training loss: 4030.1624
+cellbender:remove-background: [epoch 017]  average training loss: 4029.4847
+cellbender:remove-background: [epoch 018]  average training loss: 4028.5625
+cellbender:remove-background: [epoch 019]  average training loss: 4030.4838
+cellbender:remove-background: [epoch 020]  average training loss: 4030.3322
+cellbender:remove-background: [epoch 020] average test loss: 4003.6438
+cellbender:remove-background: Inference procedure complete.
+cellbender:remove-background: Training succeeded
+cellbender:remove-background: 2023-10-14 21:08:51
+cellbender:remove-background: Preparing to write outputs to file...
