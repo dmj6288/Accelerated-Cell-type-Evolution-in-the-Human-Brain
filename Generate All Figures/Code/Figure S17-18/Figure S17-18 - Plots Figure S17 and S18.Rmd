@@ -1,0 +1,64 @@
+---
+title: "Figure 1 - stacked Gene Proportions"
+---
+
+# IMPORT RELEVANT LIBARIES
+
+```{r}
+
+source("../../Baseline/Figure S17-18 Baseline.R")
+
+```
+
+
+```{r}
+
+save_flag <- 1
+
+Neuron_wise_df <- readRDS("../../Visualization_data/Figure S17-18/Neuron_wise_df_proportion.rds")
+
+for (Neuron_type in c("Excite", "Inhibit")){
+  
+  neuron_df <- Neuron_wise_df[Neuron_wise_df$Major_CellType == Neuron_type, ]
+  
+  p     <- list()
+  count <- 1
+  
+  for (study in studies){ 
+    
+    plot_df    <- neuron_df[neuron_df$Study == regions[[study]], ]
+    plot_df$CellType <- factor(plot_df$CellType, levels = unique(plot_df$CellType))
+    
+    p[[count]] <- ggplot(plot_df, aes(CellType, fill = Spec_Reg))                                                          +   
+                  geom_bar(data = plot_df, aes(y = Proportion), stat = "identity", position = "dodge", 
+                           width = geom_bar_width, alpha=geom_bar_alpha_prop, color = "black")                             +
+                  scale_fill_manual(values=list( "#0fbabd", "#bc131f", "#21675e", "#8c1044"))                              +
+                  #geom_text(aes(label=Study, x = 1, y = 4), position=position_dodge(width=0.9), vjust=-1.0, size=5)       +
+                  geom_hline(yintercept = 0,colour = "black")                                                              +
+                  ylim(c(-4.5,  4.5)) +
+                  theme(panel.grid.major = element_blank(), 
+                        panel.grid.minor = element_blank(),                                                                                   
+                        panel.background = element_blank(), 
+                        axis.title.x =  element_blank(), 
+                        axis.title.y = element_blank(), 
+                        axis.line = element_line(colour = "black"),
+                        axis.text.x=element_text(size=16, angle = 45, vjust = 1, hjust = 1),
+                        axis.text=element_text(size=16)) +
+                        scale_x_discrete(labels = function(x) str_wrap(x, width = 10), drop = FALSE)                      
+    
+    count <- count + 1
+  }
+
+  g <- ggarrange(plotlist = p, nrow=2, ncol = 1, common.legend = TRUE, legend="bottom")
+
+  g <- annotate_figure(g, top = text_grob("Proportions of DEGs in considered Genes in both studies", color = "black", face = "bold", size = 20, y = 0.5))
+
+  if  (save_flag == 1){
+      ggsave(filename = paste0("../../Figures/Figure S17-S18/", study, "_", Neuron_type,"_proportion_stat_sig_subtypes.jpg"), plot = g, device = "jpeg",
+          width=8.5, height=11, dpi=300)
+    
+  }
+
+}
+
+```

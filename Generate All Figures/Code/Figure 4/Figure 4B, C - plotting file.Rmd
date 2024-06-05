@@ -1,0 +1,66 @@
+---
+title: "Plots Figures 4 B and C"
+
+---
+
+```{r}
+
+source("../../Baseline/Figure 4BC Viz Baseline.R")
+
+```
+
+
+
+```{r}
+
+gene_lists <- readRDS("../../Visualization_data/Figure 4/cell_type_sharing_list_reg_combined_first_v4.rds")
+
+m_list          <- list()
+
+for (cell in names(gene_lists)){
+  
+  names_of_combinations_Excite          <- powerset(names(gene_lists[["Excite"]]))
+  bool_gene_lists_Excite                <- list_to_matrix(gene_lists[["Excite"]])
+  comb_gene_lists_Excite                <- make_comb_mat(bool_gene_lists_Excite, mode = "intersect")
+  
+  names_of_combinations_Inhibit          <- powerset(names(gene_lists[["Inhibit"]]))
+  bool_gene_lists_Inhibit                <- list_to_matrix(gene_lists[["Inhibit"]])
+  comb_gene_lists_Inhibit                <- make_comb_mat(bool_gene_lists_Inhibit, mode = "intersect")
+  
+  m_list <- normalize_comb_mat(comb_gene_lists_Excite,
+                               comb_gene_lists_Inhibit)
+
+}
+```
+
+```{r}
+select  <- c("1000", "0100", "0010", "0001", "1010", "0101", "1001", "0110")
+
+ht_list = NULL
+max_set_size = max(sapply(m_list, set_size))
+max_comb_size = max(sapply(m_list, comb_size))
+
+for(i in seq_along(m_list)) {
+    ht_list = ht_list %v%
+         UpSet(m_list[[i]][, select], pt_size = unit(12, "mm"), lwd = 5,
+               comb_col = c("salmon2", "skyblue2")[comb_degree(m_list[[i]][, select])], 
+               top_annotation   = upset_top_annotation(m_list[[i]][, select] , 
+               add_numbers = TRUE,
+               gp = gpar(fill = "#18908D"),
+               height = unit(6, "cm"), 
+               annotation_name_rot = 0, 
+               bar_width = 0.6,
+               numbers_rot = 0,
+               extend = 0.05, ylim = c(0, max_comb_size)), 
+               set_order = names(gene_lists[["Excite"]]),
+                comb_order = c(8, 5, 6, 7, 2, 1, 4, 3), 
+               #comb_order = c(1, 2, 3, 4, 5, 6, 7, 8), 
+               right_annotation = NULL)
+}
+
+draw(ht_list)
+
+ht_list
+
+```
+

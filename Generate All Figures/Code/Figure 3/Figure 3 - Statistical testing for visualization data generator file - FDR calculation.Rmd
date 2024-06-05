@@ -1,0 +1,143 @@
+---
+title: "CRE_alignment"
+output: html_document
+date: "2023-11-08"
+---
+
+```{r setup, include=FALSE}
+
+source("../../Baseline/Figure 3 Baseline.R")
+
+```
+
+
+```{r}
+
+data     <- readRDS("../../Visualization_data/Figure 3/full_table.rds")
+data$DEG <- as.factor(data$DEG)
+
+```
+
+```{r}
+
+test_cols <- colnames(data)[c(2, 3, 8, 10, 11, 12, 14, 16, 36, 37)]
+
+stats_results_list      <- list()
+data_stats_results_list <- list()
+
+heatmap_table           <- c()
+
+for (col in test_cols){
+  
+  formula_str <- paste0(col, " ~ DEG")
+  
+  formula <- as.formula(formula_str)
+  
+  print(col)
+  
+  
+  
+  if (col == "HAR_Count" || col == "cHAR_Count" || col == "tandem_Count" || col == "dNdS" || col == "Alpha" || col == "specificity_values"){
+    
+    print("A")
+    current_data <- na.omit(data[, c("Gene", col, "Cell", "Species", "Study", "DEG", "Cell_Region", "Region", "Expression")])
+    
+    # Step 1: Calculate p-values for each group
+    results <- current_data %>%
+      group_by(Cell, Species, Study) %>%
+      wilcox_test(formula)
+    
+    # Step 2: Apply FDR correction within each "Study" category
+    results <- results %>%
+      group_by(Study) %>%
+      mutate(p_adj = p.adjust(p, method = "fdr"))
+    
+    # Step 3: Add significance labels based on the corrected p-values
+    results <- results %>%
+      add_significance("p_adj", cutpoints = c(0, 1e-04, 0.001, 0.01, 0.05, 1),
+                       symbols = c("****", "***", "**", "*", "ns"))
+    
+    # Un-group the results if needed
+    results <- results %>% ungroup()
+    
+  }else{
+    
+    if (col == "Human_hypo" || col == "Human_UP"){
+      
+      reg_test_col <- "UR_test"
+      formula_str <- paste0(col, " ~ UR_test")
+      print("B1")
+      
+    }else{
+      
+      reg_test_col <- "DR_test"
+      formula_str <- paste0(col, " ~ DR_test")
+      print("B2")
+      
+    }
+    
+    formula <- as.formula(formula_str)
+    
+    current_data <- data[, c("Gene", col, "Cell", "Species", "Study", "DEG", "Regulation", "Cell_Region", "Region", "Expression", reg_test_col)]
+    current_data <- current_data[!duplicated(current_data), ]
+    
+    
+    
+    # Step 1: Calculate p-values for each group
+    results <- current_data %>%
+      group_by(Cell, Species, Study, Regulation) %>%
+      wilcox_test(formula)
+    
+    # Step 2: Apply FDR correction within each "Study" category
+    results <- results %>%
+      group_by(Study) %>%
+      mutate(p_adj = p.adjust(p, method = "fdr"))
+    
+    # Step 3: Add significance labels based on the corrected p-values
+    results <- results %>%
+      add_significance("p_adj", cutpoints = c(0, 1e-04, 0.001, 0.01, 0.05, 1),
+                       symbols = c("****", "***", "**", "*", "ns"))
+    
+    # Un-group the results if needed
+    results <- results %>% ungroup()
+    
+  }
+  
+  results <- results %>% mutate(Region = if_else(Study == "Caglayan", "PCC", "dlPFC"))
+  results$Cell_Region <- paste0(results$Cell, " ", results$Region)
+  results <- results %>% add_xy_position(x = "Cell")
+  
+  heatmap_table <- rbind(heatmap_table, results[, c("Cell", "Study", ".y.", "p")])
+  
+  stats_results_list[[col]]      <- results
+  data_stats_results_list[[col]] <- current_data
+  
+}
+
+```
+
+```{r}
+saveRDS(heatmap_table, "../../Visualization_data/Figure 5/heatmap_table.rds")
+```
+
+```{r}
+
+write_xlsx(heatmap_table, "../../Visualization_data/Figure 5/heatmap_table_V2.xlsx")
+
+heatmap_table_plotting <- heatmap_table[heatmap_table$.y. != "specificity_values", ]
+
+write_xlsx(heatmap_table_plotting, "../../Visualization_data/Figure 5/heatmap_table_for_plotting.xlsx")
+
+```
+
+```{r}
+
+saveRDS(stats_results_list,      "../../Visualization_data/Figure 3/stats_data_pvalues_all_considered_genes_newdNdS.rds")
+saveRDS(data_stats_results_list, "../../Visualization_data/Figure 3/data_stats_results_all_considered_genes_newdNdS.rds")
+
+```
+
+```{r}
+write_xlsx(data, "../../Supplementary Tables/Supplementary Table 5 - containing all plot variables.xlsx")
+```
+

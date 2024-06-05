@@ -1,0 +1,58 @@
+
+```{r}
+source("../../Baseline/Figure S4-S7 Baseline.R")
+```
+
+
+```{r}
+
+study         <- list.files(folder_name)[1]
+
+chimp_down_regulated_Caglayan          <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_CHIMP_DRGenes.rds"))
+human_down_regulated_Caglayan          <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_HUMAN_DRGenes.rds"))
+chimp_up_regulated_Caglayan            <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_CHIMP_URGenes.rds"))
+human_up_regulated_Caglayan            <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_HUMAN_URGenes.rds"))
+
+study         <- list.files(folder_name)[6]
+
+chimp_down_regulated_Ma               <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_CHIMP_DRGenes.rds"))
+human_down_regulated_Ma               <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_HUMAN_DRGenes.rds"))
+chimp_up_regulated_Ma                 <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_CHIMP_URGenes.rds"))
+human_up_regulated_Ma                 <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_HUMAN_URGenes.rds"))
+
+```
+
+```{r}
+
+considered_genes_cell_type      <- list()
+
+for (cell_type in traditional_cell_types){
+  considered_list <- list()
+  for (study in study_results){
+  
+    considered_Genes  <- readRDS(paste0(folder_name, study, "/", study, FDR, "_three_species_considered_Genes.rds"))
+    
+    #print(considered_Genes[[ ]])
+    considered_list[[study]]   <- c(considered_list, considered_Genes[[cell_type]])
+  }
+  considered_genes_cell_type[[cell_type]]  <- unlist(Reduce(intersect, considered_list))
+}
+```
+
+```{r}
+
+saveRDS(chimp_down_regulated_Caglayan, paste0(checkpoints_path, "chimp_down_regulated_Caglayan.rds"))
+saveRDS(chimp_up_regulated_Caglayan,   paste0(checkpoints_path, "chimp_up_regulated_Caglayan.rds"))
+saveRDS(human_down_regulated_Caglayan, paste0(checkpoints_path, "human_down_regulated_Caglayan.rds"))
+saveRDS(human_up_regulated_Caglayan,   paste0(checkpoints_path, "human_up_regulated_Caglayan.rds"))
+
+saveRDS(chimp_down_regulated_Ma, paste0(checkpoints_path, "chimp_down_regulated_Ma.rds"))
+saveRDS(chimp_up_regulated_Ma,   paste0(checkpoints_path, "chimp_up_regulated_Ma.rds"))
+saveRDS(human_down_regulated_Ma, paste0(checkpoints_path, "human_down_regulated_Ma.rds"))
+saveRDS(human_up_regulated_Ma,   paste0(checkpoints_path, "human_up_regulated_Ma.rds"))
+
+saveRDS(considered_genes_cell_type, paste0(checkpoints_path, "considered_genes_cell_type.rds"))
+
+
+```
+

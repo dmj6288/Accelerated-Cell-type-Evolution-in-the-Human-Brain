@@ -1,0 +1,153 @@
+---
+title: "Shaojie_barcode_generator_notebook"
+output: html_document
+date: "2023-05-27"
+---
+
+```{r setup, include=FALSE}
+suppressMessages(suppressWarnings(library(Seurat)))
+suppressMessages(suppressWarnings(library(hash)))
+suppressMessages(suppressWarnings(library(plyr)))
+suppressMessages(suppressWarnings(library(readxl)))
+suppressMessages(suppressWarnings(library(dplyr)))
+suppressMessages(suppressWarnings(library(tidyverse)))
+```
+
+# IMPORT 
+
+```{r cars}
+human_metadata_file <- read_excel("author_source/snRNA-seq_Human_cell_meta.xlsx")
+chimp_metadata_file <- read_excel("author_source/snRNA-seq_Chimpanzee_cell_meta.xlsx")
+macak_metadata_file <- read_excel("author_source/snRNA-seq_Rhesus_cell_meta.xlsx")
+covariates_file     <- read_excel("author_source/covariates_file_Ma.xlsx", skip = 1)
+
+cells_to_subselect <- c("L2-3 IT", "L3-5 IT-1", "L3-5 IT-2", "L3-5 IT-3", "SST", "VIP")
+
+human_metadata_file <- human_metadata_file[human_metadata_file$subclass %in% cells_to_subselect, ]
+chimp_metadata_file <- chimp_metadata_file[chimp_metadata_file$subclass %in% cells_to_subselect, ]
+macak_metadata_file <- macak_metadata_file[macak_metadata_file$subclass %in% cells_to_subselect, ]
+
+gender_hash <- hash(c("Male", "Female"), c("M", "F"))
+source("author_source/cellname_map_function.R")
+```
+
+```{r}
+
+Ma_cell_name_hash <- readRDS("D:/Yi/Evolution Paper/Post processing runs/Metadata generator files/Ma et. al/Ma_cell_name_hash.rds")
+
+human_metadata_file <- human_metadata_file[human_metadata_file$subclass %in% hash::keys(Ma_cell_name_hash),]
+chimp_metadata_file <- chimp_metadata_file[chimp_metadata_file$subclass %in% hash::keys(Ma_cell_name_hash),]
+macak_metadata_file <- macak_metadata_file[macak_metadata_file$subclass %in% hash::keys(Ma_cell_name_hash),]
+
+human_metadata_file$subclass <- paste0(unlist(lapply(human_metadata_file$subclass, major_cells, Ma_cell_name_hash)), "_#human")
+chimp_metadata_file$subclass <- paste0(unlist(lapply(chimp_metadata_file$subclass, major_cells, Ma_cell_name_hash)), "_#chimp")
+macak_metadata_file$subclass <- paste0(unlist(lapply(macak_metadata_file$subclass, major_cells, Ma_cell_name_hash)), "_#macaque")
+
+human_metadata_file          <- data.frame(human_metadata_file[, c("cell_name", "subclass", "samplename")])
+chimp_metadata_file          <- data.frame(chimp_metadata_file[, c("cell_name", "subclass", "samplename")])
+macak_metadata_file          <- data.frame(macak_metadata_file[, c("cell_name", "subclass", "samplename")])
+
+rownames(human_metadata_file)<-human_metadata_file$cell_name
+rownames(chimp_metadata_file)<-chimp_metadata_file$cell_name
+rownames(macak_metadata_file)<-macak_metadata_file$cell_name
+
+
+
+human_metadata_file          <- human_metadata_file[-c(1)]
+chimp_metadata_file          <- chimp_metadata_file[-c(1)]
+macak_metadata_file          <- macak_metadata_file[-c(1)]
+
+# rownames(human_metadata_file)<-paste0(rownames(human_metadata_file), "H")
+# rownames(chimp_metadata_file)<-paste0(rownames(chimp_metadata_file), "C")
+# rownames(macak_metadata_file)<-paste0(rownames(macak_metadata_file), "M")
+
+sample_to_age_dict <- hash(covariates_file$Case, covariates_file$`Age (Y)`)
+sample_to_sex_dict <- hash(covariates_file$Case, covariates_file$Sex)
+
+human_sample_age   <- c()
+human_sample_sex   <- c()
+
+chimp_sample_age   <- c()
+chimp_sample_sex   <- c()
+
+macak_sample_age   <- c()
+macak_sample_sex   <- c()
+
+for (sample in human_metadata_file$samplename){
+  human_sample_age <- c(human_sample_age, sample_to_age_dict[[sample]])
+  human_sample_sex <- c(human_sample_sex, gender_hash[[sample_to_sex_dict[[sample]]]])
+}
+
+for (sample in chimp_metadata_file$samplename){
+  chimp_sample_age <- c(chimp_sample_age, sample_to_age_dict[[sample]])
+  chimp_sample_sex <- c(chimp_sample_sex, gender_hash[[sample_to_sex_dict[[sample]]]])
+}
+
+for (sample in macak_metadata_file$samplename){
+  macak_sample_age <- c(macak_sample_age, sample_to_age_dict[[sample]])
+  macak_sample_sex <- c(macak_sample_sex, gender_hash[[sample_to_sex_dict[[sample]]]])
+}
+
+human_metadata_file$human_age <- human_sample_age
+human_metadata_file$sex       <- human_sample_sex
+
+chimp_metadata_file$human_age <- round(2.06871*chimp_sample_age - 2.30729, 1)
+chimp_metadata_file$sex       <- chimp_sample_sex
+
+macak_metadata_file$human_age <- round(3.05864*macak_sample_age + 0.47236, 1)
+macak_metadata_file$sex       <- macak_sample_sex
+
+```
+
+```{r}
+df_human_macak <- rbind(human_metadata_file, macak_metadata_file)
+df_human_chimp <- rbind(human_metadata_file, chimp_metadata_file)
+df_chimp_macak <- rbind(chimp_metadata_file, macak_metadata_file)
+
+```
+
+
+```{r}
+
+
+
+
+df_human_macak$subclass          <- as.factor(df_human_macak$subclass)
+df_human_chimp$subclass          <- as.factor(df_human_chimp$subclass)
+df_chimp_macak$subclass          <- as.factor(df_chimp_macak$subclass)
+
+df_human_macak$samplename          <- as.factor(df_human_macak$samplename)
+df_human_chimp$samplename          <- as.factor(df_human_chimp$samplename)
+df_chimp_macak$samplename          <- as.factor(df_chimp_macak$samplename)
+
+# df_human_macak$human_age          <- as.factor(df_human_macak$human_age)
+# df_human_chimp$human_age          <- as.factor(df_human_chimp$human_age)
+# df_chimp_macak$human_age          <- as.factor(df_chimp_macak$human_age)
+
+df_human_macak$sex          <- as.factor(df_human_macak$sex)
+df_human_chimp$sex          <- as.factor(df_human_chimp$sex)
+df_chimp_macak$sex          <- as.factor(df_chimp_macak$sex)
+
+colnames(df_chimp_macak)         <- c("trad", "sample_id",  "human_age",  "sex")
+colnames(df_human_chimp)         <- c("trad", "sample_id",  "human_age",  "sex")
+colnames(df_human_macak)         <- c("trad", "sample_id",  "human_age",  "sex")
+
+rownames(df_human_macak) <- paste0(rownames(df_human_macak), "-1")
+rownames(df_human_chimp) <- paste0(rownames(df_human_chimp), "-1")
+rownames(df_chimp_macak) <- paste0(rownames(df_chimp_macak), "-1")
+```
+
+
+```{r}
+
+```
+
+
+# SAVE METADATA FILES
+
+```{r}
+saveRDS(df_human_macak, "metadata_with_neuron_subtypes_with_500cells_per_individual/df_human_macak.rds")
+saveRDS(df_human_chimp, "metadata_with_neuron_subtypes_with_500cells_per_individual/df_human_chimp.rds")
+saveRDS(df_chimp_macak, "metadata_with_neuron_subtypes_with_500cells_per_individual/df_chimp_macak.rds")
+```
+

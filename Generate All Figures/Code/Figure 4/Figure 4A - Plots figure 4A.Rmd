@@ -1,0 +1,51 @@
+---
+title: "Figure 1 - stacked Gene Proportions"
+---
+
+# IMPORT RELEVANT LIBARIES
+
+```{r}
+
+source("../../Baseline/Figure 4A Baseline.R")
+
+```
+
+```{r}
+
+Neuron_wise_df <- readRDS("../../Visualization_data/Figure S17-18/Neuron_wise_df_proportion.rds")
+
+count <- 1
+save_flag <- 1
+
+for (study in studies[2]){
+  
+  plot_df          <- Neuron_wise_df[Neuron_wise_df$Study == regions[[study]], ]
+  plot_df          <- plot_df[plot_df$CellType %in% Reduce(union, cells_of_interest_list), ]
+  plot_df$CellType <- factor(plot_df$CellType, levels = unique(plot_df$CellType))
+  
+  p <- ggplot(plot_df, aes(CellType, fill = Spec_Reg))                                                                   +   
+                geom_bar(data = plot_df, aes(y = Proportion), stat = "identity", position = "dodge", 
+                         width = geom_bar_width, alpha=geom_bar_alpha_prop, color = "black")                             +
+                scale_fill_manual(values=list( "#0fbabd", "#bc131f", "#21675e", "#8c1044"))                              +
+                #geom_text(aes(label=Study, x = 1, y = 4), position=position_dodge(width=0.9), vjust=-1.0, size=5)       +
+                geom_hline(yintercept = 0,colour = "black")                                                              +
+                ylim(c(-3.5,  4.5)) +
+                theme(panel.grid.major = element_blank(), 
+                      panel.grid.minor = element_blank(),                                                                                   
+                      panel.background = element_blank(), 
+                      axis.title.x =  element_blank(), 
+                      axis.title.y = element_blank(), 
+                      axis.line = element_line(colour = "black"),
+                      axis.text.x=element_text(size=16, angle = 45, vjust = 1, hjust = 1),
+                      axis.text=element_text(size=16)) +
+                      scale_x_discrete(labels = function(x) str_wrap(x, width = 10), drop = FALSE)                      
+  
+  }
+
+if  (save_flag == 1){
+    ggsave(filename = paste0("../../Figures/Figure 4/", study ,"_proportion_stat_sig_subtypes_same_level.jpg"), plot = p, device = "jpeg",
+        width=9.5, height=6, dpi=300)
+  
+}
+
+```

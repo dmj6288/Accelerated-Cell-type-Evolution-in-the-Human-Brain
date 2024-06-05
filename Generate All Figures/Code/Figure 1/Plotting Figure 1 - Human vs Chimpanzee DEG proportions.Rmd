@@ -1,0 +1,89 @@
+---
+title: "Figure 1 - Human vs Chimpanzee DEG proportions"
+---
+
+# IMPORT RELEVANT LIBARIES
+
+```{r}
+
+source("../../Baseline/Figure 1 Baseline.R")
+
+```
+
+```{r}
+
+p     <- list()
+count <- 1
+  
+for (study in studies){
+  gene_proportion_table <- read_excel(paste0(gene_table_path, study, "_gene_table_Figure_1.xlsx"))
+  all_counts <- c()  
+  
+  for (cell_type in cell_types){
+    
+    counts      <- data.frame(rbind(c(-as.double(gene_proportion_table[gene_proportion_table$...1==cell_type, "Chimp Specific DOWN Proportion"]), 
+                                      -as.double(gene_proportion_table[gene_proportion_table$...1==cell_type, "95 % bootstrapped interval CD LOW"]),
+                                      -as.double(gene_proportion_table[gene_proportion_table$...1==cell_type, "95 % bootstrapped interval CD HIGH"]), "Chimp", "DOWN"),
+                                    c(-as.double(gene_proportion_table[gene_proportion_table$...1==cell_type, "Human Specific DOWN Proportion"]), 
+                                      -as.double(gene_proportion_table[gene_proportion_table$...1==cell_type, "95 % bootstrapped interval HD LOW"]),
+                                      -as.double(gene_proportion_table[gene_proportion_table$...1==cell_type, "95 % bootstrapped interval HD HIGH"]), "Human", "DOWN"),
+                                    c(as.double(gene_proportion_table[gene_proportion_table$...1==cell_type, "Chimp Specific UP Proportion"]), 
+                                      as.double(gene_proportion_table[gene_proportion_table$...1==cell_type, "95 % bootstrapped interval CU LOW"]),
+                                      as.double(gene_proportion_table[gene_proportion_table$...1==cell_type, "95 % bootstrapped interval CU HIGH"]), "Chimp", "UP"),
+                                    c(as.double(gene_proportion_table[gene_proportion_table$...1==cell_type, "Human Specific UP Proportion"]), 
+                                      as.double(gene_proportion_table[gene_proportion_table$...1==cell_type, "95 % bootstrapped interval HU LOW"]),
+                                      as.double(gene_proportion_table[gene_proportion_table$...1==cell_type, "95 % bootstrapped interval HU HIGH"]), "Human", "UP")))
+    
+    counts$Cell <- cell_full_names_hash[[cell_type]]
+    
+    all_counts  <- rbind(all_counts, counts)
+    
+  }
+  
+  all_counts$Study <- regions[[study]]
+  colnames(all_counts) <- c("Proportion", "lowerbound", "upperbound", "Species", "Regulation", "CellType", "Study")
+  
+  df_all_counts            <- all_counts
+  df_all_counts$Proportion <- as.numeric(df_all_counts$Proportion)
+  df_all_counts$Species    <- factor(df_all_counts$Species, levels = c("Chimp", "Human"), ordered = TRUE)
+  
+  df_all_counts$lowerbound <- as.numeric(df_all_counts$lowerbound)
+  df_all_counts$upperbound <- as.numeric(df_all_counts$upperbound)
+  
+  df_all_counts$Regulation <- factor(df_all_counts$Regulation, levels = c("UP", "DOWN"))
+  df_all_counts$CellType   <- factor(df_all_counts$CellType, levels = c("Excitatory Neuron", "Inhibitory Neuron", "Astrocyte", "Microglia", "Oligodendrocyte", "OPC"))
+  
+  #df_all_counts          <- df_all_counts[-c(4)]
+  df_all_counts$Spec_Reg   <- paste0(df_all_counts$Species, "-", df_all_counts$Regulation)
+  df_all_counts$Spec_Reg   <- factor(df_all_counts$Spec_Reg, levels = c("Human-UP", "Chimp-UP", "Human-DOWN", "Chimp-DOWN"  ))
+  
+  p[[count]] <- ggplot(df_all_counts, aes(CellType, fill = Spec_Reg))                                                           +  
+         geom_bar(data = df_all_counts, 
+                  aes(y = Proportion), stat = "identity", 
+                  position = "dodge", width = geom_bar_width, alpha=geom_bar_alpha, color = "black")              +
+    
+         geom_errorbar(data = df_all_counts, 
+                  aes(ymin=lowerbound, ymax=upperbound), width=geom_errorbar_width, 
+                  position=position_dodge(geom_errorbar_dodge), color = "black")                                  +
+    
+         scale_fill_manual(values=list( "#0fbabd", "#bc131f", "#21675e", "#8c1044"))                              +
+         #geom_text(aes(label=Study, x = 1, y = 4), position=position_dodge(width=0.9), vjust=-1.0, size=5)           +
+         geom_hline(yintercept = 0,colour = "black")                                             +
+         ylim(c(-3,  4.5)) +
+         theme(panel.grid.major = element_blank(), 
+               panel.grid.minor = element_blank(),                                                                                   
+               panel.background = element_blank(), 
+               axis.line = element_line(colour = "black"),
+               axis.text.x=element_text(size=16, angle = 45, vjust = 1, hjust = 1),
+               axis.text=element_text(size=16)) +
+                scale_x_discrete(labels = function(x) str_wrap(x, width = 10), drop = FALSE)+
+         xlab("Cell Type")
+  
+  count <- count + 1
+}
+
+g <- ggarrange(plotlist = p, nrow=2, ncol = 1, common.legend = TRUE, legend="bottom")
+
+ggsave(filename = paste0(figure_output_path, study, "_Figure_1.jpg"), plot = g, device = "jpeg",
+       width=8.5, height=11, dpi=300)
+```

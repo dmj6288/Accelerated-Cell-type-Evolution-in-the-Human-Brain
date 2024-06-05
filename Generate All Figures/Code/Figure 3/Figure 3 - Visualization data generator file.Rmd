@@ -1,0 +1,143 @@
+---
+title: "CRE_alignment"
+output: html_document
+date: "2023-11-08"
+---
+
+```{r setup, include=FALSE}
+
+source("../../Baseline/Figure 3 Baseline.R")
+
+```
+
+# merged counts file is available in loci overlap pipeline
+
+```{r}
+
+merged_counts <- readRDS("../../../Visualization - cellbender processed data - 018/loci_overlap_calculator/4.count_overlaps_and_integrate/Merged_counts/merged_counts_with_pvalues_all_considered_genes_V5.rds")
+
+```
+
+```{r}
+dropout_table <- c()
+barplot_table <- c()
+
+for (study in studies){
+  
+  study_df <- c()
+  NDEG <- considered_list[[study]]
+  
+  for (spec in species_type[1]){
+    
+    spec_df <- c()
+    current_merged_data <- merged_counts[[study]][[spec]]
+    
+    for (cell_type in mini_cell_type_list) {
+        
+        DEG_list_UR            <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_", spec, "_URGenes.rds"))
+        DEG_data_UR            <- current_merged_data[current_merged_data$Gene %in% DEG_list_UR[[cell_type]] , ]
+        DEG_data_UR$Regulation <- "UR"      
+        DEG_data_UR$DEG        <- "DEG"
+        
+        DEG_list_DR            <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_", spec, "_DRGenes.rds"))
+        DEG_data_DR            <- current_merged_data[current_merged_data$Gene %in% DEG_list_DR[[cell_type]] , ]
+        DEG_data_DR$Regulation <- "DR"
+        DEG_data_DR$DEG        <- "DEG"
+        
+        DEGs                       <- c(DEG_list_UR[[cell_type]], DEG_list_DR[[cell_type]])
+        NDEGs                      <- NDEG[[cell_type]]
+        background                 <- setdiff(NDEGs, DEGs)
+        
+        background_data            <- current_merged_data[current_merged_data$Gene %in% background, ]
+        background_data$Regulation <- "NA"
+        background_data$DEG        <- "background"
+        
+        df                  <- rbind(DEG_data_UR, DEG_data_DR, background_data)
+        df                  <- df[df$major_celltypes == cell_type, ]
+
+        df_DAR_celltype     <- df[df$major_celltypes == cell_type, ]
+        df_DAR_celltype     <- df_DAR_celltype[, c("Gene", "Chimp_DOWN", "Chimp_UP", "Human_DOWN", "Human_UP")]
+        
+        df              <- df[, c("Gene",    "HAR_Count", "cHAR_Count", "Count_NeuN_hyper", "Count_NeuN_hypo", "Total_cellDMR_count", "Chimp_hypo", "Human_hypo", "Chimp_hyper", "Human_hyper", "tandem_Count", "dNdS", "major_celltypes", colnames(df)[18:37])]
+        df              <- df[!duplicated(df$Gene), ]
+
+        df_final <- Reduce(function(x, y) full_join(x, y, by = "Gene"), list(df,  df_DAR_celltype))
+      
+        df_final <- df_final[!duplicated(df_final), ]
+        
+        
+        dropout_table <- rbind(dropout_table, c(length(setdiff(DEGs,  df$Gene)),
+                                                length(setdiff(background, background_data$Gene)), cell_type, spec, study))
+        
+        
+        df_final$Cell <- cell_type
+        
+        print(dim(df_final))
+
+        spec_df           <- rbind(spec_df, df_final)
+
+    }
+    
+    spec_df$Species <- spec
+    study_df        <- rbind(study_df, spec_df)
+
+  }
+  
+  study_df$Study  <- study
+  study_df$Region <- region_list[[study]]
+  
+  barplot_table   <- rbind(barplot_table, study_df)
+  
+}
+
+barplot_table$Cell_Region <- paste0(barplot_table$Cell, " ", barplot_table$Region)
+barplot_table$DEG         <- factor(barplot_table$DEG, levels = c("DEG", "background"))
+barplot_table             <- barplot_table[!is.na(barplot_table$Gene), ]
+
+dropout_table             <- as.data.frame(dropout_table)
+colnames(dropout_table)   <- c("DEG_drop", "NDEG_drop", "Cell", "Species", "Study")
+
+
+```
+
+
+```{r}
+
+Regulation_vector <- barplot_table$Regulation
+
+UR_vector <-  c()
+DR_vector <-  c()
+
+for (reg in Regulation_vector){
+  
+  if (reg == "UR"){
+    
+    UR_vector <- c(UR_vector, "UR")
+    DR_vector <- c(DR_vector, "background")
+    
+  }else if (reg == "DR"){
+    
+    DR_vector <- c(DR_vector, "DR")
+    UR_vector <- c(UR_vector, "background")
+    
+  }else{
+   
+    UR_vector <- c(UR_vector, "background")
+    DR_vector <- c(DR_vector, "background")
+     
+  }
+}
+
+barplot_table$UR_test <- UR_vector
+barplot_table$DR_test <- DR_vector
+```
+
+
+```{r}
+
+saveRDS(barplot_table, "../../Visualization_data/Figure 3/full_table.rds")
+
+```
+
+
+

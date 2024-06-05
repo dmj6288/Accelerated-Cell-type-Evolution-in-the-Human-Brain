@@ -1,0 +1,101 @@
+---
+title: "Prepares the checkpoints and visualization data for Figures S1-S3"
+output: 
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r}
+
+source("../../Baseline/Figure S1-S3 Baseline.R")
+
+```
+
+
+
+# Recalculating aggregate cell count numbers
+
+```{r}
+
+for (study in study_results){
+
+  chimp_aggregate_study_cell_count_hash   <- list()
+  human_aggregate_study_cell_count_hash   <- list()
+  macaque_aggregate_study_cell_count_hash <- list()
+
+
+  cell_number_file <- read_excel(paste0(folder_name , study, "/", study, "_MajorCellTypes.xlsx"))
+  colnames(cell_number_file) <- c("cell_type", "chimp", "macaque", "human")
+
+
+  for (cell_type in cell_number_file$cell_type[1:6]){
+
+    chimp_aggregate_study_cell_count_hash[[cell_type]] <- c(chimp_aggregate_study_cell_count_hash[[cell_type]], as.numeric(round(cell_number_file[cell_number_file$cell_type == cell_type, "chimp"]*cell_number_file[cell_number_file$cell_type == "TOTAL", "chimp"]/100)[1, 1]))
+
+    human_aggregate_study_cell_count_hash[[cell_type]] <- c(human_aggregate_study_cell_count_hash[[cell_type]], round(cell_number_file[cell_number_file$cell_type == cell_type, "human"]*cell_number_file[cell_number_file$cell_type == "TOTAL", "human"]/100)[1, 1])
+
+    macaque_aggregate_study_cell_count_hash[[cell_type]] <- c(macaque_aggregate_study_cell_count_hash[[cell_type]], round(cell_number_file[cell_number_file$cell_type == cell_type, "human"]*cell_number_file[cell_number_file$cell_type == "TOTAL", "macaque"]/100)[1, 1])
+
+  }
+
+  names(chimp_aggregate_study_cell_count_hash) <- cell_types
+  names(human_aggregate_study_cell_count_hash) <- cell_types
+  names(macaque_aggregate_study_cell_count_hash) <- cell_types
+  
+  saveRDS(chimp_aggregate_study_cell_count_hash,   paste0("../../Visualization_data/Figure S1-S3/checkpoints/", study, "_chimp_numbers.rds"))
+  saveRDS(human_aggregate_study_cell_count_hash,   paste0("../../Visualization_data/Figure S1-S3/checkpoints/", study, "_human_numbers.rds"))
+  saveRDS(macaque_aggregate_study_cell_count_hash, paste0("../../Visualization_data/Figure S1-S3/checkpoints/", study, "_macaque_numbers.rds"))
+  
+}
+```
+
+```{r}
+
+for (study in study_results){
+   
+  chimp_down_regulated          <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_CHIMP_DRGene_numbers.rds"))
+  human_down_regulated          <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_HUMAN_DRGene_numbers.rds"))
+  chimp_up_regulated            <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_CHIMP_URGene_numbers.rds"))
+  human_up_regulated            <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_HUMAN_URGene_numbers.rds"))
+  considered_Genes              <- readRDS(paste0(folder_name, study, "/", study, FDR, "_three_species_considered_Gene_Number.rds"))
+  
+  gene_proportion_table         <- c()
+  cell_names                    <- c()
+  
+  for (key in names(chimp_up_regulated)){
+    
+    gene_proportion_table <- rbind(gene_proportion_table, c(human_up_regulated[[key]],    
+                                                            chimp_up_regulated[[key]],    
+                                                            human_down_regulated[[key]],  
+                                                            chimp_down_regulated[[key]],  
+                                                            considered_Genes[[key]],
+                                                            round(100*human_up_regulated[[key]]/considered_Genes[[key]],   2),  
+                                                            round(100*chimp_up_regulated[[key]]/considered_Genes[[key]],   2),  
+                                                            round(100*human_down_regulated[[key]]/considered_Genes[[key]], 2),  
+                                                            round(100*chimp_down_regulated[[key]]/considered_Genes[[key]], 2)))
+    
+    cell_names            <- c(cell_names, key)
+    
+  }
+  
+  colnames(gene_proportion_table) <- c("Human Specific UP",   
+                                       "Chimp Specific UP",   
+                                       "Human Specific DOWN", 
+                                       "Chimp Specific DOWN", 
+                                       "Considered Genes",
+                                       "Human.Specific.UP.Proportion",
+                                       "Chimp.Specific.UP.Proportion",
+                                       "Human.Specific.DOWN.Proportion",
+                                       "Chimp.Specific.DOWN.Proportion"
+                                       )
+                                       
+  rownames(gene_proportion_table) <- cell_names
+  gene_proportion_table <- cbind(" "=rownames(gene_proportion_table), gene_proportion_table)
+
+
+  print(gene_proportion_table)
+  gene_proportion_table <- as.data.frame(gene_proportion_table)
+  write_xlsx(gene_proportion_table, paste0("../../Visualization_data/Figure S1-S3/", study, "_Figure_S1_to_S3_gene_table.xlsx"))
+  
+}
+```

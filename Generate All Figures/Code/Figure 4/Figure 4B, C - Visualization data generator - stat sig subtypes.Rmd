@@ -1,0 +1,86 @@
+---
+title: "Figure 4BC for stat sig subtypes"
+---
+
+```{r}
+
+source("../../Baseline/Figure 4BC Baseline - statsig.R")
+
+```
+
+
+```{r}
+
+cell_type_list <- list()
+
+for (cellname in names(cell_names_of_interest)){
+
+  major_type_combined_list <- list()
+  sub_type_combined_list   <- list()
+  
+  for (study in studies[2]){
+
+    # MAJOR TYPES
+    
+    human_down_regulated_genes_major_types                <- readRDS(paste0(majortype_folder_name, study, "/", study, FDR, "_original_human_DRGenes.rds"))
+    
+    human_up_regulated_genes_major_types                  <- readRDS(paste0(majortype_folder_name, study, "/", study, FDR, "_original_human_URGenes.rds"))
+    
+    
+    for (name in names(human_down_regulated_genes_major_types)) {
+      major_type_combined_list[[name]] <- unique(c(human_down_regulated_genes_major_types[[name]], 
+                                                   human_up_regulated_genes_major_types[[name]]))
+    }
+    
+    human_major_DEG_Venn                                  <- Venn(major_type_combined_list)
+    human_major_DEG_Venn_table                            <- as.data.frame(process_region_data(human_major_DEG_Venn))
+    
+    human_major_cell_specific_genes                       <- human_major_DEG_Venn_table[human_major_DEG_Venn_table$name == cellname, ]$item[[1]]
+    
+    human_major_cells_shared_genes                        <- setdiff(major_type_combined_list[[cellname]], human_major_cell_specific_genes)
+    
+    # MAJOR TYPES COMPLETE
+    
+    # SUB TYPES
+    
+    human_down_genes_sub_types                               <- readRDS(paste0(subtype_folder_name, study, "/", study, FDR, "_original_human_DRGenes.rds"))
+    human_down_genes_sub_types_of_intereset                  <- human_down_genes_sub_types[cell_names_of_interest[[cellname]]]
+    
+    human_up_genes_sub_types                                 <- readRDS(paste0(subtype_folder_name, study, "/", study, FDR, "_original_human_URGenes.rds"))
+    human_up_genes_sub_types_of_intereset                    <- human_up_genes_sub_types[cell_names_of_interest[[cellname]]]
+    
+    for (name in names(human_down_genes_sub_types_of_intereset)) {
+      sub_type_combined_list[[name]] <- unique(c(human_down_genes_sub_types_of_intereset[[name]], 
+                                                 human_up_genes_sub_types_of_intereset[[name]]))
+    }
+    
+    human_genes_of_sub_types_of_intereset_union              <- Reduce(union, sub_type_combined_list)
+    
+    human_genes_of_sub_types_of_intereset_venn               <- Venn(sub_type_combined_list)
+    human_genes_of_sub_types_of_intereset_venn_table         <- as.data.frame(process_region_data(human_genes_of_sub_types_of_intereset_venn))
+    
+    human_sub_type_cell_specific_genes                       <- Reduce(union, human_genes_of_sub_types_of_intereset_venn_table[human_genes_of_sub_types_of_intereset_venn_table$name %in% cell_names_of_interest[[cellname]], ]$item)
+    
+    human_sub_type_cells_shared_genes                        <- setdiff(human_genes_of_sub_types_of_intereset_union, human_sub_type_cell_specific_genes)
+    
+    human_shared_gene_list <- list(human_major_cell_specific_genes, 
+                                   human_major_cells_shared_genes,
+                                   human_sub_type_cell_specific_genes, 
+                                   human_sub_type_cells_shared_genes)
+    
+    names(human_shared_gene_list) <- c("Major Type, Cell-specific", "Major Type, Shared", "Sub Type, Cell-specific", "Sub Type, Shared")
+
+  }
+  
+  cell_type_list[[cellname]] <- human_shared_gene_list
+  
+}
+
+```
+
+```{r}
+
+saveRDS(cell_type_list, paste0("../../Visualization_data/Figure 4/cell_type_sharing_list_reg_combined_first_v4.rds"))
+
+```
+
