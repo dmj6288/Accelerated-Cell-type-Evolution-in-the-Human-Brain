@@ -1,0 +1,19 @@
+suppressWarnings(suppressMessages(library(Seurat)))
+suppressWarnings(suppressMessages(library(data.table)))
+suppressWarnings(suppressMessages(library(ggplot2)))
+suppressWarnings(suppressMessages(library(readxl)))
+
+seurat_object_path <- "~/Yi_Lab/Lab_WorkDir/Dennis/Evolution/filtered_seurat/filtered_seurat_objects_species/RN009/Khrameeva/"
+
+Khrameeva_count_matrix<- Read10X_h5("~/Yi_Lab/Lab_WorkDir/Dennis/Evolution/cellbender_finished_RAW_data/Khrameeva/Chimp.h5")
+
+source("~/Yi_Lab/Lab_WorkDir/Dennis/pseudo_single_pipeline/support_functions/comprehensive_filtering_003.R")
+
+Chimp_data         <- Khrameeva_count_matrix
+colnames(Chimp_data) <- paste0(colnames(Chimp_data), "C")
+
+Chimp_seurat       <- CreateSeuratObject(Chimp_data)
+
+Chimp_seurat_filt  <- comprehensive_filtering(Chimp_seurat, "Khrameeva_ACC_Chimp")
+
+saveRDS(Chimp_seurat_filt, paste0(seurat_object_path, "Khrameeva_Chimp_v2.rds"))

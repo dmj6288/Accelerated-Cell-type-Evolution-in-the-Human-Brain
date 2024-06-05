@@ -1,0 +1,25 @@
+suppressWarnings(suppressMessages(library(Seurat)))
+suppressWarnings(suppressMessages(library(data.table)))
+suppressWarnings(suppressMessages(library(ggplot2)))
+suppressWarnings(suppressMessages(library(readxl)))
+
+seurat_object_path <- "~/Yi_Lab/Lab_WorkDir/Dennis/Evolution/filtered_seurat/filtered_seurat_objects_technical/RN011/Kanton/"
+Kanton_count_matrix<- Read10X_h5("~/Yi_Lab/Lab_WorkDir/Dennis/Evolution/cellbender_finished_RAW_data/Kanton/set_1.h5")
+
+meta_data           <- read_excel("~/Yi_Lab/Lab_WorkDir/Dennis/Evolution/raw_data_processing_folder/Kanton/metadata/metadata_file_withSpecies_symbol.xlsx")
+
+source("~/Yi_Lab/Lab_WorkDir/Dennis/pseudo_single_pipeline/support_functions/comprehensive_filtering_003.R")
+
+set1              <- c("3",   "HC1", "MI1")
+
+set1_barcodes     <- paste0(meta_data[meta_data$Individual %in% set1, ]$Barcode,
+                            meta_data[meta_data$Individual %in% set1, ]$Symbol)
+
+set1_data         <- Kanton_count_matrix[, set1_barcodes]
+set1_seurat       <- CreateSeuratObject(set1_data)
+
+set1_seurat@meta.data$orig.ident <- meta_data[meta_data$Individual %in% set1,]$Individual
+
+set1_seurat_filt  <- comprehensive_filtering(set1_seurat, "Kanton_PFC_set1")
+
+saveRDS(set1_seurat_filt, paste0(seurat_object_path, "Kanton_set1.rds"))

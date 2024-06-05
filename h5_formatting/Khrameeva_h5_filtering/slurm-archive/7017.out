@@ -1,0 +1,21 @@
+Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  ..@ i       : int [1:9736518] 28 46 54 94 115 118 121 122 130 132 ...
+  ..@ p       : int [1:21956] 0 1073 1553 1804 2794 3798 4641 5439 6504 6754 ...
+  ..@ Dim     : int [1:2] 25080 21955
+  ..@ Dimnames:List of 2
+  .. ..$ : chr [1:25080] "ENSPTRG00000047549" "ENSPTRG00000050965" "ENSPTRG00000049558" "ENSPTRG00000050603" ...
+  .. ..$ : chr [1:21955] "AAACCTGAGCAATCTC-1" "AAACGGGAGCCACTAT-1" "AAACGGGCAGTCTTCC-1" "AAACGGGTCCTATTCA-1" ...
+  ..@ x       : num [1:9736518] 1 1 1 1 1 1 1 1 1 1 ...
+  ..@ factors : list()
+NULL
+You created a large dataset with compression and chunking.
+The chunk size is equal to the dataset dimensions.
+If you want to read subsets of the dataset, you should testsmaller chunk sizes to improve read times.
+You created a large dataset with compression and chunking.
+The chunk size is equal to the dataset dimensions.
+If you want to read subsets of the dataset, you should testsmaller chunk sizes to improve read times.
+Error in write10xCounts(paste0(h5_data_path, "Chimp.h5"), counts, barcodes = colnames(counts),  : 
+  specified 'path' already exists
+Execution halted
+h5_2.R
+SLURM Job ID        : 7017

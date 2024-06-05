@@ -1,0 +1,20 @@
+#!/bin/bash -l
+
+#SBATCH --time=16:00:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=8GB
+#SBATCH --mail-user=dennis00@ucsb.edu
+#SBATCH --mail-type=ALL
+#SBATCH --time=15-00:00:00
+#SBATCH --job-name="PAIR"
+#SBATCH --array=1
+#SBATCH --output=/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/slurm-archive/RN019/%j_how_many_cells.out
+
+cd $SLURM_SUBMIT_DIR
+
+cd /home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/Evolution_Paper/how_any_cells/
+
+Rscript sgmeta_full_covariates_cell_number_sweep.R
+echo sgmeta_full_covariates_cell_number_sweep.R
+echo "SLURM Job ID        : ${SLURM_JOB_ID}"

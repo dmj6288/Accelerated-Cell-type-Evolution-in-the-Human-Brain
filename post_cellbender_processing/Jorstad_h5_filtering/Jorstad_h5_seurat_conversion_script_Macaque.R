@@ -1,0 +1,26 @@
+suppressWarnings(suppressMessages(library(Seurat)))
+suppressWarnings(suppressMessages(library(data.table)))
+suppressWarnings(suppressMessages(library(ggplot2)))
+suppressWarnings(suppressMessages(library(readxl)))
+
+seurat_object_path  <- "~/Yi_Lab/Lab_WorkDir/Dennis/Evolution/filtered_seurat/filtered_seurat_objects_technical/RN015/Jorstad/"
+Jorstad_count_matrix<- Read10X_h5("~/Yi_Lab/Lab_WorkDir/Dennis/Evolution/cellbender_finished_RAW_data/Jorstad/chimp_counts.h5")
+
+metadata_file       <- read_excel("~/Yi_Lab/Lab_WorkDir/Dennis/Evolution/raw_data_processing_folder/Jorstad/potentially_processed_data/Chimp_metadata.xlsx")
+
+source("~/Yi_Lab/Lab_WorkDir/Dennis/pseudo_single_pipeline/support_functions/comprehensive_filtering_003.R")
+
+Chimp_donors        <- unique(metadata_file$donor)
+
+replicate_barcodes <- metadata_file$sample_id
+
+Chimp_data         <- Jorstad_count_matrix[, replicate_barcodes]
+
+Chimp_seurat       <- CreateSeuratObject(Chimp_data)
+
+print(dim(Chimp_seurat))
+
+Chimp_seurat_filt  <- comprehensive_filtering(Chimp_seurat, paste0("Jorstad_MTG_Chimp"))
+
+saveRDS(Chimp_seurat_filt, paste0(seurat_object_path, "Jorstad_Chimp.rds"))
+

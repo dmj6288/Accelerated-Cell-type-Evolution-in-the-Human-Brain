@@ -1,0 +1,21 @@
+#!/bin/bash -l
+
+#SBATCH --time=16:00:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=64GB
+#SBATCH --mail-user=dennis00@ucsb.edu
+#SBATCH --mail-type=ALL
+#SBATCH --time=15-00:00:00
+#SBATCH --job-name="PAIR"
+#SBATCH --array=1
+#SBATCH --output=/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/slurm-archive/RN018/%j_GO_term_combined_simplified2.out
+
+cd $SLURM_SUBMIT_DIR
+
+cd /home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/Evolution_Paper/GO_analysis/combined
+
+Rscript GO_term_combined_simplified2.R
+
+echo GO_term_combined_simplified2.R
+echo "SLURM Job ID        : ${SLURM_JOB_ID}"

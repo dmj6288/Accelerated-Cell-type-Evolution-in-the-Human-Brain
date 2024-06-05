@@ -1,0 +1,6 @@
+Error in scan(file = file, what = what, sep = sep, quote = quote, dec = dec,  : 
+  line 1 did not have 15 elements
+Calls: ReadMtx -> read.table -> scan
+Execution halted
+h5_2.R
+SLURM Job ID        : 6451

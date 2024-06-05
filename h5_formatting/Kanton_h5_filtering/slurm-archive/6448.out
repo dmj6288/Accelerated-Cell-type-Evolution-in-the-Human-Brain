@@ -1,0 +1,7 @@
+Error: Cannot find expression matrix at ../aligned_10x_data/Kanton/Chimp/matrix.mtx.gz
+In addition: Warning message:
+In normalizePath(path = all.files[[i]], winslash = "/") :
+  path[1]="../aligned_10x_data/Kanton/Chimp/matrix.mtx.gz": No such file or directory
+Execution halted
+h5_2.R
+SLURM Job ID        : 6448

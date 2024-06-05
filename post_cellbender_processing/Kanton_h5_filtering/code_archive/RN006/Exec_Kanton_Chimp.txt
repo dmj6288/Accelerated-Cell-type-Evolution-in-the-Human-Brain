@@ -1,0 +1,21 @@
+#!/bin/bash -l
+
+#SBATCH --time=16:00:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=64GB
+#SBATCH --mail-user=dennis00@ucsb.edu
+#SBATCH --mail-type=ALL
+#SBATCH --time=15-00:00:00
+#SBATCH --job-name="PAIR"
+#SBATCH --array=1
+#SBATCH --output=/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/slurm-archive/RN006/%j.out
+
+cd $SLURM_SUBMIT_DIR
+
+cd /home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/Evolution_paper/post_cellbender_processing/Kanton_h5_filtering
+
+Rscript Kanton_h5_seurat_conversion_script_Chimp.R
+
+echo  Kanton_h5_seurat_conversion_script_Chimp.R
+echo "SLURM Job ID        : ${SLURM_JOB_ID}"

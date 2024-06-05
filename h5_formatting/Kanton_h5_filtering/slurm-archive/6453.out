@@ -1,0 +1,33 @@
+Error in H5File.open(filename, mode, file_create_pl, file_access_pl) : 
+  HDF5-API Errors:
+    error #000: H5F.c in H5Fopen(): line 509: unable to open file
+        class: HDF5
+        major: File accessibilty
+        minor: Unable to open file
+
+    error #001: H5Fint.c in H5F_open(): line 1652: unable to read superblock
+        class: HDF5
+        major: File accessibilty
+        minor: Read failed
+
+    error #002: H5Fsuper.c in H5F__super_read(): line 414: unable to locate file signature
+        class: HDF5
+        major: File accessibilty
+        minor: Not an HDF5 file
+
+    error #003: H5FDint.c in H5FD_locate_signature(): line 126: unable to read file signature
+        class: HDF5
+        major: Low-level I/O
+        minor: Unable to initialize object
+
+    error #004: H5FDint.c in H5FD_read(): line 205: driver read request failed
+        class: HDF5
+        major: Virtual File Layer
+        minor: Read failed
+
+    error #005: H5FDsec2.c in H5FD_sec2_read(): line 725: file read failed: time = Tue Jul 18 23:35:39 2023
+, filename = '/home/local/AD
+Calls: Read10X_h5 -> <Anonymous> -> initialize -> H5File.open
+Execution halted
+h5_1.R
+SLURM Job ID        : 6453
