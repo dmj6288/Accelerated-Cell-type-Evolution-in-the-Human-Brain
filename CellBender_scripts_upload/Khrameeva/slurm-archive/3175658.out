@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/dennis00/anaconda3/bin/cellbender", line 33, in <module>
+    sys.exit(load_entry_point('cellbender', 'console_scripts', 'cellbender')())
+  File "/home/dennis00/CellBender/cellbender/base_cli.py", line 98, in main
+    args = cli_dict[args.tool].validate_args(args)
+  File "/home/dennis00/CellBender/cellbender/remove_background/cli.py", line 38, in validate_args
+    assert os.access(file_dir, os.W_OK), \
+AssertionError: Cannot write to specified output directory /home/dennis00/Yi_lab/cellbent_output_RAW/Khrameeva. Ensure the directory exists and is write accessible.
+cellbender_Khrameeva_human
+SLURM Job ID        : 3175658

@@ -1,0 +1,32 @@
+#!/bin/bash -l
+
+#SBATCH -N 1 --ntasks-per-node=6 --partition=gpu
+#SBATCH --gres=gpu:1
+#SBATCH --job-name="PAIR"
+#SBATCH --output=/home/dennis00/Yi_lab/CellBender_scripts/slurm-archive/%j.out
+
+module load cuda/11.7
+
+cd $SLURM_SUBMIT_DIR
+
+cd /home/dennis00/Yi_lab/CellBender_scripts
+
+REPS="set_Q19.26.010.h5 set_Q19.26.011.h5 set_Q19.26.015.h5"
+
+for p in $REPS
+do
+	cellbender remove-background \
+                  	--input "/home/dennis00/Yi_lab/raw_h5_data/Jorstad_h5/$p" \
+                  	--output "/home/dennis00/Yi_lab/cellbent_output_RAW/Jorstad/$p" \
+                  	--cuda \
+                   	--expected-cells 12000 \
+                  	--total-droplets-included 20000 \
+                 	--low-count-threshold 15 \
+                  	--learning-rate 1e-4 \
+                  	--fpr 0.01 \
+                 	--epochs 150
+
+done
+
+echo cellbender_Jorstad_chimp.R
+echo "SLURM Job ID        : ${SLURM_JOB_ID}"

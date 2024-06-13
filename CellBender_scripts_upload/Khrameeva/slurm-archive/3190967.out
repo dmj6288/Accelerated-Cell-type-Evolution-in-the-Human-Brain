@@ -1,0 +1,8 @@
+cellbender:remove-background: Command:
+cellbender remove-background --input /home/dennis00/Yi_lab/raw_h5_data/Khrameeva_h5/Human.h5 --output /home/dennis00/Yi_lab/cellbent_output_RAW/Khrameeva/Human.h5 --cuda --expected-cells 17000 --total-droplets-included 21000 --low-count-threshold 15 --learning-rate 1e-4 --fpr 0.01 --epochs 150
+cellbender:remove-background: 2023-07-31 16:51:29
+cellbender:remove-background: Running remove-background
+cellbender:remove-background: Loading data from file /home/dennis00/Yi_lab/raw_h5_data/Khrameeva_h5/Human.h5
+cellbender:remove-background: OSError: Unable to open file /home/dennis00/Yi_lab/raw_h5_data/Khrameeva_h5/Human.h5.
+cellbender_Khrameeva_human
+SLURM Job ID        : 3190967
