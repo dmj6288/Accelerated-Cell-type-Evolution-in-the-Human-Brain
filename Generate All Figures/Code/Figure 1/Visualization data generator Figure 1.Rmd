@@ -42,10 +42,10 @@ for (study in study_results){
   names(human_aggregate_study_cell_count_hash) <- cell_types
   names(macaque_aggregate_study_cell_count_hash) <- cell_types
   
-  saveRDS(chimp_aggregate_study_cell_count_hash,   paste0("../../Visualization_data/Figure 1/checkpoints/", study, "_chimp_numbers.rds"))
-  saveRDS(human_aggregate_study_cell_count_hash,   paste0("../../Visualization_data/Figure 1/checkpoints/", study, "_human_numbers.rds"))
-  saveRDS(macaque_aggregate_study_cell_count_hash, paste0("../../Visualization_data/Figure 1/checkpoints/", study, "_macaque_numbers.rds"))
-  
+  # saveRDS(chimp_aggregate_study_cell_count_hash,   paste0("../../Visualization_data/Figure 1/checkpoints/", study, "_chimp_numbers.rds"))
+  # saveRDS(human_aggregate_study_cell_count_hash,   paste0("../../Visualization_data/Figure 1/checkpoints/", study, "_human_numbers.rds"))
+  # saveRDS(macaque_aggregate_study_cell_count_hash, paste0("../../Visualization_data/Figure 1/checkpoints/", study, "_macaque_numbers.rds"))
+  # 
 }
 ```
 
@@ -217,3 +217,89 @@ colnames(gene_proportion_table) <- c("Human Specific UP",   "95 % bootstrapped i
   
 }
 ```
+
+
+```{r}
+# Example sorted lists with repetitions
+list1 <- c(1, 2, 2, 3, 3, 3, 4)
+list2 <- c(2, 3, 3, 5, 6)
+
+# Find common elements
+common_elements <- intersect(list1, list2)
+
+# Count the occurrences in both lists
+count_list1 <- table(list1)
+count_list2 <- table(list2)
+
+# Initialize the overlap count
+overlap_count <- 0
+
+# Sum the minimum counts for each common element
+for (element in common_elements) {
+  overlap_count <- overlap_count + min(count_list1[element], count_list2[element])
+}
+
+# Print the overlap count
+print(overlap_count)
+
+study_df <- c()
+
+for (study in c("Caglayan", "Ma")){
+  
+  for (cell_type in cell_number_file$cell_type[6]){
+
+    DR_list1 <- unlist(chimp_boot_DR[[study]][[cell_type]])
+    DR_list2 <- unlist(human_boot_DR[[study]][[cell_type]])
+    
+    DR_common_elements <- intersect(DR_list1, DR_list2)
+    
+    count_DR_list1 <- table(DR_list1)
+    count_DR_list2 <- table(DR_list2)
+    
+    DR_overlap_count <- 0
+
+    # Sum the minimum counts for each common element
+    for (element in DR_common_elements) {
+      DR_overlap_count <- DR_overlap_count + min(count_DR_list1[as.character(element)], 
+                                                 count_DR_list2[as.character(element)])
+    }
+    
+    UR_list1 <- unlist(chimp_boot_UR[[study]][[cell_type]])
+    UR_list2 <- unlist(human_boot_UR[[study]][[cell_type]])
+    
+    UR_common_elements <- intersect(UR_list1, UR_list2)
+    
+    count_UR_list1 <- table(UR_list1)
+    count_UR_list2 <- table(UR_list2)
+    
+    UR_overlap_count <- 0
+    
+    # Sum the minimum counts for each common element
+    for (element in UR_common_elements) {
+      UR_overlap_count <- UR_overlap_count + min(count_UR_list1[as.character(element)], 
+                                                 count_UR_list2[as.character(element)])
+    }
+    
+    study_df <- rbind(study_df,   c(as.numeric(UR_overlap_count)/10000, 
+                                   as.numeric(DR_overlap_count)/10000,
+                                   cell_type,
+                                   study))
+
+  }
+
+}
+
+study_df <- as.data.frame(study_df)
+colnames(study_df) <- c("Up regulation", "Down regulation",
+                        "Cell Type", "Study")
+
+study_df$`Up regulation` <- as.numeric(study_df$`Up regulation`)
+study_df$`Down regulation` <- as.numeric(study_df$`Down regulation`)
+
+
+```
+
+```{r}
+write.xlsx()
+```
+

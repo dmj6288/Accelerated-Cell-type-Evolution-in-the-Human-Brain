@@ -21,7 +21,7 @@ regions            <- c("PCC", "dlPFC")
 names(regions)     <- studies
 regulation         <- c("UR", "DR")
 folder_name        <- "../../Cloud Data/major/"
-figure_path        <- "../../Figures/Figure 2/"
+figure_path        <- "../../Figures/Figure 2, S8/"
 FDR                <- 0.05
 
 colour_list <- list(list("#a3ebe7", "#54c5e0"), list("#eb934b", "#d95734"))

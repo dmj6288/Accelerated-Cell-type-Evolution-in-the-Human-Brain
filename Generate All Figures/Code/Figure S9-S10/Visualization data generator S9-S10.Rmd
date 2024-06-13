@@ -1,0 +1,96 @@
+---
+title: "Figure 2 - Gene Ontology Enrichment Analysis"
+---
+
+```{r}
+source("../../Baseline/Figure S9-S10 Baseline.R")
+```
+
+# Loading GO table data from analysis
+
+```{r}
+significant_GO_table <- read_excel(paste0(checkpoints_path, "Significant Biological Processes from DEGs - Figure 2.xlsx"))
+considered_GO_table  <- read_excel(paste0(checkpoints_path, "Considered Biological Processes from DEGs - Figure 2.xlsx"))
+
+significant_GO_table$Significant <- "YES"
+considered_GO_table$Significant  <- "NO"
+all_GO_terms                     <- rbind(significant_GO_table, considered_GO_table)
+GO_table                         <- all_GO_terms[all_GO_terms$ID %in% significant_GO_table$ID, ]
+
+up_GO_Table                      <- GO_table[GO_table$regulation %in% c("HU", "CU"), ]
+down_GO_Table                    <- GO_table[GO_table$regulation %in% c("HD", "CD"), ]
+
+saveRDS(up_GO_Table,   paste0(checkpoints_path, "up_GO_Table.rds"))
+saveRDS(down_GO_Table, paste0(checkpoints_path, "down_GO_Table.rds"))
+
+```
+
+```{r}
+significant_GO_table <- read_excel(paste0(checkpoints_path, "singificant_combined_BP_FDR5.xlsx"))
+considered_GO_table  <- read_excel(paste0(checkpoints_path, "considered_combined_BP_FDR5.xlsx"))
+
+significant_GO_table$Significant <- "SIG"
+considered_GO_table$Significant  <- "CONS"
+all_GO_terms                     <- rbind(significant_GO_table, considered_GO_table)
+GO_table                         <- all_GO_terms[all_GO_terms$ID %in% significant_GO_table$ID, ]
+
+sub_table <- GO_table #[up_GO_Table$cell_type %in% c("Inhibit" ,"Microglia") == FALSE, ]
+
+yaxis_order           <- sub_table$Description
+yaxis_order           <- yaxis_order[!duplicated(yaxis_order)]
+sub_table$Description <- factor(sub_table$Description, levels = yaxis_order)
+
+sub_table <- sub_table[sub_table$Count > gene_count_value, ]
+sub_table <- sub_table[sub_table$Significant == "SIG", ]
+
+saveRDS(sub_table,   paste0(checkpoints_path, "combined_GO_table.rds"))
+
+```
+
+```{r}
+#human_metrics        <- read_excel(paste0(checkpoints_path, "Human metrics.xlsx"))
+significant_GO_table <- read_excel(paste0(checkpoints_path, "Significant Biological Processes from DEGs - Figure 2 FDR20.xlsx"))
+considered_GO_table  <- read_excel(paste0(checkpoints_path, "Considered Biological Processes from DEGs - Figure 2 FDR20.xlsx"))
+
+significant_GO_table <- considered_GO_table[considered_GO_table$p.adjust < 0.3, ]
+
+common_terms <- intersect(significant_GO_table[significant_GO_table$regulation == "CU", ]$Description, significant_GO_table[significant_GO_table$regulation == "HU", ]$Description)
+common_GO_terms <- significant_GO_table[significant_GO_table$Description %in% common_terms, ]
+
+
+shared_GO_term_descriptions <- c("response to organic cyclic compound", "positive regulation of nervous system development", "regulation of cell development", "regulation of nervous system development")
+shared_GO_term_table        <- common_GO_terms[common_GO_terms$Description %in% shared_GO_term_descriptions, ]
+shared_GO_term_table        <- shared_GO_term_table[shared_GO_term_table$regulation %in% c("HU", "CU"), ]
+shared_GO_term_table        <- shared_GO_term_table[order(shared_GO_term_table$Description), ]
+shared_GO_term_table        <- shared_GO_term_table[-c(1, 6), ]
+
+shared_GO_term_table_human_genes <- shared_GO_term_table[shared_GO_term_table$regulation == "HU", ]$geneID
+split_genes <- unlist(strsplit(shared_GO_term_table_human_genes, "/"))
+unique_genes_human <- unique(split_genes)
+unique_genes_human
+
+shared_GO_term_table_chimp_genes <- shared_GO_term_table[shared_GO_term_table$regulation == "CU", ]$geneID
+split_genes <- unlist(strsplit(shared_GO_term_table_chimp_genes, "/"))
+unique_genes_chimp <- unique(split_genes)
+unique_genes_chimp
+
+reshaped_data <- shared_GO_term_table                                                 %>%
+                 separate_rows(geneID, sep = "/")                                     %>%
+                 mutate(regulation_category = ifelse(regulation == 'HU', 'HU', 'CU')) %>%
+                 mutate(cell_type = ifelse(cell_type == 'OPC', 'OPC', 'Oligo'))
+
+names(reshaped_data)[names(reshaped_data) == 'geneID'] <- 'Gene'
+
+#reshaped_data <-  merge(subset_human_metrics_to_plot, reshaped_data, by = "Gene")
+reshaped_data$Description_FDR <- paste0(reshaped_data$Description, " (FDR", format(round(reshaped_data$p.adjust, 2), nsmall = 2), ")")
+
+regulation.labs <- c("Chimpanzee Upregulated Gene-vs-BP terms", "Human Upregulated Gene-vs-BP terms")
+names(regulation.labs) <- c("CU", "HU")
+
+```
+
+```{r}
+saveRDS(reshaped_data, paste0(checkpoints_path, "functional_convergence_GO_table.rds"))
+```
+
+

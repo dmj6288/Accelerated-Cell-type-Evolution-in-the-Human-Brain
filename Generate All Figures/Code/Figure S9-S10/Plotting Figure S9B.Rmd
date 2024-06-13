@@ -1,0 +1,43 @@
+---
+title: "Figure 2 - Gene Ontology Enrichment Analysis"
+---
+
+```{r}
+source("../../Baseline/Figure S9-S10 Baseline.R")
+```
+
+```{r}
+
+down_GO_Table <- readRDS(paste0(checkpoints_path, "down_GO_Table.rds"))
+
+```
+
+```{r}
+sub_table <- down_GO_Table #[up_GO_Table$cell_type %in% c("Inhibit" ,"Microglia") == FALSE, ]
+sub_table <- sub_table[sub_table$Count > 10, ]
+sub_table <- sub_table[sub_table$Significant == "YES", ]
+
+regulation.labs <- c("Chimpanzee Downregulated Genes", "Human Downregulated Genes")
+names(regulation.labs) <- c("CD", "HD")
+
+g <- ggplot(data = sub_table, aes(x = cell_type, y = Description, 
+                        color = `p.adjust`, size = Count, shape = region))      + 
+  geom_point()                                                                  +
+  scale_color_gradient(low = "blue", high = "red", limits = c(0, 0.05))         +
+  theme_bw()                                                                    + 
+  ylab("")                                                                      + 
+  xlab("")                                                                      + 
+  ggtitle("GO enrichment analysis") +
+  facet_grid(. ~ regulation, labeller = labeller(regulation = regulation.labs)) +
+  theme(axis.line = element_line(colour = "black"),
+        axis.text.x=element_text(size=14, angle = 45, vjust = 1, hjust = 1),
+        axis.text.y=element_text(size=12, hjust = 0),
+        strip.text = element_text(face="bold", size=8))                         +
+  scale_x_discrete(breaks=names(cellfullnames),
+        labels=cellfullnames)
+
+ ggsave(filename = paste0(figure_output_path, "Figure S12 - downregulated GO terms.jpg"), plot = g, device = "jpeg",
+         width=10, height=9, dpi=300)
+ 
+```
+

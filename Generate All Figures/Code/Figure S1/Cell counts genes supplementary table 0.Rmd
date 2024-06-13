@@ -1,0 +1,81 @@
+---
+title: "Proportion Change Calculator"
+output: 
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r}
+
+source("../../Baseline/Figure S1 Baseline.R")
+
+```
+
+```{r}
+all_counts <- c()
+
+for (study in study_results){
+  
+  cell_names                    <- c()
+  
+  study_cell_count_files        <- cell_counts_files[tstrsplit(cell_counts_files, "_")[[1]] %in% study]
+  
+  chimp_cell_counts             <- readRDS(paste0(cell_counts_path, study_cell_count_files[1]))
+  human_cell_counts             <- readRDS(paste0(cell_counts_path, study_cell_count_files[2]))
+  macaque_cell_counts           <- readRDS(paste0(cell_counts_path, study_cell_count_files[3]))
+  
+  p     <- list()
+  count <- 1
+  
+  gene_proportion_table         <- read_excel(paste0(gene_table_path, study, "_Figure_S1_to_S3_gene_table.xlsx"))
+  
+  all_cell_counts               <- c()
+  
+  for (cell_type in cell_types){
+    
+
+    
+    grob1 <- grobTree(textGrob(paste0("n(Human ", cell_full_names_hash[[cell_type]], " cells) :", human_cell_counts[[cell_type]]), 
+                              x=0.05,  y=0.95, hjust=0, gp=gpar(col="black", fontsize=8, fontface="bold")))
+    
+    grob2 <- grobTree(textGrob(paste0("n(Chimp ", cell_full_names_hash[[cell_type]], " cells)  :", chimp_cell_counts[[cell_type]]), 
+                              x=0.05,  y=0.90, hjust=0, gp=gpar(col="black", fontsize=8, fontface="bold")))
+    
+    grob4 <- grobTree(textGrob(paste0("n(Macaque ", cell_full_names_hash[[cell_type]], " cells)  :", macaque_cell_counts[[cell_type]]), 
+                              x=0.05,  y=0.85, hjust=0, gp=gpar(col="black", fontsize=8, fontface="bold")))
+    
+    grob3 <- grobTree(textGrob(paste0("n(Considered non-silent genes) :", gene_proportion_table[gene_proportion_table$...1 == cell_type, "Considered Genes"]), 
+                              x=0.05,  y=0.80, hjust=0, gp=gpar(col="black", fontsize=8, fontface="bold")))
+    
+    all_cell_counts <- rbind(all_cell_counts,
+                             c(cell_full_names_hash[[cell_type]], human_cell_counts[[cell_type]],
+                               chimp_cell_counts[[cell_type]],
+                               macaque_cell_counts[[cell_type]],
+                               gene_proportion_table[gene_proportion_table$...1 == cell_type, "Considered Genes"],
+                               study))
+    
+    
+    count <- count + 1
+    
+  }
+  
+  all_counts <- rbind(all_counts, all_cell_counts)
+
+}
+
+colnames(all_counts) <- c("Cell Names",
+                          "Number of Human cells",
+                          "Number of Chimpanzee cells",
+                          "Number of Macaque cells",
+                          "Considered",
+                          "Study")
+
+all_counts <- as.data.frame(all_counts)
+all_counts$Considered <- as.numeric(all_counts$Considered)
+
+```
+```{r}
+write_xlsx(all_counts, "../../Supplementary Tables/Supplementary Table 0.xlsx")
+```
+
+

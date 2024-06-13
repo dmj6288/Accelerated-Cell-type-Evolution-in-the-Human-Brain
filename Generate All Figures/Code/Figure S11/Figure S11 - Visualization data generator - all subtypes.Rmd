@@ -1,0 +1,156 @@
+---
+title: "Figure 4B, C visualization data generator file
+---
+
+```{r}
+
+source("../../Baseline/Figure 4B Baseline.R")
+
+```
+
+
+```{r}
+
+
+cell_type_list_avg   <- list()
+cell_type_list_combo <- list()
+
+for (cellname in names(cell_names_of_interest)){
+  
+  human_final_df_combination_table_list           <- list()
+  human_final_subtype_df_combination_table_list   <- list()
+  human_final_df_lineplot_combination_table_list  <- list()
+
+
+  major_type_combined_list <- list()
+  
+  for (study in studies[2]){
+
+    # MAJOR TYPES
+    
+    human_down_regulated_genes_major_types                <- readRDS(paste0(majortype_folder_name, study, "/", study, FDR, "_original_human_DRGenes.rds"))
+    
+    human_up_regulated_genes_major_types                  <- readRDS(paste0(majortype_folder_name, study, "/", study, FDR, "_original_human_URGenes.rds"))
+    
+    
+    for (name in names(human_down_regulated_genes_major_types)) {
+      major_type_combined_list[[name]] <- unique(c(human_down_regulated_genes_major_types[[name]], 
+                                                   human_up_regulated_genes_major_types[[name]]))
+    }
+    
+    major_cell_type_list_union                            <- Reduce(union, major_type_combined_list)
+    
+    human_major_DEG_Venn                                  <- Venn(major_type_combined_list)
+    human_major_DEG_Venn_table                            <- as.data.frame(process_region_data(human_major_DEG_Venn))
+    
+    human_major_cell_specific_genes                       <- human_major_DEG_Venn_table[human_major_DEG_Venn_table$name == cellname, ]$item[[1]]
+    
+    human_major_cells_shared_genes                        <- setdiff(major_type_combined_list[[name]], human_major_cell_specific_genes)
+    
+    # MAJOR TYPES COMPLETE
+    
+    # SUB TYPES
+    
+    human_down_genes_sub_types                               <- readRDS(paste0(subtype_folder_name, study, "/", study, FDR, "_original_human_DRGenes.rds"))
+    human_up_genes_sub_types                                 <- readRDS(paste0(subtype_folder_name, study, "/", study, FDR, "_original_human_URGenes.rds"))
+    
+    
+    combination_sharedness_list  <- list()
+    
+    human_final_df_combination_table           <- rep(NA, 6)
+    human_final_subtype_df_combination_table   <- rep(NA, 2)
+    
+    human_final_df_lineplot_combination_vector <- c()
+    
+    combinations          <- combination_list[[cellname]]
+    
+    for (current_combination in names(combinations)){
+      
+      print(current_combination)
+      
+      human_down_genes_sub_types_of_intereset                  <- human_down_genes_sub_types[combinations[[current_combination]]]
+      human_up_genes_sub_types_of_intereset                    <- human_up_genes_sub_types[combinations[[current_combination]]]
+      
+      sub_type_combined_list       <- list()
+      
+      for (name in names(human_down_genes_sub_types_of_intereset)) {
+        
+        sub_type_combined_list[[name]] <- unique(c(human_down_genes_sub_types_of_intereset[[name]], 
+                                                   human_up_genes_sub_types_of_intereset[[name]]))
+      
+      }
+      
+      human_genes_of_sub_types_of_intereset_union              <- Reduce(union, sub_type_combined_list)
+    
+      human_genes_of_sub_types_of_intereset_venn               <- Venn(sub_type_combined_list)
+      human_genes_of_sub_types_of_intereset_venn_table         <- as.data.frame(process_region_data(human_genes_of_sub_types_of_intereset_venn))
+      
+      human_sub_type_cell_specific_genes                       <- Reduce(union, human_genes_of_sub_types_of_intereset_venn_table[human_genes_of_sub_types_of_intereset_venn_table$name %in% combinations[[current_combination]], ]$item)
+      
+      human_sub_type_cells_shared_genes                        <- setdiff(human_genes_of_sub_types_of_intereset_union, human_sub_type_cell_specific_genes)
+      
+      human_shared_gene_list <- list(human_major_cell_specific_genes, 
+                                     human_major_cells_shared_genes,
+                                     human_sub_type_cell_specific_genes, 
+                                     human_sub_type_cells_shared_genes)
+      
+      names(human_shared_gene_list) <- c("Major Type, Cell-specific", "Major Type, Shared", "Sub Type, Cell-specific", "Sub Type, Shared")
+      
+      human_shared_gene_list_Venn                         <- Venn(human_shared_gene_list)
+      
+      human_shared_gene_list_table                        <- as.data.frame(process_region_data(human_shared_gene_list_Venn))
+  
+      human_shared_gene_count <- human_shared_gene_list_table[human_shared_gene_list_table$id %in% c("3", "4", "1/3", "2/4", "2/3", "1/4"), ]$count
+      human_shared_barplot    <- as.data.frame(cbind(c("Sub type and cell specific DEGs",
+                                                   "Sub type and shared DEGs",
+                                                   "Cell specific DEGs present in both studies",
+                                                   "Shared DEGs present in both studies",
+                                                   "Cell specific subtype DEGs present in excitatory neuron shared DEGs",
+                                                   "Shared subtype DEGs present in excitatory neuron cell type DEGs"), as.numeric(human_shared_gene_count)))
+  
+      colnames(human_shared_barplot) <- c("Gene_Category", "Count")
+      human_shared_barplot$Count     <- as.numeric(human_shared_barplot$Count)
+      colnames(human_shared_barplot) <- paste0(cellname, "_", current_combination, "_",  study, "_", c("Gene_Category", "Count"))
+      
+      human_final_df_combination_table   <- cbind(human_final_df_combination_table,   human_shared_barplot)
+      
+      subtype_combination <- paste(combinations[[current_combination]], collapse = ", ")
+      colname             <- paste0(cellname, "_", current_combination, "_",  study, "_", "Count")
+      colname_df          <- paste0(colnames(human_shared_barplot)[1], "_SumValue")
+      colname_df_subtype  <- paste0(cellname, "_", current_combination, "_",  study, "_Gene_Type_SumValue")
+      
+      human_final_df_lineplot_combination_vector  <- rbind(human_final_df_lineplot_combination_vector, c(subtype_combination, as.numeric(human_final_df_combination_table[, colname]), length(combinations[[current_combination]])))
+      
+    }
+
+      numeric_columns_indices                              <- which(sapply(human_final_df_combination_table, is.numeric))
+      numeric_human_final_df_combination_table             <- human_final_df_combination_table[, numeric_columns_indices]
+      rownames(numeric_human_final_df_combination_table)   <- human_shared_barplot[, 1]
+
+      barplot_combined                                           <- calculate_averages_by_length(numeric_human_final_df_combination_table)
+      human_final_df_combination_table_list[[current_combination]]          <- barplot_combined
+
+      human_final_df_lineplot_combination_vector_df              <- na.omit(as.data.frame(as.matrix(human_final_df_lineplot_combination_vector[, c(2:8)])))
+      rownames(human_final_df_lineplot_combination_vector_df)    <- human_final_df_lineplot_combination_vector[, 1]
+      colnames(human_final_df_lineplot_combination_vector_df)    <- c(human_final_df_combination_table[, 2], "#Subtypes")
+      human_final_df_lineplot_combination_table_list[[current_combination]] <- human_final_df_lineplot_combination_vector_df
+
+  }
+  
+  
+  cell_type_list_avg[[cellname]]   <- human_final_df_combination_table_list
+  cell_type_list_combo[[cellname]] <- human_final_df_lineplot_combination_table_list
+  
+}
+
+
+```
+
+
+```{r}
+
+saveRDS(cell_type_list_avg,   paste0("../../Visualization_data/Figure 4/cell_type_list_avg_V4.rds"))
+saveRDS(cell_type_list_combo, paste0("../../Visualization_data/Figure 4/cell_type_list_combo_V4.rds"))
+
+```
+

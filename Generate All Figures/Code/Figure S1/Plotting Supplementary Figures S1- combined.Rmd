@@ -1,0 +1,52 @@
+---
+title: "Proportion Change Calculator"
+output: 
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r}
+
+source("../../Baseline/Figure S1-S3 Baseline.R")
+all_counts <- readRDS("../../Visualization_data/Figure S1-S3/combined_S123.rds")
+
+```
+
+```{r}
+
+
+p     <- list()
+count <- 1
+  
+for (study in study_results){
+  
+  current_counts <- all_counts[all_counts$Study == study, ]
+  
+  p[[count]] <- ggplot(current_counts, aes(Cell, fill = Spec_Reg))                                                           +  
+                geom_bar(data = current_counts, 
+                         aes(y = Number), stat = "identity", 
+                         position = "dodge", width = geom_bar_width, alpha=geom_bar_alpha, color = "black")              +
+    
+                scale_fill_manual(values=list( "#0fbabd", "#bc131f", "#21675e", "#8c1044"))                              +
+                #geom_text(aes(label=Study, x = 1, y = 4), position=position_dodge(width=0.9), vjust=-1.0, size=5)           +
+                geom_hline(yintercept = 0,colour = "black")                                             +
+                ylim(c(-5,  5.0)) +
+                theme(panel.grid.major = element_blank(), 
+                      panel.grid.minor = element_blank(),                                                                                   
+                      panel.background = element_blank(), 
+                      axis.line = element_line(colour = "black"),
+                      axis.text.x=element_text(size=16, angle = 45, vjust = 1, hjust = 1),
+                      axis.text=element_text(size=16)) +
+                      scale_x_discrete(labels = function(x) str_wrap(x, width = 10), drop = FALSE)+
+                xlab("Cell Type")
+  
+  count <- count + 1
+}
+
+g <- ggarrange(plotlist = p, nrow=3, ncol = 1, common.legend = TRUE, legend="bottom")
+
+ggsave(filename = paste0(figure_output_path, study, "_Figure_1.jpg"), plot = g, device = "jpeg",
+       width=8.5, height=11, dpi=300)
+```
+
+

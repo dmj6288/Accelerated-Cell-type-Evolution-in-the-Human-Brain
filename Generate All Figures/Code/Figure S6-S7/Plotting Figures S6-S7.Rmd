@@ -1,0 +1,71 @@
+---
+title: "Upset plot"
+
+---
+
+```{r}
+
+source("../../Baseline/Figure S6-S7 Baseline.R")
+
+```
+
+```{r}
+
+m_list_human <- readRDS(paste0(checkpoints_path, "human_upset_plot_data.rds"))
+m_list_chimp <- readRDS(paste0(checkpoints_path, "chimp_upset_plot_data.rds"))
+
+```
+
+# HUMAN UPSET PLOTS
+
+```{r}
+select  <- c("100000", "010000", "001000", "000100", "000010", "000001", "011000", "000101", "001100", "110000")
+
+cell_order <- c("Excitatory Neuron", "Inhibitory Neuron", "Astrocyte", "Oligodendrocyte", "Microglia", "OPC")
+ht_list = NULL
+max_set_size = max(sapply(m_list_human, set_size))
+max_comb_size = max(sapply(m_list_human, comb_size))
+for(i in seq_along(m_list_human)) {
+    ht_list = ht_list %v%
+        UpSet(  m_list[[i]],
+                top_annotation   = upset_top_annotation(m_list_human[[i]] , 
+                add_numbers = TRUE, 
+                gp = gpar(fill = "green"), 
+                height = unit(5, "cm"), 
+                annotation_name_rot = 0, 
+                bar_width = 0.75, 
+                numbers_rot = 0,
+                extend = 0.05, ylim = c(0, max_comb_size)), 
+                set_order = cell_order,
+                comb_order = NULL,
+right_annotation = NULL)
+}
+#ht_list
+
+```
+
+# CHIMPANZEE UPSET PLOTS
+
+```{r}
+select  <- c("100000", "010000", "001000", "000100", "000010", "000001", "011000", "000101", "001100", "110000")
+ht_list = NULL
+max_set_size = max(sapply(m_list_chimp, set_size))
+max_comb_size = max(sapply(m_list_chimp, comb_size))
+for(i in seq_along(m_list_chimp)) {
+    ht_list = ht_list %v%
+        UpSet(  m_list[[i]],
+                top_annotation   = upset_top_annotation(m_list_chimp[[i]] , 
+                add_numbers = TRUE, 
+                gp = gpar(fill = "green"), 
+                height = unit(5, "cm"), 
+                annotation_name_rot = 0, 
+                bar_width = 0.75, 
+                numbers_rot = 0,
+                extend = 0.05, ylim = c(0, max_comb_size)), 
+                set_order = cell_order,
+                comb_order = NULL,
+right_annotation = NULL)
+}
+#ht_list
+
+```

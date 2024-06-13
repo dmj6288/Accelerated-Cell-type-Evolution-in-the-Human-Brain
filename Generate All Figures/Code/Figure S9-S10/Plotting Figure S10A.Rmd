@@ -1,0 +1,42 @@
+---
+title: "Figure S13 - Functional convergence in GO terms"
+---
+
+```{r}
+source("../../Baseline/Figure S9-S10 Baseline.R")
+```
+
+```{r}
+
+reshaped_data <- readRDS(paste0(checkpoints_path, "functional_convergence_GO_table.rds"))
+
+```
+
+```{r}
+
+regulation.labs <- c("Chimpanzee Upregulated Gene-vs-BP terms", "Human Upregulated Gene-vs-BP terms")
+names(regulation.labs) <- c("CU", "HU")
+
+g <- ggplot(reshaped_data, aes(x = Description, y = Gene, color = regulation_category,
+                          shape = region)) +
+  geom_point(aes(color=cell_type)) +
+  scale_color_manual(values = c("Oligo" = "blue", "OPC" = "red")) +
+  theme_bw() + 
+  ylab("") + 
+  xlab("") + 
+  ggtitle("GO enrichment analysis") +
+  facet_grid(. ~ regulation, labeller = labeller(regulation = regulation.labs))   +
+  theme(axis.line = element_line(colour = "black"),
+        axis.text.x=element_text(size=8.5, angle = 0, vjust = 0.8, hjust = 0.5),
+        axis.text.y=element_text(size=10))       +
+  labs(x = "GO Term Description", y = "Gene Name", color = "Category")            +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10), drop = FALSE)    +
+  facet_grid(. ~ regulation, labeller = labeller(regulation = regulation.labs))   +
+  scale_size(range = c(2,8))
+
+ggsave(filename = paste0(figure_output_path, "Figure S13 - Go terms common to human and chimpanzees.jpg"), 
+       plot = g, device = "jpeg",
+       width=7.5, height=9, dpi=300)
+ 
+```
+

@@ -56,7 +56,7 @@ for (study in study_results[c(1, 5)]){
 		chimp_up_regulated_cell_type_entrez     <- bitr(chimp_up_regulated_cell_type,   fromType="SYMBOL", toType="ENTREZID", OrgDb="org.Hs.eg.db")
 		human_up_regulated_cell_type_entrez     <- bitr(human_up_regulated_cell_type,   fromType="SYMBOL", toType="ENTREZID", OrgDb="org.Hs.eg.db")
     
-		considered_Genes_cell_type_entrez       <- bitr(c(considered_Genes[[cell_type]], "EEIG1", "EEIG2"), 
+		considered_Genes_cell_type_entrez       <- bitr(c(considered_Genes[[cell_type]]), 
 								fromType="SYMBOL", toType="ENTREZID", OrgDb="org.Hs.eg.db")
 
 		print(length(considered_Genes_cell_type_entrez$ENTREZID))

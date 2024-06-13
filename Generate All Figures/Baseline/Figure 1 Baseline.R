@@ -13,6 +13,7 @@ suppressWarnings(suppressMessages(library(ggpubr)))
 suppressWarnings(suppressMessages(library(grid)))
 suppressWarnings(suppressMessages(library(readxl)))
 suppressWarnings(suppressMessages(library(xlsx)))
+suppressWarnings(suppressMessages(library(writexl)))
 
 folder_name                    <- "../../Cloud Data/major/"
 study_results                  <- list.files(folder_name)[c(1, 6)]

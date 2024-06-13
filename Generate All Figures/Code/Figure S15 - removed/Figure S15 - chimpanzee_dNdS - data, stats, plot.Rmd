@@ -1,0 +1,147 @@
+
+```{r}
+source("../../Baseline/Figure S15 Baseline.R")
+```
+
+```{r}
+ensembl99           <- readRDS("../../Visualization_data/Figure S15/ensembl99_list_V3.rds")
+```
+
+```{r}
+
+chimpanzee_gene_ensembl <- c()
+
+for (study in studies){
+  
+  DR_gene_list    <- readRDS(paste0(folder_name, study, "/", study, "0.05_original_CHIMP_DRGenes.rds"))
+  UR_gene_list    <- readRDS(paste0(folder_name, study, "/", study, "0.05_original_CHIMP_URGenes.rds"))
+  
+  considered_list <- readRDS(paste0(folder_name, study, "/", study, "0.05_three_species_considered_Genes.rds"))
+  
+  study_ensembl          <- ensembl99[[study]]
+  
+  study_wise_genes_ensembl      <- c()
+  
+  for (cell in names(UR_gene_list)){
+    
+    all_genes_by_cell_type <- c(DR_gene_list[[cell]], UR_gene_list[[cell]])
+    background_genes       <- setdiff(considered_list[[cell]], all_genes_by_cell_type)
+    
+    DEG_ensembl            <- study_ensembl[study_ensembl$Gene %in% all_genes_by_cell_type, ]
+    DEG_ensembl$DEG        <- "DEG"
+    
+    background_ensembl     <- study_ensembl[study_ensembl$Gene %in% background_genes, ]
+    background_ensembl$DEG <- "background"
+    
+    all_genes_ensembl      <- rbind(DEG_ensembl,
+                                    background_ensembl)
+    
+    all_genes_ensembl$Cell <- cell
+    
+    study_wise_genes_ensembl <- rbind(study_wise_genes_ensembl, 
+                                      all_genes_ensembl)
+    
+  }
+  
+  study_wise_genes_ensembl$Region <- region_list[[study]]
+  chimpanzee_gene_ensembl <- rbind(chimpanzee_gene_ensembl,
+                                   study_wise_genes_ensembl)
+  
+}
+
+chimpanzee_gene_ensembl$Cell_region <- paste0(chimpanzee_gene_ensembl$Cell, " ",
+                                              chimpanzee_gene_ensembl$Region)
+
+```
+
+```{r}
+saveRDS(chimpanzee_gene_ensembl, paste0("../../Visualization_data/Figure S15/chimpanzee_dNdS.rds"))
+```
+
+```{r}
+formula_str <- paste0("dNdS", " ~ DEG")
+  
+formula <- as.formula(formula_str)
+  
+results <- chimpanzee_gene_ensembl                 %>%
+           group_by(Cell, Region)                  %>%
+           wilcox_test(formula)                    %>% 
+           adjust_pvalue(method = "bonferroni")    %>% 
+           add_significance("p", cutpoints = c(0, 1e-04, 0.001, 0.01, 0.05, 1),
+                                 symbols   = c("****", "***", "**", "*", "ns"))  
+
+results$Cell_Region <- paste0(results$Cell, " ", results$Region)
+results <- results %>% add_xy_position(x = "Cell")
+results$y.position <- 2.5
+```
+
+```{r}
+
+saveRDS(results, paste0("../../Visualization_data/Figure S15/chimpanzee_dNdS_stats.rds"))
+
+```
+
+```{r}
+chimpanzee_gene_ensembl  <- readRDS("../../Visualization_data/Figure S15/chimpanzee_dNdS.rds")
+stat.test_DEG            <- readRDS("../../Visualization_data/Figure S15/chimpanzee_dNdS_stats.rds")
+
+df                       <- chimpanzee_gene_ensembl
+
+df$log_dNdS              <- log10(df$dNdS)
+df                       <- df %>% mutate(log_dNdS = if_else(log_dNdS == -Inf, -3, log_dNdS))
+
+mean_calculation_df      <- df[df$log_dNdS > -3, ]
+
+mean_data                <- mean_calculation_df %>% group_by(Cell, DEG, Region) %>% summarise(mean_value   = mean(log_dNdS))
+median_data              <- mean_calculation_df %>% group_by(Cell, DEG, Region) %>% summarise(median_value = median(log_dNdS))
+
+mean_data$Cell_Region    <- paste0(mean_data$Cell, " ", mean_data$Region)
+median_data$Cell_Region  <- paste0(median_data$Cell, " ", median_data$Region)
+
+breaks <- c(-3, -2, -1, 0, 1, 2, 3)
+cell_plot_list  <- list()
+cell_plot_count <- 1
+
+df$DEG <- factor(df$DEG, levels = c("DEG", "background"))
+
+for (cell_region in cell_plot_order){
+    
+    plot_df            <- df[df$Cell_region == cell_region, c("Gene", "DEG", "Cell", "Cell_region", "log_dNdS")]
+    plot_df            <- plot_df[!duplicated(plot_df$Gene), ]
+    
+    plot_mean_data     <- mean_data[mean_data$Cell_Region == cell_region, ]
+    plot_median_data   <- median_data[median_data$Cell_Region == cell_region, ]
+    
+    plot_stat.test_DEG <- stat.test_DEG[stat.test_DEG$Cell_Region %in% cell_region, ]
+    
+    cell_plot_list[[cell_plot_count]] <- ggplot(plot_df, aes(x=DEG, y=log_dNdS))                                                                                       + 
+                                         ggdist::stat_halfeye(aes(fill=DEG), adjust = .5, width = 0.6, .width = 0, justification = -.3, point_interval = NULL)         +
+                                         geom_point(aes(color=DEG), size = 1.5, alpha = .2, position = position_jitter(seed = 1, width = .1))                          +
+                                         geom_point(data = plot_mean_data,   aes(x = DEG, y = mean_value), color = "black", size = 2.5, shape = 18)                    + 
+                                         xlab("")                                             +
+                                         ylab("")                                             +
+                                         theme_bw()                                           +
+                                         theme(axis.text.y  = element_text(),
+                                               axis.text.x  = element_blank(),
+                                               axis.ticks.y = element_blank(),
+                                               axis.ticks.x = element_blank(),
+                                               plot.title = element_text(hjust = 0.5))        +
+                                         add_pvalue(plot_stat.test_DEG, label = "{p.signif}",
+                                                    label.size = 6)                           +
+                                         scale_fill_manual(values = c("DEG"="#ff6666", "background"="#fcb0b1"))        +
+                                         scale_colour_manual(values = c("DEG"="#0fbabd", "background"="skyblue"))      +
+                                         guides(fill=guide_legend(title="Type of Gene"))                               +
+                                         scale_y_continuous(limits = c(-3.25, 3.25), breaks = breaks)                      
+    
+    cell_plot_count <- cell_plot_count + 1
+    
+}
+
+cell_plot_arrange <- ggarrange(plotlist = cell_plot_list, nrow=2, ncol = 6, common.legend = TRUE, legend="bottom")
+
+ggsave(filename = "../../Figures/Figure S15/Chimpanzee_dNdS.jpg", plot = cell_plot_arrange, device = "jpeg",
+       width=15, height=9, dpi=300)
+
+
+```
+

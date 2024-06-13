@@ -51,7 +51,7 @@ for (cellname in names(cell_names_of_interest)){
     
     for (name in names(human_down_genes_sub_types_of_intereset)) {
       sub_type_combined_list[[name]] <- unique(c(human_down_genes_sub_types_of_intereset[[name]], 
-                                                 human_up_genes_sub_types_of_intereset[[name]]))
+                                                   human_up_genes_sub_types_of_intereset[[name]]))
     }
     
     human_genes_of_sub_types_of_intereset_union              <- Reduce(union, sub_type_combined_list)

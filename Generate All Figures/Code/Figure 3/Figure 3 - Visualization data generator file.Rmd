@@ -14,7 +14,7 @@ source("../../Baseline/Figure 3 Baseline.R")
 
 ```{r}
 
-merged_counts <- readRDS("../../../Visualization - cellbender processed data - 018/loci_overlap_calculator/4.count_overlaps_and_integrate/Merged_counts/merged_counts_with_pvalues_all_considered_genes_V5.rds")
+merged_counts <- readRDS("../../Visualization_data/Figure 3/merged_counts_with_pvalues_all_considered_genes_V6_HAQER.rds")
 
 ```
 
@@ -58,7 +58,8 @@ for (study in studies){
         df_DAR_celltype     <- df[df$major_celltypes == cell_type, ]
         df_DAR_celltype     <- df_DAR_celltype[, c("Gene", "Chimp_DOWN", "Chimp_UP", "Human_DOWN", "Human_UP")]
         
-        df              <- df[, c("Gene",    "HAR_Count", "cHAR_Count", "Count_NeuN_hyper", "Count_NeuN_hypo", "Total_cellDMR_count", "Chimp_hypo", "Human_hypo", "Chimp_hyper", "Human_hyper", "tandem_Count", "dNdS", "major_celltypes", colnames(df)[18:37])]
+        df              <- df[, c("Gene",    "HAR_Count", "cHAR_Count", "HAQER_Count", "Count_NeuN_hyper", "Count_NeuN_hypo", "Total_cellDMR_count", "Chimp_hypo", "Human_hypo", "Chimp_hyper", "Human_hyper", "tandem_Count", "dNdS", "major_celltypes", colnames(df)[19:38])]
+        
         df              <- df[!duplicated(df$Gene), ]
 
         df_final <- Reduce(function(x, y) full_join(x, y, by = "Gene"), list(df,  df_DAR_celltype))
@@ -135,9 +136,13 @@ barplot_table$DR_test <- DR_vector
 
 ```{r}
 
-saveRDS(barplot_table, "../../Visualization_data/Figure 3/full_table.rds")
+saveRDS(barplot_table, "../../Visualization_data/Figure 3/full_table_HAQER.rds")
 
 ```
 
+
+```{r}
+write_xlsx(barplot_table, "../../Supplementary Tables/Supplementary Table 5 - containing all plot variables.xlsx")
+```
 
 

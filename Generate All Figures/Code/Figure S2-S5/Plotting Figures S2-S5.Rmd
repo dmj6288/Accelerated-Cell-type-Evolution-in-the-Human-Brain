@@ -1,0 +1,213 @@
+
+
+```{r}
+source("../../Baseline/Figure S2-S5 Baseline.R")
+```
+
+```{r}
+
+chimp_down_regulated_Caglayan <- readRDS(paste0(checkpoints_path, "chimp_down_regulated_Caglayan.rds"))
+chimp_up_regulated_Caglayan   <- readRDS(paste0(checkpoints_path, "chimp_up_regulated_Caglayan.rds"))
+human_down_regulated_Caglayan <- readRDS(paste0(checkpoints_path, "human_down_regulated_Caglayan.rds"))
+human_up_regulated_Caglayan   <- readRDS(paste0(checkpoints_path, "human_up_regulated_Caglayan.rds"))
+
+chimp_down_regulated_Ma       <- readRDS(paste0(checkpoints_path, "chimp_down_regulated_Ma.rds"))
+chimp_up_regulated_Ma         <- readRDS(paste0(checkpoints_path, "chimp_up_regulated_Ma.rds"))
+human_down_regulated_Ma       <- readRDS(paste0(checkpoints_path, "human_down_regulated_Ma.rds"))
+human_up_regulated_Ma         <- readRDS(paste0(checkpoints_path, "human_up_regulated_Ma.rds"))
+
+considered_genes_cell_type    <- readRDS(paste0(checkpoints_path, "considered_genes_cell_type.rds"))
+
+```
+
+
+```{r}
+
+
+up_human_plots                  <- list()
+down_human_plots                <- list()
+up_chimp_plots                  <- list()
+down_chimp_plots                <- list()
+
+up_human_venn_common_genes_hash                  <- hash()
+down_human_venn_common_genes_hash                <- hash()
+up_chimp_venn_common_genes_hash                  <- hash()
+down_chimp_venn_common_genes_hash                <- hash()
+
+up_human_p_value                  <- list()
+down_human_p_value                <- list()
+up_chimp_p_value                  <- list()
+down_chimp_p_value                <- list()
+
+
+count                           <- 1
+
+cell_pvalue_vector <- c()
+
+for (cell_type in traditional_cell_types){
+  
+  gene_list_from_each_study_hash_up_human   <- list()
+  gene_list_from_each_study_hash_down_human <- list()
+  gene_list_from_each_study_hash_up_chimp   <- list()
+  gene_list_from_each_study_hash_down_chimp <- list()
+  
+  #cell_type <- traditional_cell_types[4]
+  
+  for (study in study_results){
+    
+    print(cell_type)
+    
+    chimp_down_regulated          <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_CHIMP_DRGenes.rds"))
+    human_down_regulated          <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_HUMAN_DRGenes.rds"))
+    chimp_up_regulated            <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_CHIMP_URGenes.rds"))
+    human_up_regulated            <- readRDS(paste0(folder_name, study, "/", study, FDR, "_original_HUMAN_URGenes.rds"))
+    
+    considered_Genes              <- readRDS(paste0(folder_name, study, "/", study, FDR, "_three_species_considered_Genes.rds"))
+  
+    gene_list_from_each_study_hash_up_human[[study]]   <- intersect(human_up_regulated[[cell_type]],   considered_genes_cell_type[[cell_type]])
+    gene_list_from_each_study_hash_down_human[[study]] <- intersect(human_down_regulated[[cell_type]], considered_genes_cell_type[[cell_type]])
+    gene_list_from_each_study_hash_up_chimp[[study]]   <- intersect(chimp_up_regulated[[cell_type]],   considered_genes_cell_type[[cell_type]])
+    gene_list_from_each_study_hash_down_chimp[[study]] <- intersect(chimp_down_regulated[[cell_type]], considered_genes_cell_type[[cell_type]])
+  }  
+  
+  print(length(considered_genes_cell_type[[cell_type]]))
+  
+  names(gene_list_from_each_study_hash_up_human)    <- c("PCC", "dlPFC")
+  names(gene_list_from_each_study_hash_down_human)  <- c("PCC", "dlPFC")
+  names(gene_list_from_each_study_hash_up_chimp)    <- c("PCC", "dlPFC")
+  names(gene_list_from_each_study_hash_down_chimp)  <- c("PCC", "dlPFC")
+  
+  cell_type_gene_list_from_each_study_up_human   <- gene_list_from_each_study_hash_up_human
+  up_human_venn                                  <- process_region_data(Venn(cell_type_gene_list_from_each_study_up_human))
+  up_human_p_value[[cell_type]]                  <- enrich_pvalue(length(considered_genes_cell_type[[cell_type]]), 
+                                                                  up_human_venn$count[1] - up_human_venn$count[3], 
+                                                                  up_human_venn$count[2] - up_human_venn$count[3], 
+                                                                  up_human_venn$count[3])
+  
+  png(paste0(figure_output_path,  100*FDR, cell_type, "HUMAN_UP_VennDiagram_noFill.jpg"), width = 480)  
+  
+  if(length(human_up_regulated_Caglayan[[cell_type]]) < length(human_up_regulated_Ma[[cell_type]])){
+    inverted <- TRUE
+  }else{
+    inverted <- FALSE
+  }
+  up_human_plots[[count]] <- draw.pairwise.venn(area1 = length(human_up_regulated_Caglayan[[cell_type]]), 
+                                                area2 = length(human_up_regulated_Ma[[cell_type]]),
+                                           cross.area = length(intersect(human_up_regulated_Caglayan[[cell_type]],
+                                                                         human_up_regulated_Ma[[cell_type]])), 
+                                                 fill = "white", col = c("orange", "green"), lwd = 5, 
+                                                alpha = c(0.5, 0.5), cex = 2.5, 
+                                               scaled = TRUE, category = c("PCC", "dlPFC"), cat.cex = 2, 
+                                              cat.pos = 1, inverted = inverted)
+
+  grid.arrange(gTree(children = up_human_plots[[count]]), # Add title & subtitle
+             top = textGrob(cell_full_names_hash[[cell_type]], gp=gpar(fontsize=20), just = "center", vjust = 3),
+             bottom = textGrob(paste0("p-value = ", as.character(signif(up_human_p_value[[cell_type]], digits = 3))),
+                                       gp=gpar(fontsize=15), just = "center", vjust = -4))
+
+  dev.off()
+  
+  if(length(human_down_regulated_Caglayan[[cell_type]]) < length(human_down_regulated_Ma[[cell_type]])){
+    inverted <- TRUE
+  }else{
+    inverted <- FALSE
+  }
+  
+  cell_type_gene_list_from_each_study_down_human   <- gene_list_from_each_study_hash_down_human
+  down_human_venn                                  <- process_region_data(Venn(cell_type_gene_list_from_each_study_down_human))
+  down_human_p_value[[cell_type]]                  <- enrich_pvalue(length(considered_genes_cell_type[[cell_type]]), 
+                                                                  down_human_venn$count[1] - down_human_venn$count[3], 
+                                                                  down_human_venn$count[2] - down_human_venn$count[3], 
+                                                                  down_human_venn$count[3])
+  
+  png(paste0(figure_output_path,  100*FDR, cell_type, "HUMAN_DOWN_VennDiagram_noFill.jpg"), width = 480)  
+  down_human_plots[[count]] <- draw.pairwise.venn(area1 = length(human_down_regulated_Caglayan[[cell_type]]), 
+                   area2 = length(human_down_regulated_Ma[[cell_type]]),
+                   fill = "white", col = c("orange", "green"), lwd = 5, 
+                   alpha = c(0.5, 0.5), cex = 2.5, 
+                   scaled=TRUE, category = c("PCC", "dlPFC"), cat.cex = 2, 
+                   cat.pos = 1, inverted = inverted,
+                   cross.area = length(intersect(human_down_regulated_Caglayan[[cell_type]], 
+                                                 human_down_regulated_Ma[[cell_type]])))
+
+  grid.arrange(gTree(children = down_human_plots[[count]]), # Add title & subtitle
+             top = textGrob(cell_full_names_hash[[cell_type]], gp=gpar(fontsize=20), just = "center", vjust = 3),
+             bottom = textGrob(paste0("p-value = ", as.character(signif(down_human_p_value[[cell_type]], digits = 3))),
+                                       gp=gpar(fontsize=15), just = "center", vjust = -4))
+
+  dev.off()
+  
+  if(length(chimp_up_regulated_Caglayan[[cell_type]]) < length(chimp_up_regulated_Ma[[cell_type]])){
+    inverted <- TRUE
+  }else{
+    inverted <- FALSE
+  }
+  
+  cell_type_gene_list_from_each_study_up_chimp   <- gene_list_from_each_study_hash_up_chimp
+  up_chimp_venn                                  <- process_region_data(Venn(cell_type_gene_list_from_each_study_up_chimp))
+  up_chimp_p_value[[cell_type]]                  <- enrich_pvalue(length(considered_genes_cell_type[[cell_type]]), 
+                                                                  up_chimp_venn$count[1] - up_chimp_venn$count[3], 
+                                                                  up_chimp_venn$count[2] - up_chimp_venn$count[3], 
+                                                                  up_chimp_venn$count[3])
+  
+  png(paste0(figure_output_path,  100*FDR, cell_type, "chimp_UP_VennDiagram_noFill.jpg"), width = 480)  
+  up_chimp_plots[[count]] <- draw.pairwise.venn(area1 = length(chimp_up_regulated_Caglayan[[cell_type]]), 
+                   area2 = length(chimp_up_regulated_Ma[[cell_type]]),
+                   fill = "white", col = c("orange", "green"), lwd = 5, 
+                   alpha = c(0.5, 0.5), cex = 2.5, 
+                   scaled=TRUE, category = c("PCC", "dlPFC"), cat.cex = 2, 
+                   cat.pos = 1, inverted = inverted,
+                   cross.area = length(intersect(chimp_up_regulated_Caglayan[[cell_type]], 
+                                                 chimp_up_regulated_Ma[[cell_type]])))
+
+grid.arrange(gTree(children = up_chimp_plots[[count]]), # Add title & subtitle
+           top = textGrob(cell_full_names_hash[[cell_type]], gp=gpar(fontsize=20), just = "center", vjust = 3),
+           bottom = textGrob(paste0("p-value = ", as.character(signif(up_chimp_p_value[[cell_type]], digits = 3))),
+                                     gp=gpar(fontsize=15), just = "center", vjust = -4))
+
+  dev.off()
+  
+  if(length(chimp_down_regulated_Caglayan[[cell_type]]) < length(chimp_down_regulated_Ma[[cell_type]])){
+    inverted <- TRUE
+  }else{
+    inverted <- FALSE
+  }
+  
+  cell_type_gene_list_from_each_study_down_chimp   <- gene_list_from_each_study_hash_down_chimp
+  down_chimp_venn                                  <- process_region_data(Venn(cell_type_gene_list_from_each_study_down_chimp))
+  down_chimp_p_value[[cell_type]]                  <- enrich_pvalue(length(considered_genes_cell_type[[cell_type]]), 
+                                                                  down_chimp_venn$count[1] - down_chimp_venn$count[3], 
+                                                                  down_chimp_venn$count[2] - down_chimp_venn$count[3], 
+                                                                  down_chimp_venn$count[3])
+  
+  png(paste0(figure_output_path,  100*FDR, cell_type, "chimp_DOWN_VennDiagram_noFill.jpg"), width = 480)  
+  down_chimp_plots[[count]] <- draw.pairwise.venn(area1 = length(chimp_down_regulated_Caglayan[[cell_type]]), 
+                   area2 = length(chimp_down_regulated_Ma[[cell_type]]),
+                   fill = "white", col = c("orange", "green"), lwd = 5, 
+                   alpha = c(0.5, 0.5), cex = 2.5, 
+                   scaled=TRUE, category = c("PCC", "dlPFC"), cat.cex = 2, 
+                   cat.pos = 1, inverted = inverted,
+                   cross.area = length(intersect(chimp_down_regulated_Caglayan[[cell_type]], 
+                                                 chimp_down_regulated_Ma[[cell_type]])))
+
+grid.arrange(gTree(children = down_chimp_plots[[count]]), # Add title & subtitle
+           top = textGrob(cell_full_names_hash[[cell_type]], gp=gpar(fontsize=20), just = "center", vjust = 3),
+           bottom = textGrob(paste0("p-value = ", as.character(signif(down_chimp_p_value[[cell_type]], digits = 3))),
+                                     gp=gpar(fontsize=15), just = "center", vjust = -4))
+
+  dev.off()
+  count <- count + 1
+  
+  cell_pvalue_vector <- rbind(cell_pvalue_vector, c(up_human_p_value[[cell_type]], up_chimp_p_value[[cell_type]], down_human_p_value[[cell_type]], down_chimp_p_value[[cell_type]]))
+  }
+
+rownames(cell_pvalue_vector) <- unique(values(cell_full_names_hash))
+colnames(cell_pvalue_vector) <- c("HU", "CU", "HD", "CD")
+
+```
+
+```{r}
+
+writexl::write_xlsx(as.data.frame(cell_pvalue_vector), paste0(supplementary_table_path, "Supplementary Table 3.xlsx"))
+
+```
