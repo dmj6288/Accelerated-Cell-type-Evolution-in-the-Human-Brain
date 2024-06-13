@@ -1,0 +1,1994 @@
+[1] "Caglayan"  "Jorstad"   "Kanton"    "Khrameeva" "Ma"       
+<hash> containing 3 key-value pair(s).
+  Jorstad_df_chimp_macak.rds_sce.rdscounts_ls.rds : Jorstad_df_chimp_macak.rds_sce.rdsmetadata_ls.rds
+  Jorstad_df_human_chimp.rds_sce.rdscounts_ls.rds : Jorstad_df_human_chimp.rds_sce.rdsmetadata_ls.rds
+  Jorstad_df_human_macak.rds_sce.rdscounts_ls.rds : Jorstad_df_human_macak.rds_sce.rdsmetadata_ls.rds
+[1] "Jorstad_df_chimp_macak.rds_sce.rdscounts_ls.rds"
+[1] "Astro_#chimp-vs-Astro_#macaque"
+[1] 1
+[1] "# -------- CLUST MAT -------- #"
+20 x 9 sparse Matrix of class "dgCMatrix"
+        Astro_#chimp_C19.32.001 Astro_#chimp_C19.32.002 Astro_#chimp_C19.32.003
+PRDM16                     4280                    1286                    1492
+PEX10                         9                       6                       3
+PEX14                       739                     478                     573
+PLCH2                        39                      19                      49
+SPSB1                        37                      17                      50
+SLC2A5                      143                       2                       6
+PLEKHM2                     434                     351                     500
+NMNAT1                      225                      67                     148
+CCDC27                        .                       .                       .
+MMEL1                        17                       .                       .
+TMEM51                     1178                     145                     269
+FBXO42                     1068                     578                     744
+ALDH4A1                      76                       .                       .
+CLCN6                       222                      73                     196
+CELA2B                        7                       .                       .
+RER1                         27                      34                     111
+PANK4                        19                      41                      28
+VPS13D                     3653                    1156                    1345
+RBP7                          9                      11                       4
+GPR157                       39                       4                       4
+        Astro_#chimp_C19.32.004 Astro_#chimp_C19.32.005 Astro_#chimp_C19.32.006
+PRDM16                     1448                   10274                    1166
+PEX10                         5                      14                       1
+PEX14                       295                    3923                     198
+PLCH2                        10                     103                      19
+SPSB1                         8                      71                       1
+SLC2A5                        7                      96                       4
+PLEKHM2                     319                    2075                     128
+NMNAT1                       52                     829                      91
+CCDC27                        .                       2                       .
+MMEL1                         .                      31                       1
+TMEM51                       91                    1671                      43
+FBXO42                      381                    3657                     440
+ALDH4A1                       .                     102                      12
+CLCN6                        64                    1621                     177
+CELA2B                        .                       3                       .
+RER1                         49                     894                      80
+PANK4                        19                     691                      20
+VPS13D                      835                    6863                    1136
+RBP7                          9                      64                       2
+GPR157                        4                      98                       4
+        Astro_#chimp_C19.32.007 Astro_#macaque_Q19.26.011
+PRDM16                     1204                       476
+PEX10                         2                        73
+PEX14                       640                       234
+PLCH2                         1                        12
+SPSB1                        53                         7
+SLC2A5                       16                        12
+PLEKHM2                     199                       493
+NMNAT1                      270                        52
+CCDC27                        2                         2
+MMEL1                         5                         1
+TMEM51                      643                       130
+FBXO42                      372                       338
+ALDH4A1                       .                       123
+CLCN6                       391                        73
+CELA2B                        .                         2
+RER1                          6                        91
+PANK4                         3                        51
+VPS13D                      891                       585
+RBP7                          6                         2
+GPR157                       13                         4
+        Astro_#macaque_Q19.26.015
+PRDM16                          .
+PEX10                           2
+PEX14                           2
+PLCH2                           .
+SPSB1                           5
+SLC2A5                          1
+PLEKHM2                         1
+NMNAT1                          .
+CCDC27                          .
+MMEL1                           .
+TMEM51                          3
+FBXO42                          3
+ALDH4A1                         .
+CLCN6                           1
+CELA2B                          .
+RER1                            4
+PANK4                           .
+VPS13D                          7
+RBP7                            2
+GPR157                          .
+0 x 9 sparse Matrix of class "dgCMatrix"
+     Astro_#chimp_C19.32.001 Astro_#chimp_C19.32.002 Astro_#chimp_C19.32.003
+     Astro_#chimp_C19.32.004 Astro_#chimp_C19.32.005 Astro_#chimp_C19.32.006
+     Astro_#chimp_C19.32.007 Astro_#macaque_Q19.26.011
+     Astro_#macaque_Q19.26.015
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                  cluster_sample_id cluster_id
+Astro_#chimp_C19.32.001     Astro_#chimp_C19.32.001      Astro
+Astro_#chimp_C19.32.002     Astro_#chimp_C19.32.002      Astro
+Astro_#chimp_C19.32.003     Astro_#chimp_C19.32.003      Astro
+Astro_#chimp_C19.32.004     Astro_#chimp_C19.32.004      Astro
+Astro_#chimp_C19.32.005     Astro_#chimp_C19.32.005      Astro
+Astro_#chimp_C19.32.006     Astro_#chimp_C19.32.006      Astro
+Astro_#chimp_C19.32.007     Astro_#chimp_C19.32.007      Astro
+Astro_#macaque_Q19.26.011 Astro_#macaque_Q19.26.011      Astro
+Astro_#macaque_Q19.26.015 Astro_#macaque_Q19.26.015      Astro
+                                   sample_id   human_age sex compare
+Astro_#chimp_C19.32.001     chimp_C19.32.001  0.04297592   F       B
+Astro_#chimp_C19.32.002     chimp_C19.32.002  1.08046525   M       B
+Astro_#chimp_C19.32.003     chimp_C19.32.003  1.08046525   M       B
+Astro_#chimp_C19.32.004     chimp_C19.32.004 -0.42571443   M       B
+Astro_#chimp_C19.32.005     chimp_C19.32.005  1.17602347   F       B
+Astro_#chimp_C19.32.006     chimp_C19.32.006 -0.04803191   F       B
+Astro_#chimp_C19.32.007     chimp_C19.32.007 -0.04803191   M       B
+Astro_#macaque_Q19.26.011 macaque_Q19.26.011 -1.35854474   F       A
+Astro_#macaque_Q19.26.015 macaque_Q19.26.015 -1.49960689   F       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 12815 rows and 5 columns
+        baseMean log2FoldChange     lfcSE     pvalue      padj
+       <numeric>      <numeric> <numeric>  <numeric> <numeric>
+PRDM16  922.1186       1.946174  0.890233 0.00350113 0.0507082
+PEX10    28.5713      -2.193233  1.620941 0.00963408 0.0913634
+PEX14   306.5092       0.191667  0.592863 0.51675502 0.7646303
+PLCH2    11.4048      -0.135535  1.066164 0.77006428        NA
+SPSB1    59.9949      -0.712548  1.285664 0.19715899 0.4733490
+...          ...            ...       ...        ...       ...
+ADARB1   206.158       0.855582  0.866453 0.06135526 0.2544352
+NRIP1    149.345      -1.689062  1.166698 0.01630253 0.1225625
+RCAN1    268.312       2.130864  0.978664 0.00320903 0.0487992
+GRIK1    196.229      -0.254043  0.723315 0.48198110 0.7394737
+APP     1113.697      -0.284065  0.565061 0.28447806 0.5712954
+[1] "Excite_#chimp-vs-Excite_#macaque"
+[1] 2
+[1] "# -------- CLUST MAT -------- #"
+20 x 10 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 10 column names ‘Excite_#chimp_C19.32.001’, ‘Excite_#chimp_C19.32.002’, ‘Excite_#chimp_C19.32.003’ ... ]]
+                                                                   
+PRDM16    255   157   130   108   305    83   135   241   177   178
+PEX10    1182   587   360   622   680   341   476  5337  4141  5319
+PEX14   31226 13621 10181 10116 30744  6031 20316 21754 14073 16734
+PLCH2    3427  2808  2603  1930  5246  1082  2667  1071  1380  2181
+SPSB1    3899   944   926   959  3041   993  2732  1709  1376  2267
+SLC2A5   1244   438   317   459  1161   234   799   890   705  1276
+PLEKHM2 30387 12160 11097 11595 33613  7083 20381 25103 16364 17920
+NMNAT1  12282  4987  4231  3687 13292  2576  6897  6676  3764  7259
+CCDC27     98    20    19    22   131    10    83   757   628   970
+MMEL1     299    63    25    32   211    15   156   572   658   924
+TMEM51    959   463   341   297  1285   149   661  2211  1599  2084
+FBXO42  46089 19330 14145 14502 48252 11020 31760 29382 19768 19970
+ALDH4A1   218     .    20     3   151     .   235  1109   693   776
+CLCN6   18598  5252  6493  6062 18053  3073 13787  9934  5929  7235
+CELA2B    632   114    76   106   530    29   537   600   736  1514
+RER1    10870  4294  4076  4041 11351  2165  7831  7625  4974  5341
+PANK4    3422  1769  1341  1678  5060   935  3324 10211  4700  4408
+VPS13D  80403 31860 23584 24610 77438 17256 52494 52368 37268 28743
+RBP7      597   270   156   376   626   110   421   970   806  1301
+GPR157   1030   335   207   205   668   210   799   809   583  1020
+0 x 10 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 10 column names ‘Excite_#chimp_C19.32.001’, ‘Excite_#chimp_C19.32.002’, ‘Excite_#chimp_C19.32.003’ ... ]]
+              
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                    cluster_sample_id cluster_id
+Excite_#chimp_C19.32.001     Excite_#chimp_C19.32.001     Excite
+Excite_#chimp_C19.32.002     Excite_#chimp_C19.32.002     Excite
+Excite_#chimp_C19.32.003     Excite_#chimp_C19.32.003     Excite
+Excite_#chimp_C19.32.004     Excite_#chimp_C19.32.004     Excite
+Excite_#chimp_C19.32.005     Excite_#chimp_C19.32.005     Excite
+Excite_#chimp_C19.32.006     Excite_#chimp_C19.32.006     Excite
+Excite_#chimp_C19.32.007     Excite_#chimp_C19.32.007     Excite
+Excite_#macaque_Q19.26.010 Excite_#macaque_Q19.26.010     Excite
+Excite_#macaque_Q19.26.011 Excite_#macaque_Q19.26.011     Excite
+Excite_#macaque_Q19.26.015 Excite_#macaque_Q19.26.015     Excite
+                                    sample_id  human_age sex compare
+Excite_#chimp_C19.32.001     chimp_C19.32.001 -0.2437159   M       B
+Excite_#chimp_C19.32.002     chimp_C19.32.002  1.1568045   M       B
+Excite_#chimp_C19.32.003     chimp_C19.32.003  0.1074720   F       B
+Excite_#chimp_C19.32.004     chimp_C19.32.004  0.1074720   M       B
+Excite_#chimp_C19.32.005     chimp_C19.32.005  0.1920956   F       B
+Excite_#chimp_C19.32.006     chimp_C19.32.006  1.1568045   M       B
+Excite_#chimp_C19.32.007     chimp_C19.32.007  1.2456593   F       B
+Excite_#macaque_Q19.26.010 macaque_Q19.26.010 -1.3692097   F       A
+Excite_#macaque_Q19.26.011 macaque_Q19.26.011 -1.1111078   F       A
+Excite_#macaque_Q19.26.015 macaque_Q19.26.015 -1.2422743   F       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 13087 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue        padj
+       <numeric>      <numeric> <numeric>   <numeric>   <numeric>
+PRDM16   168.391      -0.202433  0.481349 5.59515e-01 6.75745e-01
+PEX10   1781.420      -2.698497  0.647484 2.20038e-06 1.67811e-05
+PEX14  15587.359      -0.102126  0.190910 5.70036e-01 6.85730e-01
+PLCH2   2376.510       0.388333  0.498607 2.76302e-01 3.99334e-01
+SPSB1   1684.393      -0.181782  0.393406 5.58038e-01 6.74210e-01
+...          ...            ...       ...         ...         ...
+ADARB1   19913.1       0.286914  0.214158 1.47925e-01 2.46957e-01
+NRIP1    13034.4      -1.313625  0.298654 8.12704e-07 6.89297e-06
+RCAN1    14141.5       0.785241  0.168724 8.80668e-07 7.37968e-06
+GRIK1    19644.3       1.568118  0.470528 5.97740e-05 3.19421e-04
+APP     114130.5       0.132184  0.291883 6.03264e-01 7.15119e-01
+[1] "Inhibit_#chimp-vs-Inhibit_#macaque"
+[1] 3
+[1] "# -------- CLUST MAT -------- #"
+20 x 10 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 10 column names ‘Inhibit_#chimp_C19.32.001’, ‘Inhibit_#chimp_C19.32.002’, ‘Inhibit_#chimp_C19.32.003’ ... ]]
+                                                                   
+PRDM16     99    26    47    40   152    32    64    68    74    97
+PEX10     437   148   157   242   170   156    64  3120  3664  4698
+PEX14   10432  5212  7614  5062 13112  3626  7028 11403 10121 13164
+PLCH2    2674  1384  2005  1855  3101  1437  1905  3093  2312  3732
+SPSB1     538   188   378   304   614   370   440   710   661   824
+SLC2A5    329    96   156   144   531   114   266   264   318   621
+PLEKHM2  8376  3873  5872  4599  9728  3291  6118 10600 10617 12354
+NMNAT1   4320  1493  2779  1527  4868  1379  2066  3233  2345  4804
+CCDC27     13     .     3     8    52    14    20   290   304   400
+MMEL1     141    42    66    41   178   102    82   214   257   550
+TMEM51   1165   778  1501   731  1819   619   814  1442  1584  2144
+FBXO42  15946  7992  9824  7920 21323  6584 12685 15205 13875 16419
+ALDH4A1    68     .    16     2    50     .    67   600   500   626
+CLCN6    6210  1987  4490  2843  9551  2113  5201  5013  4180  6669
+CELA2B    144     7    25    36   191     9   130   174   191   611
+RER1     3185  1236  1962  1512  3722   917  2176  3547  2793  4147
+PANK4    1093   403   567   654  1919   349  1015  4464  2832  2596
+VPS13D  29678 14199 19035 14568 35705 11496 23592 23727 20745 20822
+RBP7      242    53    90   116   218    41   127   440   514   869
+GPR157    307    90   127   111   235   134   410   301   226   462
+0 x 10 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 10 column names ‘Inhibit_#chimp_C19.32.001’, ‘Inhibit_#chimp_C19.32.002’, ‘Inhibit_#chimp_C19.32.003’ ... ]]
+              
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                      cluster_sample_id cluster_id
+Inhibit_#chimp_C19.32.001     Inhibit_#chimp_C19.32.001    Inhibit
+Inhibit_#chimp_C19.32.002     Inhibit_#chimp_C19.32.002    Inhibit
+Inhibit_#chimp_C19.32.003     Inhibit_#chimp_C19.32.003    Inhibit
+Inhibit_#chimp_C19.32.004     Inhibit_#chimp_C19.32.004    Inhibit
+Inhibit_#chimp_C19.32.005     Inhibit_#chimp_C19.32.005    Inhibit
+Inhibit_#chimp_C19.32.006     Inhibit_#chimp_C19.32.006    Inhibit
+Inhibit_#chimp_C19.32.007     Inhibit_#chimp_C19.32.007    Inhibit
+Inhibit_#macaque_Q19.26.010 Inhibit_#macaque_Q19.26.010    Inhibit
+Inhibit_#macaque_Q19.26.011 Inhibit_#macaque_Q19.26.011    Inhibit
+Inhibit_#macaque_Q19.26.015 Inhibit_#macaque_Q19.26.015    Inhibit
+                                     sample_id  human_age sex compare
+Inhibit_#chimp_C19.32.001     chimp_C19.32.001 -0.2437159   M       B
+Inhibit_#chimp_C19.32.002     chimp_C19.32.002  1.1568045   M       B
+Inhibit_#chimp_C19.32.003     chimp_C19.32.003  0.1920956   F       B
+Inhibit_#chimp_C19.32.004     chimp_C19.32.004  0.1074720   M       B
+Inhibit_#chimp_C19.32.005     chimp_C19.32.005  1.1568045   M       B
+Inhibit_#chimp_C19.32.006     chimp_C19.32.006  1.2456593   F       B
+Inhibit_#chimp_C19.32.007     chimp_C19.32.007  0.1074720   F       B
+Inhibit_#macaque_Q19.26.010 macaque_Q19.26.010 -1.3692097   F       A
+Inhibit_#macaque_Q19.26.011 macaque_Q19.26.011 -1.1111078   F       A
+Inhibit_#macaque_Q19.26.015 macaque_Q19.26.015 -1.2422743   F       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 13085 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue        padj
+       <numeric>      <numeric> <numeric>   <numeric>   <numeric>
+PRDM16   61.8966     0.00235575  0.490961 9.94272e-01 0.997388589
+PEX10   982.1078    -2.81620327  0.936147 7.33136e-05 0.000549747
+PEX14  8014.9490    -0.21678301  0.227818 2.79099e-01 0.442418156
+PLCH2  2271.6598    -0.13428434  0.328042 6.06437e-01 0.740364927
+SPSB1   474.7922    -0.38239673  0.429417 2.18805e-01 0.373231463
+...          ...            ...       ...         ...         ...
+ADARB1  11681.46     0.48364190  0.301186   0.0505743   0.1238813
+NRIP1    7210.47    -0.41517443  0.309475   0.0988726   0.2074643
+RCAN1    6764.48     0.68539787  0.379725   0.0205225   0.0607137
+GRIK1  155407.54    -0.18778842  0.376359   0.5093414   0.6648775
+APP     58764.49     0.00337443  0.296622   0.9889482   0.9945219
+[1] "Microglia_#chimp-vs-Microglia_#macaque"
+[1] 4
+[1] "# -------- CLUST MAT -------- #"
+20 x 9 sparse Matrix of class "dgCMatrix"
+        Microglia_#chimp_C19.32.001 Microglia_#chimp_C19.32.002
+PRDM16                            1                           .
+PEX10                             .                           1
+PEX14                           311                           9
+PLCH2                             .                           .
+SPSB1                           299                           4
+SLC2A5                         1557                           6
+PLEKHM2                         118                           6
+NMNAT1                          152                           3
+CCDC27                            .                           .
+MMEL1                             8                           .
+TMEM51                           75                           .
+FBXO42                          535                           6
+ALDH4A1                           .                           .
+CLCN6                           349                           5
+CELA2B                            1                           .
+RER1                            304                           .
+PANK4                             .                           .
+VPS13D                         1226                          19
+RBP7                              9                           .
+GPR157                            6                           .
+        Microglia_#chimp_C19.32.003 Microglia_#chimp_C19.32.004
+PRDM16                            .                           .
+PEX10                             .                           .
+PEX14                            75                          87
+PLCH2                             .                           .
+SPSB1                             4                          42
+SLC2A5                           73                         119
+PLEKHM2                          63                          58
+NMNAT1                            5                          15
+CCDC27                            .                           .
+MMEL1                             .                           .
+TMEM51                           25                           9
+FBXO42                           74                          62
+ALDH4A1                           .                           .
+CLCN6                            15                          22
+CELA2B                            .                           .
+RER1                             10                          13
+PANK4                             4                           .
+VPS13D                          144                         190
+RBP7                              .                           .
+GPR157                            2                           3
+        Microglia_#chimp_C19.32.005 Microglia_#chimp_C19.32.006
+PRDM16                            .                           .
+PEX10                             .                           .
+PEX14                            45                          10
+PLCH2                             .                           4
+SPSB1                             4                           3
+SLC2A5                           53                          29
+PLEKHM2                          54                          10
+NMNAT1                           17                           .
+CCDC27                            .                           .
+MMEL1                             .                           .
+TMEM51                           15                           .
+FBXO42                           55                          23
+ALDH4A1                           .                           .
+CLCN6                            10                           .
+CELA2B                            .                           .
+RER1                             12                           3
+PANK4                             .                           .
+VPS13D                          355                          49
+RBP7                              .                           .
+GPR157                           23                           .
+        Microglia_#chimp_C19.32.007 Microglia_#macaque_Q19.26.011
+PRDM16                            3                             .
+PEX10                             .                            59
+PEX14                           198                           398
+PLCH2                             2                             3
+SPSB1                           154                            97
+SLC2A5                         1532                           833
+PLEKHM2                         328                           574
+NMNAT1                            7                            89
+CCDC27                            .                            17
+MMEL1                            20                             4
+TMEM51                           25                           228
+FBXO42                          704                           633
+ALDH4A1                           .                             3
+CLCN6                           448                           282
+CELA2B                            .                             4
+RER1                             18                           125
+PANK4                             2                            33
+VPS13D                          851                          1148
+RBP7                              .                            10
+GPR157                            2                             8
+        Microglia_#macaque_Q19.26.015
+PRDM16                              .
+PEX10                               3
+PEX14                              16
+PLCH2                               .
+SPSB1                               1
+SLC2A5                             49
+PLEKHM2                            20
+NMNAT1                              2
+CCDC27                              .
+MMEL1                               .
+TMEM51                             20
+FBXO42                             29
+ALDH4A1                             .
+CLCN6                              12
+CELA2B                              1
+RER1                                4
+PANK4                               .
+VPS13D                             37
+RBP7                                1
+GPR157                              .
+0 x 9 sparse Matrix of class "dgCMatrix"
+     Microglia_#chimp_C19.32.001 Microglia_#chimp_C19.32.002
+     Microglia_#chimp_C19.32.003 Microglia_#chimp_C19.32.004
+     Microglia_#chimp_C19.32.005 Microglia_#chimp_C19.32.006
+     Microglia_#chimp_C19.32.007 Microglia_#macaque_Q19.26.011
+     Microglia_#macaque_Q19.26.015
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                          cluster_sample_id cluster_id
+Microglia_#chimp_C19.32.001     Microglia_#chimp_C19.32.001  Microglia
+Microglia_#chimp_C19.32.002     Microglia_#chimp_C19.32.002  Microglia
+Microglia_#chimp_C19.32.003     Microglia_#chimp_C19.32.003  Microglia
+Microglia_#chimp_C19.32.004     Microglia_#chimp_C19.32.004  Microglia
+Microglia_#chimp_C19.32.005     Microglia_#chimp_C19.32.005  Microglia
+Microglia_#chimp_C19.32.006     Microglia_#chimp_C19.32.006  Microglia
+Microglia_#chimp_C19.32.007     Microglia_#chimp_C19.32.007  Microglia
+Microglia_#macaque_Q19.26.011 Microglia_#macaque_Q19.26.011  Microglia
+Microglia_#macaque_Q19.26.015 Microglia_#macaque_Q19.26.015  Microglia
+                                       sample_id   human_age sex compare
+Microglia_#chimp_C19.32.001     chimp_C19.32.001 -0.42571443   M       B
+Microglia_#chimp_C19.32.002     chimp_C19.32.002  1.17602347   F       B
+Microglia_#chimp_C19.32.003     chimp_C19.32.003  1.08046525   M       B
+Microglia_#chimp_C19.32.004     chimp_C19.32.004 -0.04803191   F       B
+Microglia_#chimp_C19.32.005     chimp_C19.32.005  0.04297592   F       B
+Microglia_#chimp_C19.32.006     chimp_C19.32.006 -0.04803191   M       B
+Microglia_#chimp_C19.32.007     chimp_C19.32.007  1.08046525   M       B
+Microglia_#macaque_Q19.26.011 macaque_Q19.26.011 -1.35854474   F       A
+Microglia_#macaque_Q19.26.015 macaque_Q19.26.015 -1.49960689   F       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 12332 rows and 5 columns
+        baseMean log2FoldChange     lfcSE    pvalue      padj
+       <numeric>      <numeric> <numeric> <numeric> <numeric>
+PRDM16  0.158241    -0.05547749  1.370728 0.8430218        NA
+PEX10   2.996533    -1.01262110  2.034047 0.0440196        NA
+PEX14  61.316247    -0.00786315  0.371128 0.9572918  0.988377
+PLCH2   1.604693     0.25414045  1.424281 0.4155476        NA
+SPSB1  25.819655     0.40984101  1.058648 0.2697673  0.623137
+...          ...            ...       ...       ...       ...
+ADARB1   38.6877     -0.2594588  0.690986  0.304285  0.656168
+NRIP1   155.8281     -0.0943385  0.652944  0.706366  0.900619
+RCAN1    30.7141     -0.0567166  0.606470  0.809837  0.937688
+GRIK1    85.4615     -0.3337124  0.825123  0.265004  0.617654
+APP     381.4910     -0.1641310  0.480328  0.352068  0.696714
+[1] "Oligo_#chimp-vs-Oligo_#macaque"
+[1] 5
+[1] "# -------- CLUST MAT -------- #"
+20 x 10 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 10 column names ‘Oligo_#chimp_C19.32.001’, ‘Oligo_#chimp_C19.32.002’, ‘Oligo_#chimp_C19.32.003’ ... ]]
+                                                         
+PRDM16    19    9    9    4   85   .   15    22   12   14
+PEX10      3    9    7    9    8   .   22   565  323  838
+PEX14    941 1094 1083 1047 1923 157 2735  4732 1816 3376
+PLCH2      .   16   32    .   44   9   53   105   42   82
+SPSB1   1981  669 1356  887 2399 624 3269  5839 1929 3774
+SLC2A5    42    7    7    8   80  12   36    52   28   59
+PLEKHM2  523  938  891  966 1910 132 3234  6458 2749 4852
+NMNAT1   714  124  172  129 1289  33  515   794  296  736
+CCDC27     .    .    .    1    .   .    3    31   20   69
+MMEL1      6    .    1    .   21   .   12    21    8   34
+TMEM51    12    2   37   80   16   9   20  1257 1036 1468
+FBXO42  1700 1489 1437 1232 3323 249 4271  6728 2767 5285
+ALDH4A1   12    .    .    .  194   .    2    78   40   59
+CLCN6    545  282  460  282 2756 175 1280  1586  582 1262
+CELA2B     .    .    2    .    1   .    .    31   14   56
+RER1     299  155  266  206 1411  77  776  1183  421 1007
+PANK4     76   34   36   15   69  11  214   805  275  402
+VPS13D  2362 2704 2379 2247 6000 741 7543 10703 4227 6755
+RBP7      15   20   10   11  134   2   43   114   42  174
+GPR157    22    3    2    4   25   5   22    42   13   41
+0 x 10 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 10 column names ‘Oligo_#chimp_C19.32.001’, ‘Oligo_#chimp_C19.32.002’, ‘Oligo_#chimp_C19.32.003’ ... ]]
+              
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                  cluster_sample_id cluster_id
+Oligo_#chimp_C19.32.001     Oligo_#chimp_C19.32.001      Oligo
+Oligo_#chimp_C19.32.002     Oligo_#chimp_C19.32.002      Oligo
+Oligo_#chimp_C19.32.003     Oligo_#chimp_C19.32.003      Oligo
+Oligo_#chimp_C19.32.004     Oligo_#chimp_C19.32.004      Oligo
+Oligo_#chimp_C19.32.005     Oligo_#chimp_C19.32.005      Oligo
+Oligo_#chimp_C19.32.006     Oligo_#chimp_C19.32.006      Oligo
+Oligo_#chimp_C19.32.007     Oligo_#chimp_C19.32.007      Oligo
+Oligo_#macaque_Q19.26.010 Oligo_#macaque_Q19.26.010      Oligo
+Oligo_#macaque_Q19.26.011 Oligo_#macaque_Q19.26.011      Oligo
+Oligo_#macaque_Q19.26.015 Oligo_#macaque_Q19.26.015      Oligo
+                                   sample_id  human_age sex compare
+Oligo_#chimp_C19.32.001     chimp_C19.32.001  1.1568045   M       B
+Oligo_#chimp_C19.32.002     chimp_C19.32.002  0.1920956   F       B
+Oligo_#chimp_C19.32.003     chimp_C19.32.003  1.1568045   M       B
+Oligo_#chimp_C19.32.004     chimp_C19.32.004 -0.2437159   M       B
+Oligo_#chimp_C19.32.005     chimp_C19.32.005  1.2456593   F       B
+Oligo_#chimp_C19.32.006     chimp_C19.32.006  0.1074720   F       B
+Oligo_#chimp_C19.32.007     chimp_C19.32.007  0.1074720   M       B
+Oligo_#macaque_Q19.26.010 macaque_Q19.26.010 -1.3692097   F       A
+Oligo_#macaque_Q19.26.011 macaque_Q19.26.011 -1.1111078   F       A
+Oligo_#macaque_Q19.26.015 macaque_Q19.26.015 -1.2422743   F       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 12997 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue        padj
+       <numeric>      <numeric> <numeric>   <numeric>   <numeric>
+PRDM16   13.5047      -1.066418  1.140150  0.12497631  0.28725861
+PEX10    89.6814      -2.908828  1.098452  0.00057811  0.00656341
+PEX14  1418.2376       0.145827  0.462373  0.71080079  0.82614490
+PLCH2    28.7699      -0.202732  1.198265  0.75394903  0.85438996
+SPSB1  1913.0696       0.186917  0.665940  0.70625317  0.82246423
+...          ...            ...       ...         ...         ...
+ADARB1   852.261    1.128659078  0.851967 5.85777e-02 1.77345e-01
+NRIP1    850.689   -2.305092434  0.902574 1.00300e-03 1.01135e-02
+RCAN1   1044.748    2.594889634  0.604971 1.91652e-06 6.73819e-05
+GRIK1   1677.691   -0.000911673  0.644902 9.98505e-01 9.99255e-01
+APP    17238.867   -0.071091103  0.453890 8.54695e-01 9.18922e-01
+[1] "OPC_#chimp-vs-OPC_#macaque"
+[1] 6
+[1] "# -------- CLUST MAT -------- #"
+20 x 9 sparse Matrix of class "dgCMatrix"
+        OPC_#chimp_C19.32.001 OPC_#chimp_C19.32.002 OPC_#chimp_C19.32.003
+PRDM16                      .                     5                    11
+PEX10                       .                     7                     5
+PEX14                      61                   224                   281
+PLCH2                       .                     4                    12
+SPSB1                      24                   106                   167
+SLC2A5                      5                     2                     .
+PLEKHM2                    57                   190                   280
+NMNAT1                      9                    45                    70
+CCDC27                      .                     .                     .
+MMEL1                       1                     1                     2
+TMEM51                      2                    18                   103
+FBXO42                    109                   324                   505
+ALDH4A1                     .                     .                     .
+CLCN6                      24                    40                    99
+CELA2B                      .                     .                     .
+RER1                       12                    63                    77
+PANK4                       2                    17                    19
+VPS13D                    446                   562                   743
+RBP7                        5                     2                     3
+GPR157                      .                     8                     1
+        OPC_#chimp_C19.32.004 OPC_#chimp_C19.32.005 OPC_#chimp_C19.32.006
+PRDM16                      .                     2                     2
+PEX10                       2                     .                     2
+PEX14                     112                   119                    92
+PLCH2                       .                     .                     1
+SPSB1                      67                   114                    33
+SLC2A5                      1                     8                     3
+PLEKHM2                   106                   138                   116
+NMNAT1                     15                    21                    27
+CCDC27                      .                     .                     .
+MMEL1                       .                     1                     2
+TMEM51                      6                    15                    23
+FBXO42                    138                   158                   143
+ALDH4A1                     .                     .                     .
+CLCN6                      28                    34                    34
+CELA2B                      .                     .                     .
+RER1                       10                    16                    18
+PANK4                       7                     4                     9
+VPS13D                    278                   370                   276
+RBP7                        4                     .                     1
+GPR157                      2                     .                     .
+        OPC_#chimp_C19.32.007 OPC_#macaque_Q19.26.010 OPC_#macaque_Q19.26.011
+PRDM16                      .                       2                       2
+PEX10                       .                      90                      89
+PEX14                      18                     538                     341
+PLCH2                       .                       3                       8
+SPSB1                       6                      75                      55
+SLC2A5                      .                       6                       5
+PLEKHM2                    16                     403                     409
+NMNAT1                      .                     234                      61
+CCDC27                      .                      11                       6
+MMEL1                       .                       6                       4
+TMEM51                      .                     299                     160
+FBXO42                     18                     903                     629
+ALDH4A1                     .                      31                      15
+CLCN6                      10                     230                     109
+CELA2B                      .                       7                       3
+RER1                        7                     146                      71
+PANK4                       .                     135                      50
+VPS13D                     38                    1424                     923
+RBP7                        .                      17                       7
+GPR157                      .                       6                       1
+0 x 9 sparse Matrix of class "dgCMatrix"
+     OPC_#chimp_C19.32.001 OPC_#chimp_C19.32.002 OPC_#chimp_C19.32.003
+     OPC_#chimp_C19.32.004 OPC_#chimp_C19.32.005 OPC_#chimp_C19.32.006
+     OPC_#chimp_C19.32.007 OPC_#macaque_Q19.26.010 OPC_#macaque_Q19.26.011
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                              cluster_sample_id cluster_id          sample_id
+OPC_#chimp_C19.32.001     OPC_#chimp_C19.32.001        OPC   chimp_C19.32.001
+OPC_#chimp_C19.32.002     OPC_#chimp_C19.32.002        OPC   chimp_C19.32.002
+OPC_#chimp_C19.32.003     OPC_#chimp_C19.32.003        OPC   chimp_C19.32.003
+OPC_#chimp_C19.32.004     OPC_#chimp_C19.32.004        OPC   chimp_C19.32.004
+OPC_#chimp_C19.32.005     OPC_#chimp_C19.32.005        OPC   chimp_C19.32.005
+OPC_#chimp_C19.32.006     OPC_#chimp_C19.32.006        OPC   chimp_C19.32.006
+OPC_#chimp_C19.32.007     OPC_#chimp_C19.32.007        OPC   chimp_C19.32.007
+OPC_#macaque_Q19.26.010 OPC_#macaque_Q19.26.010        OPC macaque_Q19.26.010
+OPC_#macaque_Q19.26.011 OPC_#macaque_Q19.26.011        OPC macaque_Q19.26.011
+                          human_age sex compare
+OPC_#chimp_C19.32.001   -0.40003387   M       B
+OPC_#chimp_C19.32.002    1.06757807   M       B
+OPC_#chimp_C19.32.003   -0.03202242   F       B
+OPC_#chimp_C19.32.004    0.05665504   F       B
+OPC_#chimp_C19.32.005   -0.03202242   M       B
+OPC_#chimp_C19.32.006    1.06757807   M       B
+OPC_#chimp_C19.32.007    1.16068940   F       B
+OPC_#macaque_Q19.26.010 -1.57944407   F       A
+OPC_#macaque_Q19.26.011 -1.30897782   F       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 12614 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue      padj
+       <numeric>      <numeric> <numeric>   <numeric> <numeric>
+PRDM16   1.52839      0.0910066  1.104634 0.827870870        NA
+PEX10    8.21046     -3.5614730  2.115358 0.000995321 0.0144532
+PEX14  136.55172     -0.2569108  0.352664 0.373178194 0.6134310
+PLCH2    1.45973     -0.1585078  1.229325 0.692118978        NA
+SPSB1   58.81734      1.6802271  0.806523 0.002329401 0.0261765
+...          ...            ...       ...         ...       ...
+ADARB1   186.577       0.345908  0.454350   0.3011494  0.544867
+NRIP1    110.311      -0.645291  0.836057   0.1605058  0.376704
+RCAN1    133.380       0.379720  0.363723   0.1974923  0.425167
+GRIK1   1548.894       0.725530  0.671411   0.0858931  0.261065
+APP     1208.805       0.765419  0.580872   0.0522534  0.192079
+[1] "Jorstad_df_human_chimp.rds_sce.rdscounts_ls.rds"
+[1] "Astro_#chimp-vs-Astro_#human"
+[1] 1
+[1] "# -------- CLUST MAT -------- #"
+20 x 12 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 12 column names ‘Astro_#chimp_C19.32.001’, ‘Astro_#chimp_C19.32.002’, ‘Astro_#chimp_C19.32.003’ ... ]]
+                                                                     
+PRDM16  4280 1286 1492 1448 10274 1166 1204 203 1248 1648 19630 91536
+PEX10      9    6    3    5    14    1    2   6   35   54    60   727
+PEX14    739  478  573  295  3923  198  640 114  398  542  2115  8034
+PLCH2     39   19   49   10   103   19    1   5   13   29     4  1172
+SPSB1     37   17   50    8    71    1   53   6   14   10   725  1276
+SLC2A5   143    2    6    7    96    4   16   .   30   32   216   669
+PLEKHM2  434  351  500  319  2075  128  199  96  246  374  2133  9227
+NMNAT1   225   67  148   52   829   91  270  15  121  142   605  5022
+CCDC27     .    .    .    .     2    .    2   .    .    .   123   442
+MMEL1     17    .    .    .    31    1    5   .    2    2     2     6
+TMEM51  1178  145  269   91  1671   43  643  27  120  207  1696  8356
+FBXO42  1068  578  744  381  3657  440  372 140  784 1243  5830 21327
+ALDH4A1   76    .    .    .   102   12    .  44  152  270  1172 10403
+CLCN6    222   73  196   64  1621  177  391  26   67  117  2214  7016
+CELA2B     7    .    .    .     3    .    .   .    9    6   163  2125
+RER1      27   34  111   49   894   80    6  38  113  265  2063  5795
+PANK4     19   41   28   19   691   20    3   5   26   53   461  4124
+VPS13D  3653 1156 1345  835  6863 1136  891 320 1149 2346  9143 46116
+RBP7       9   11    4    9    64    2    6   .    6    4    92   411
+GPR157    39    4    4    4    98    4   13   4    5   11    15   950
+0 x 12 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 12 column names ‘Astro_#chimp_C19.32.001’, ‘Astro_#chimp_C19.32.002’, ‘Astro_#chimp_C19.32.003’ ... ]]
+                
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                              cluster_sample_id cluster_id        sample_id
+Astro_#chimp_C19.32.001 Astro_#chimp_C19.32.001      Astro chimp_C19.32.001
+Astro_#chimp_C19.32.002 Astro_#chimp_C19.32.002      Astro chimp_C19.32.002
+Astro_#chimp_C19.32.003 Astro_#chimp_C19.32.003      Astro chimp_C19.32.003
+Astro_#chimp_C19.32.004 Astro_#chimp_C19.32.004      Astro chimp_C19.32.004
+Astro_#chimp_C19.32.005 Astro_#chimp_C19.32.005      Astro chimp_C19.32.005
+Astro_#chimp_C19.32.006 Astro_#chimp_C19.32.006      Astro chimp_C19.32.006
+Astro_#chimp_C19.32.007 Astro_#chimp_C19.32.007      Astro chimp_C19.32.007
+Astro_#human_H18.30.002 Astro_#human_H18.30.002      Astro human_H18.30.002
+Astro_#human_H19.30.001 Astro_#human_H19.30.001      Astro human_H19.30.001
+Astro_#human_H19.30.002 Astro_#human_H19.30.002      Astro human_H19.30.002
+Astro_#human_H200.1025   Astro_#human_H200.1025      Astro  human_H200.1025
+Astro_#human_H200.1030   Astro_#human_H200.1030      Astro  human_H200.1030
+                         human_age sex compare
+Astro_#chimp_C19.32.001  0.2415480   F       B
+Astro_#chimp_C19.32.002  1.3654858   M       B
+Astro_#chimp_C19.32.003  1.3654858   M       B
+Astro_#chimp_C19.32.004 -0.2661958   M       B
+Astro_#chimp_C19.32.005  1.4690063   F       B
+Astro_#chimp_C19.32.006  0.1429570   F       B
+Astro_#chimp_C19.32.007  0.1429570   M       B
+Astro_#human_H18.30.002 -0.4485892   M       A
+Astro_#human_H19.30.001 -0.6457712   M       A
+Astro_#human_H19.30.002 -0.6457712   M       A
+Astro_#human_H200.1025  -1.0401354   M       A
+Astro_#human_H200.1030  -1.6809770   M       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 12981 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue        padj
+       <numeric>      <numeric> <numeric>   <numeric>   <numeric>
+PRDM16 2794.5764       1.405594  0.413020 0.000187845  0.00377368
+PEX10    18.3684      -1.192429  1.020857 0.053872911  0.17546464
+PEX14   774.9644       0.441037  0.543101 0.233651654  0.44811280
+PLCH2    32.0321       0.194241  0.823024 0.691578963  0.83946869
+SPSB1    46.3310       0.293254  0.824291 0.551923086  0.74361167
+...          ...            ...       ...         ...         ...
+ADARB1   560.159      0.4527927  0.504631 1.94380e-01 0.400598376
+NRIP1    594.462     -2.0824012  0.542464 2.15225e-05 0.000776366
+RCAN1    627.313      2.2414574  0.509565 1.61850e-06 0.000113901
+GRIK1    593.291     -0.3196987  0.562120 4.00387e-01 0.619482322
+APP     2450.261      0.0402907  0.550777 9.14869e-01 0.961194653
+[1] "Excite_#chimp-vs-Excite_#human"
+[1] 2
+[1] "# -------- CLUST MAT -------- #"
+20 x 14 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 14 column names ‘Excite_#chimp_C19.32.001’, ‘Excite_#chimp_C19.32.002’, ‘Excite_#chimp_C19.32.003’ ... ]]
+                                                                         
+PRDM16    255   157   130   108   305    83   135   526   858   870   565
+PEX10    1182   587   360   622   680   341   476  2158  5513  7071  4554
+PEX14   31226 13621 10181 10116 30744  6031 20316 15699 24018 30887 18670
+PLCH2    3427  2808  2603  1930  5246  1082  2667  3317 10319 14106  9107
+SPSB1    3899   944   926   959  3041   993  2732   902  1078  1400   728
+SLC2A5   1244   438   317   459  1161   234   799   476   872  1461   775
+PLEKHM2 30387 12160 11097 11595 33613  7083 20381 13818 20718 26311 15085
+NMNAT1  12282  4987  4231  3687 13292  2576  6897  6791  9750 14132  8110
+CCDC27     98    20    19    22   131    10    83    18    89    85    33
+MMEL1     299    63    25    32   211    15   156    44   107   174   103
+TMEM51    959   463   341   297  1285   149   661   601   735  1385   461
+FBXO42  46089 19330 14145 14502 48252 11020 31760 29960 34137 52219 30338
+ALDH4A1   218     .    20     3   151     .   235   815  1127  1623  1082
+CLCN6   18598  5252  6493  6062 18053  3073 13787  4756  6052  8775  5506
+CELA2B    632   114    76   106   530    29   537   631  1870  3047  1108
+RER1    10870  4294  4076  4041 11351  2165  7831  5886 13471 15060  9543
+PANK4    3422  1769  1341  1678  5060   935  3324  1674  4082  4390  3467
+VPS13D  80403 31860 23584 24610 77438 17256 52494 57495 74475 89442 56782
+RBP7      597   270   156   376   626   110   421   220   439   669   345
+GPR157   1030   335   207   205   668   210   799   306   347   654   276
+                              
+PRDM16     5195    815    6381
+PEX10     17009   3015   17264
+PEX14    252431  45565  239573
+PLCH2     58091   9915   38591
+SPSB1     10741   1564    7251
+SLC2A5     5521   1226    5410
+PLEKHM2  163403  29377  163066
+NMNAT1    84772  19196   85462
+CCDC27      940    194     986
+MMEL1       517     78     786
+TMEM51     7873   1204    5095
+FBXO42   457616  97538  522510
+ALDH4A1    7917   2571    7698
+CLCN6    206260  46857  240887
+CELA2B    30387   5446   34608
+RER1     106133  28172  157600
+PANK4     76049  13628   89702
+VPS13D  1154085 234552 1327124
+RBP7       2099    671    2360
+GPR157     3577    570    3392
+0 x 14 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 14 column names ‘Excite_#chimp_C19.32.001’, ‘Excite_#chimp_C19.32.002’, ‘Excite_#chimp_C19.32.003’ ... ]]
+                  
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                cluster_sample_id cluster_id        sample_id
+Excite_#chimp_C19.32.001 Excite_#chimp_C19.32.001     Excite chimp_C19.32.001
+Excite_#chimp_C19.32.002 Excite_#chimp_C19.32.002     Excite chimp_C19.32.002
+Excite_#chimp_C19.32.003 Excite_#chimp_C19.32.003     Excite chimp_C19.32.003
+Excite_#chimp_C19.32.004 Excite_#chimp_C19.32.004     Excite chimp_C19.32.004
+Excite_#chimp_C19.32.005 Excite_#chimp_C19.32.005     Excite chimp_C19.32.005
+Excite_#chimp_C19.32.006 Excite_#chimp_C19.32.006     Excite chimp_C19.32.006
+Excite_#chimp_C19.32.007 Excite_#chimp_C19.32.007     Excite chimp_C19.32.007
+Excite_#human_H18.30.001 Excite_#human_H18.30.001     Excite human_H18.30.001
+Excite_#human_H18.30.002 Excite_#human_H18.30.002     Excite human_H18.30.002
+Excite_#human_H19.30.001 Excite_#human_H19.30.001     Excite human_H19.30.001
+Excite_#human_H19.30.002 Excite_#human_H19.30.002     Excite human_H19.30.002
+Excite_#human_H200.1023   Excite_#human_H200.1023     Excite  human_H200.1023
+Excite_#human_H200.1025   Excite_#human_H200.1025     Excite  human_H200.1025
+Excite_#human_H200.1030   Excite_#human_H200.1030     Excite  human_H200.1030
+                          human_age sex compare
+Excite_#chimp_C19.32.001 -0.1927505   M       B
+Excite_#chimp_C19.32.002  1.5118411   M       B
+Excite_#chimp_C19.32.003  0.2346848   F       B
+Excite_#chimp_C19.32.004  0.2346848   M       B
+Excite_#chimp_C19.32.005  0.3376813   F       B
+Excite_#chimp_C19.32.006  1.5118411   M       B
+Excite_#chimp_C19.32.007  1.6199874   F       B
+Excite_#human_H18.30.001 -0.3832940   M       A
+Excite_#human_H18.30.002 -0.5892870   M       A
+Excite_#human_H19.30.001 -0.9497746   F       A
+Excite_#human_H19.30.002 -0.5892870   M       A
+Excite_#human_H200.1023  -0.0743046   F       A
+Excite_#human_H200.1025  -1.0012729   M       A
+Excite_#human_H200.1030  -1.6707500   M       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 13088 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue        padj
+       <numeric>      <numeric> <numeric>   <numeric>   <numeric>
+PRDM16   498.399      -0.796746  0.509105  0.01105369  0.04077502
+PEX10   2519.313      -1.061234  0.755981  0.00879295  0.03410851
+PEX14  27578.797       0.201546  0.221383  0.27006480  0.44600733
+PLCH2   6672.111      -0.319009  0.414432  0.20320878  0.36656083
+SPSB1   2273.438       1.010205  0.461456  0.00140422  0.00751689
+...          ...            ...       ...         ...         ...
+ADARB1   39092.9     0.28916577  0.143061 2.77168e-02 8.35848e-02
+NRIP1    33736.4    -1.31511691  0.195019 5.16238e-13 1.71051e-11
+RCAN1    25033.0     1.02151688  0.154320 1.80361e-12 5.59085e-11
+GRIK1    31333.1     2.21497759  0.270419 2.21360e-17 1.05736e-15
+APP     243519.4    -0.00530692  0.183971 9.73685e-01 9.86575e-01
+[1] "Inhibit_#chimp-vs-Inhibit_#human"
+[1] 3
+[1] "# -------- CLUST MAT -------- #"
+20 x 14 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 14 column names ‘Inhibit_#chimp_C19.32.001’, ‘Inhibit_#chimp_C19.32.002’, ‘Inhibit_#chimp_C19.32.003’ ... ]]
+                                                                         
+PRDM16     99    26    47    40   152    32    64   135   217   269   119
+PEX10     437   148   157   242   170   156    64   920  2126  3452  1416
+PEX14   10432  5212  7614  5062 13112  3626  7028 10589 11129 17947  8213
+PLCH2    2674  1384  2005  1855  3101  1437  1905  4395  4904  6616  3476
+SPSB1     538   188   378   304   614   370   440   195   296   710   219
+SLC2A5    329    96   156   144   531   114   266   189   269   541   209
+PLEKHM2  8376  3873  5872  4599  9728  3291  6118  6401  7204 11495  4661
+NMNAT1   4320  1493  2779  1527  4868  1379  2066  3461  3351  6537  2637
+CCDC27     13     .     3     8    52    14    20     5    16    34     6
+MMEL1     141    42    66    41   178   102    82    49    37    67    36
+TMEM51   1165   778  1501   731  1819   619   814  2432  1569  3679  1276
+FBXO42  15946  7992  9824  7920 21323  6584 12685 18137 14987 29237 12495
+ALDH4A1    68     .    16     2    50     .    67   296   454   726   324
+CLCN6    6210  1987  4490  2843  9551  2113  5201  2236  2226  4243  1792
+CELA2B    144     7    25    36   191     9   130   227   450  1236   202
+RER1     3185  1236  1962  1512  3722   917  2176  2567  5587  7599  3727
+PANK4    1093   403   567   654  1919   349  1015   690  1429  1456   911
+VPS13D  29678 14199 19035 14568 35705 11496 23592 30972 32258 47695 25860
+RBP7      242    53    90   116   218    41   127    55    99   227    65
+GPR157    307    90   127   111   235   134   410   227   151   324   100
+                           
+PRDM16    1954   472   2173
+PEX10     7605  1041   8277
+PEX14    97676 17581 115392
+PLCH2    28080  3668  25590
+SPSB1     5011  1168   3525
+SLC2A5    2859   256   3138
+PLEKHM2  59558 11326  68782
+NMNAT1   32573  6744  35529
+CCDC27    1078   161    352
+MMEL1      152   182    776
+TMEM51   30131  1626  20895
+FBXO42  183310 37506 242972
+ALDH4A1   3691   416   5197
+CLCN6   113206 26315 158276
+CELA2B   13409  2737  13096
+RER1     59831 15726  82123
+PANK4    31338  5527  41600
+VPS13D  427525 72098 487748
+RBP7       856   453   1840
+GPR157    1056    95   1335
+0 x 14 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 14 column names ‘Inhibit_#chimp_C19.32.001’, ‘Inhibit_#chimp_C19.32.002’, ‘Inhibit_#chimp_C19.32.003’ ... ]]
+                  
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                  cluster_sample_id cluster_id        sample_id
+Inhibit_#chimp_C19.32.001 Inhibit_#chimp_C19.32.001    Inhibit chimp_C19.32.001
+Inhibit_#chimp_C19.32.002 Inhibit_#chimp_C19.32.002    Inhibit chimp_C19.32.002
+Inhibit_#chimp_C19.32.003 Inhibit_#chimp_C19.32.003    Inhibit chimp_C19.32.003
+Inhibit_#chimp_C19.32.004 Inhibit_#chimp_C19.32.004    Inhibit chimp_C19.32.004
+Inhibit_#chimp_C19.32.005 Inhibit_#chimp_C19.32.005    Inhibit chimp_C19.32.005
+Inhibit_#chimp_C19.32.006 Inhibit_#chimp_C19.32.006    Inhibit chimp_C19.32.006
+Inhibit_#chimp_C19.32.007 Inhibit_#chimp_C19.32.007    Inhibit chimp_C19.32.007
+Inhibit_#human_H18.30.001 Inhibit_#human_H18.30.001    Inhibit human_H18.30.001
+Inhibit_#human_H18.30.002 Inhibit_#human_H18.30.002    Inhibit human_H18.30.002
+Inhibit_#human_H19.30.001 Inhibit_#human_H19.30.001    Inhibit human_H19.30.001
+Inhibit_#human_H19.30.002 Inhibit_#human_H19.30.002    Inhibit human_H19.30.002
+Inhibit_#human_H200.1023   Inhibit_#human_H200.1023    Inhibit  human_H200.1023
+Inhibit_#human_H200.1025   Inhibit_#human_H200.1025    Inhibit  human_H200.1025
+Inhibit_#human_H200.1030   Inhibit_#human_H200.1030    Inhibit  human_H200.1030
+                           human_age sex compare
+Inhibit_#chimp_C19.32.001 -0.1927505   M       B
+Inhibit_#chimp_C19.32.002  1.5118411   M       B
+Inhibit_#chimp_C19.32.003  0.3376813   F       B
+Inhibit_#chimp_C19.32.004  0.2346848   M       B
+Inhibit_#chimp_C19.32.005  1.5118411   M       B
+Inhibit_#chimp_C19.32.006  1.6199874   F       B
+Inhibit_#chimp_C19.32.007  0.2346848   F       B
+Inhibit_#human_H18.30.001 -0.3832940   M       A
+Inhibit_#human_H18.30.002 -0.5892870   M       A
+Inhibit_#human_H19.30.001 -0.9497746   F       A
+Inhibit_#human_H19.30.002 -0.5892870   M       A
+Inhibit_#human_H200.1023  -0.0743046   F       A
+Inhibit_#human_H200.1025  -1.0012729   M       A
+Inhibit_#human_H200.1030  -1.6707500   M       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 13088 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue       padj
+       <numeric>      <numeric> <numeric>   <numeric>  <numeric>
+PRDM16   155.952     -0.5116184  0.358217   0.0270898  0.1010119
+PEX10    959.262     -0.8809077  0.761158   0.0181438  0.0746749
+PEX14  13153.560      0.0643309  0.253311   0.7115306  0.8509650
+PLCH2   4263.329     -0.1532993  0.353706   0.4551875  0.6661836
+SPSB1    619.884      0.5985657  0.392044   0.0171147  0.0715189
+...          ...            ...       ...         ...        ...
+ADARB1   21628.8       0.113423  0.256277 0.518746052 0.71700795
+NRIP1    15519.1      -0.543930  0.236205 0.002647609 0.01693641
+RCAN1    12639.8       0.382271  0.247386 0.033679853 0.11868657
+GRIK1   394425.7      -0.782829  0.285967 0.000434737 0.00381869
+APP     118424.3      -0.132899  0.230197 0.425910671 0.64006800
+[1] "Microglia_#chimp-vs-Microglia_#human"
+[1] 4
+[1] "# -------- CLUST MAT -------- #"
+20 x 12 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 12 column names ‘Microglia_#chimp_C19.32.001’, ‘Microglia_#chimp_C19.32.002’, ‘Microglia_#chimp_C19.32.003’ ... ]]
+                                                            
+PRDM16     1  .   .   .   .  .    3   .    8   855    . 1171
+PEX10      .  1   .   .   .  .    .   9   43     .    .    .
+PEX14    311  9  75  87  45 10  198 235  958  2718    1  790
+PLCH2      .  .   .   .   .  4    2   6    5     6   41    .
+SPSB1    299  4   4  42   4  3  154   3    4    66    3    1
+SLC2A5  1557  6  73 119  53 29 1532 262 1064 12208   16 1502
+PLEKHM2  118  6  63  58  54 10  328 253  604  2926  424  248
+NMNAT1   152  3   5  15  17  .    7  31  121    33  368  157
+CCDC27     .  .   .   .   .  .    .   .    .   132    .    1
+MMEL1      8  .   .   .   .  .   20   .    .     4    1    .
+TMEM51    75  .  25   9  15  .   25  99  319  3223    .  142
+FBXO42   535  6  74  62  55 23  704 294 1272  7760   13   62
+ALDH4A1    .  .   .   .   .  .    .   .   14     .    .    6
+CLCN6    349  5  15  22  10  .  448  43  103  1268    .  159
+CELA2B     1  .   .   .   .  .    .   3   12     4    .   21
+RER1     304  .  10  13  12  3   18  45  213   257  208   93
+PANK4      .  .   4   .   .  .    2  12    6     2    .    .
+VPS13D  1226 19 144 190 355 49  851 798 2585  6430 2721  223
+RBP7       9  .   .   .   .  .    .   6   10    24    1    2
+GPR157     6  .   2   3  23  .    2   .    8     7  320    2
+0 x 12 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 12 column names ‘Microglia_#chimp_C19.32.001’, ‘Microglia_#chimp_C19.32.002’, ‘Microglia_#chimp_C19.32.003’ ... ]]
+                
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                      cluster_sample_id cluster_id
+Microglia_#chimp_C19.32.001 Microglia_#chimp_C19.32.001  Microglia
+Microglia_#chimp_C19.32.002 Microglia_#chimp_C19.32.002  Microglia
+Microglia_#chimp_C19.32.003 Microglia_#chimp_C19.32.003  Microglia
+Microglia_#chimp_C19.32.004 Microglia_#chimp_C19.32.004  Microglia
+Microglia_#chimp_C19.32.005 Microglia_#chimp_C19.32.005  Microglia
+Microglia_#chimp_C19.32.006 Microglia_#chimp_C19.32.006  Microglia
+Microglia_#chimp_C19.32.007 Microglia_#chimp_C19.32.007  Microglia
+Microglia_#human_H18.30.002 Microglia_#human_H18.30.002  Microglia
+Microglia_#human_H19.30.001 Microglia_#human_H19.30.001  Microglia
+Microglia_#human_H200.1023   Microglia_#human_H200.1023  Microglia
+Microglia_#human_H200.1025   Microglia_#human_H200.1025  Microglia
+Microglia_#human_H200.1030   Microglia_#human_H200.1030  Microglia
+                                   sample_id   human_age sex compare
+Microglia_#chimp_C19.32.001 chimp_C19.32.001 -0.35557998   M       B
+Microglia_#chimp_C19.32.002 chimp_C19.32.002  1.55047309   F       B
+Microglia_#chimp_C19.32.003 chimp_C19.32.003  1.43675970   M       B
+Microglia_#chimp_C19.32.004 chimp_C19.32.004  0.09385867   F       B
+Microglia_#chimp_C19.32.005 chimp_C19.32.005  0.20215714   F       B
+Microglia_#chimp_C19.32.006 chimp_C19.32.006  0.09385867   M       B
+Microglia_#chimp_C19.32.007 chimp_C19.32.007  1.43675970   M       B
+Microglia_#human_H18.30.002 human_H18.30.002 -0.55593214   M       A
+Microglia_#human_H19.30.001 human_H19.30.001 -1.15157373   F       A
+Microglia_#human_H200.1023   human_H200.1023 -0.77252908   M       A
+Microglia_#human_H200.1025   human_H200.1025 -0.77252908   M       A
+Microglia_#human_H200.1030   human_H200.1030 -1.20572296   M       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 12673 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue      padj
+       <numeric>      <numeric> <numeric>   <numeric> <numeric>
+PRDM16  63.82051    -1.06250818  2.284365 0.046376402 0.3121772
+PEX10    1.98258    -0.32967308  1.380532 0.340201134        NA
+PEX14  138.39187    -0.00213364  0.459802 0.987970819 0.9970889
+PLCH2    8.15540    -0.04731571  0.944661 0.865206619 0.9731020
+SPSB1   34.89428     3.97101668  1.828957 0.000812512 0.0305525
+...          ...            ...       ...         ...       ...
+ADARB1  113.5786     -0.2452943  0.734145    0.228415  0.624099
+NRIP1   907.0979     -0.6875812  1.281449    0.079236  0.390420
+RCAN1    42.2661      0.1661415  0.716134    0.428173  0.799673
+GRIK1   175.5449     -0.1284318  0.530453    0.379854  0.759227
+APP     660.8758     -0.0107095  0.319193    0.907975  0.980217
+[1] "Oligo_#chimp-vs-Oligo_#human"
+[1] 5
+[1] "# -------- CLUST MAT -------- #"
+20 x 13 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 13 column names ‘Oligo_#chimp_C19.32.001’, ‘Oligo_#chimp_C19.32.002’, ‘Oligo_#chimp_C19.32.003’ ... ]]
+                                                                      
+PRDM16    19    9    9    4   85   .   15   10    36   44 .  136  1429
+PEX10      3    9    7    9    8   .   22   83   378  156 .    1  1564
+PEX14    941 1094 1083 1047 1923 157 2735 1014  4597 2681 1 3021  9817
+PLCH2      .   16   32    .   44   9   53  170   818  665 . 1028  5792
+SPSB1   1981  669 1356  887 2399 624 3269  188  1016  401 .   31  6486
+SLC2A5    42    7    7    8   80  12   36    4    27   18 .   36   543
+PLEKHM2  523  938  891  966 1910 132 3234  602  1777  640 1 1247  3599
+NMNAT1   714  124  172  129 1289  33  515  141  1013  452 . 1707  4472
+CCDC27     .    .    .    1    .   .    3    .     2    2 .    5    88
+MMEL1      6    .    1    .   21   .   12    .    10    . .    3     6
+TMEM51    12    2   37   80   16   9   20    4    20    8 .    4    58
+FBXO42  1700 1489 1437 1232 3323 249 4271 1290  7528 4012 1 3059 17286
+ALDH4A1   12    .    .    .  194   .    2   17    54    8 .   44   142
+CLCN6    545  282  460  282 2756 175 1280   81   511  248 . 3673  9243
+CELA2B     .    .    2    .    1   .    .    .    92   10 .  216    55
+RER1     299  155  266  206 1411  77  776  342  1448 1032 . 1022 10246
+PANK4     76   34   36   15   69  11  214   16    81   30 .    .  2129
+VPS13D  2362 2704 2379 2247 6000 741 7543 2473 11816 7303 3 8530 36644
+RBP7      15   20   10   11  134   2   43  127   411  308 .  845  8870
+GPR157    22    3    2    4   25   5   22    2    11    . .    6    94
+0 x 13 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 13 column names ‘Oligo_#chimp_C19.32.001’, ‘Oligo_#chimp_C19.32.002’, ‘Oligo_#chimp_C19.32.003’ ... ]]
+                 
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                              cluster_sample_id cluster_id        sample_id
+Oligo_#chimp_C19.32.001 Oligo_#chimp_C19.32.001      Oligo chimp_C19.32.001
+Oligo_#chimp_C19.32.002 Oligo_#chimp_C19.32.002      Oligo chimp_C19.32.002
+Oligo_#chimp_C19.32.003 Oligo_#chimp_C19.32.003      Oligo chimp_C19.32.003
+Oligo_#chimp_C19.32.004 Oligo_#chimp_C19.32.004      Oligo chimp_C19.32.004
+Oligo_#chimp_C19.32.005 Oligo_#chimp_C19.32.005      Oligo chimp_C19.32.005
+Oligo_#chimp_C19.32.006 Oligo_#chimp_C19.32.006      Oligo chimp_C19.32.006
+Oligo_#chimp_C19.32.007 Oligo_#chimp_C19.32.007      Oligo chimp_C19.32.007
+Oligo_#human_H18.30.002 Oligo_#human_H18.30.002      Oligo human_H18.30.002
+Oligo_#human_H19.30.001 Oligo_#human_H19.30.001      Oligo human_H19.30.001
+Oligo_#human_H19.30.002 Oligo_#human_H19.30.002      Oligo human_H19.30.002
+Oligo_#human_H200.1023   Oligo_#human_H200.1023      Oligo  human_H200.1023
+Oligo_#human_H200.1025   Oligo_#human_H200.1025      Oligo  human_H200.1025
+Oligo_#human_H200.1030   Oligo_#human_H200.1030      Oligo  human_H200.1030
+                         human_age sex compare
+Oligo_#chimp_C19.32.001  1.4473695   M       B
+Oligo_#chimp_C19.32.002  0.3190152   F       B
+Oligo_#chimp_C19.32.003  1.4473695   M       B
+Oligo_#chimp_C19.32.004 -0.1907239   M       B
+Oligo_#chimp_C19.32.005  1.5512969   F       B
+Oligo_#chimp_C19.32.006  0.2200367   F       B
+Oligo_#chimp_C19.32.007  0.2200367   M       B
+Oligo_#human_H18.30.002 -0.3738340   M       A
+Oligo_#human_H19.30.001 -0.5717909   M       A
+Oligo_#human_H19.30.002 -0.5717909   M       A
+Oligo_#human_H200.1023  -0.9182155   F       A
+Oligo_#human_H200.1025  -0.9677047   M       A
+Oligo_#human_H200.1030  -1.6110646   M       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 13030 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue        padj
+       <numeric>      <numeric> <numeric>   <numeric>   <numeric>
+PRDM16   19.7538     -0.5981278  1.213862  0.13724804   0.4324633
+PEX10    27.2937     -0.7864535  1.241935  0.08052061   0.3218893
+PEX14   901.3541     -0.0130916  0.161057  0.81566151   0.9676862
+PLCH2   109.9661     -1.7089894  1.526509  0.01229763   0.0995560
+SPSB1   816.7813      2.3583304  1.122331  0.00148766   0.0221334
+...          ...            ...       ...         ...         ...
+ADARB1   583.723      0.0265594  0.338760 8.44096e-01 0.975186922
+NRIP1    657.479     -2.3584514  0.622509 2.69395e-05 0.000945055
+RCAN1    885.177      0.1371595  0.351292 2.55822e-01 0.595385367
+GRIK1    846.672      0.0242229  0.328307 8.52837e-01 0.977529054
+APP    12820.918     -0.2992964  0.369858 3.33760e-02 0.188847330
+[1] "OPC_#chimp-vs-OPC_#human"
+[1] 6
+[1] "# -------- CLUST MAT -------- #"
+20 x 12 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 12 column names ‘OPC_#chimp_C19.32.001’, ‘OPC_#chimp_C19.32.002’, ‘OPC_#chimp_C19.32.003’ ... ]]
+                                                           
+PRDM16    .   5  11   .   2   2  .  .   13    17    4   416
+PEX10     .   7   5   2   .   2  .  .   62   444  773   584
+PEX14    61 224 281 112 119  92 18  7  362  4555  168  5134
+PLCH2     .   4  12   .   .   1  .  .   16    26    1   110
+SPSB1    24 106 167  67 114  33  6  .  104  1962  356  1284
+SLC2A5    5   2   .   1   8   3  .  .   11    76   37   342
+PLEKHM2  57 190 280 106 138 116 16  2  190  2634  899  4427
+NMNAT1    9  45  70  15  21  27  .  .   79   976  438  2545
+CCDC27    .   .   .   .   .   .  .  .    .    13    5   118
+MMEL1     1   1   2   .   1   2  .  .    .     4    .     6
+TMEM51    2  18 103   6  15  23  .  .   84  1614  401  2565
+FBXO42  109 324 505 138 158 143 18  7  907  8531 3588 14508
+ALDH4A1   .   .   .   .   .   .  .  .   52   366  121   956
+CLCN6    24  40  99  28  34  34 10  .  107  5536 2020  8108
+CELA2B    .   .   .   .   .   .  .  .    5    12    3    11
+RER1     12  63  77  10  16  18  7  3  169   739 1255  1355
+PANK4     2  17  19   7   4   9  .  .   23  1380  321  2016
+VPS13D  446 562 743 278 370 276 38 17 1452 13990 3568 14795
+RBP7      5   2   3   4   .   1  .  .    .    14    4   100
+GPR157    .   8   1   2   .   .  .  .    4    16   13    84
+0 x 12 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 12 column names ‘OPC_#chimp_C19.32.001’, ‘OPC_#chimp_C19.32.002’, ‘OPC_#chimp_C19.32.003’ ... ]]
+                
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                          cluster_sample_id cluster_id        sample_id
+OPC_#chimp_C19.32.001 OPC_#chimp_C19.32.001        OPC chimp_C19.32.001
+OPC_#chimp_C19.32.002 OPC_#chimp_C19.32.002        OPC chimp_C19.32.002
+OPC_#chimp_C19.32.003 OPC_#chimp_C19.32.003        OPC chimp_C19.32.003
+OPC_#chimp_C19.32.004 OPC_#chimp_C19.32.004        OPC chimp_C19.32.004
+OPC_#chimp_C19.32.005 OPC_#chimp_C19.32.005        OPC chimp_C19.32.005
+OPC_#chimp_C19.32.006 OPC_#chimp_C19.32.006        OPC chimp_C19.32.006
+OPC_#chimp_C19.32.007 OPC_#chimp_C19.32.007        OPC chimp_C19.32.007
+OPC_#human_H19.30.001 OPC_#human_H19.30.001        OPC human_H19.30.001
+OPC_#human_H19.30.002 OPC_#human_H19.30.002        OPC human_H19.30.002
+OPC_#human_H200.1023   OPC_#human_H200.1023        OPC  human_H200.1023
+OPC_#human_H200.1025   OPC_#human_H200.1025        OPC  human_H200.1025
+OPC_#human_H200.1030   OPC_#human_H200.1030        OPC  human_H200.1030
+                       human_age sex compare
+OPC_#chimp_C19.32.001 -0.2316694   M       B
+OPC_#chimp_C19.32.002  1.3603565   M       B
+OPC_#chimp_C19.32.003  0.1675395   F       B
+OPC_#chimp_C19.32.004  0.2637344   F       B
+OPC_#chimp_C19.32.005  0.1675395   M       B
+OPC_#chimp_C19.32.006  1.3603565   M       B
+OPC_#chimp_C19.32.007  1.4613612   F       B
+OPC_#human_H19.30.001 -0.4096300   M       A
+OPC_#human_H19.30.002 -0.6020199   M       A
+OPC_#human_H200.1023  -0.9387021   F       A
+OPC_#human_H200.1025  -0.9867996   M       A
+OPC_#human_H200.1030  -1.6120666   M       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 12895 rows and 5 columns
+        baseMean log2FoldChange     lfcSE     pvalue      padj
+       <numeric>      <numeric> <numeric>  <numeric> <numeric>
+PRDM16   3.14804     -0.0632091  1.009950 0.84259023        NA
+PEX10   12.70986     -1.8140042  1.713433 0.00886941  0.077804
+PEX14  203.33552      0.1391959  0.507616 0.64448509  0.844954
+PLCH2    2.14720     -0.1155635  1.040031 0.71469367        NA
+SPSB1   86.89260      1.2362357  0.729806 0.00874128  0.077207
+...          ...            ...       ...        ...       ...
+ADARB1   267.419       0.928201  0.595700  0.0166652  0.113353
+NRIP1    241.437      -0.750197  0.695127  0.0620993  0.243093
+RCAN1    232.274       0.312548  0.322801  0.1873671  0.449757
+GRIK1   3652.346       0.154948  0.416337  0.5665834  0.802413
+APP     2291.494       0.236438  0.363869  0.3488058  0.629593
+[1] "Jorstad_df_human_macak.rds_sce.rdscounts_ls.rds"
+[1] "Astro_#human-vs-Astro_#macaque"
+[1] 1
+[1] "# -------- CLUST MAT -------- #"
+20 x 7 sparse Matrix of class "dgCMatrix"
+        Astro_#human_H18.30.002 Astro_#human_H19.30.001 Astro_#human_H19.30.002
+PRDM16                      203                    1248                    1648
+PEX10                         6                      35                      54
+PEX14                       114                     398                     542
+PLCH2                         5                      13                      29
+SPSB1                         6                      14                      10
+SLC2A5                        .                      30                      32
+PLEKHM2                      96                     246                     374
+NMNAT1                       15                     121                     142
+CCDC27                        .                       .                       .
+MMEL1                         .                       2                       2
+TMEM51                       27                     120                     207
+FBXO42                      140                     784                    1243
+ALDH4A1                      44                     152                     270
+CLCN6                        26                      67                     117
+CELA2B                        .                       9                       6
+RER1                         38                     113                     265
+PANK4                         5                      26                      53
+VPS13D                      320                    1149                    2346
+RBP7                          .                       6                       4
+GPR157                        4                       5                      11
+        Astro_#human_H200.1025 Astro_#human_H200.1030 Astro_#macaque_Q19.26.011
+PRDM16                   19630                  91536                       476
+PEX10                       60                    727                        73
+PEX14                     2115                   8034                       234
+PLCH2                        4                   1172                        12
+SPSB1                      725                   1276                         7
+SLC2A5                     216                    669                        12
+PLEKHM2                   2133                   9227                       493
+NMNAT1                     605                   5022                        52
+CCDC27                     123                    442                         2
+MMEL1                        2                      6                         1
+TMEM51                    1696                   8356                       130
+FBXO42                    5830                  21327                       338
+ALDH4A1                   1172                  10403                       123
+CLCN6                     2214                   7016                        73
+CELA2B                     163                   2125                         2
+RER1                      2063                   5795                        91
+PANK4                      461                   4124                        51
+VPS13D                    9143                  46116                       585
+RBP7                        92                    411                         2
+GPR157                      15                    950                         4
+        Astro_#macaque_Q19.26.015
+PRDM16                          .
+PEX10                           2
+PEX14                           2
+PLCH2                           .
+SPSB1                           5
+SLC2A5                          1
+PLEKHM2                         1
+NMNAT1                          .
+CCDC27                          .
+MMEL1                           .
+TMEM51                          3
+FBXO42                          3
+ALDH4A1                         .
+CLCN6                           1
+CELA2B                          .
+RER1                            4
+PANK4                           .
+VPS13D                          7
+RBP7                            2
+GPR157                          .
+0 x 7 sparse Matrix of class "dgCMatrix"
+     Astro_#human_H18.30.002 Astro_#human_H19.30.001 Astro_#human_H19.30.002
+     Astro_#human_H200.1025 Astro_#human_H200.1030 Astro_#macaque_Q19.26.011
+     Astro_#macaque_Q19.26.015
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                  cluster_sample_id cluster_id
+Astro_#human_H18.30.002     Astro_#human_H18.30.002      Astro
+Astro_#human_H19.30.001     Astro_#human_H19.30.001      Astro
+Astro_#human_H19.30.002     Astro_#human_H19.30.002      Astro
+Astro_#human_H200.1025       Astro_#human_H200.1025      Astro
+Astro_#human_H200.1030       Astro_#human_H200.1030      Astro
+Astro_#macaque_Q19.26.011 Astro_#macaque_Q19.26.011      Astro
+Astro_#macaque_Q19.26.015 Astro_#macaque_Q19.26.015      Astro
+                                   sample_id   human_age sex compare
+Astro_#human_H18.30.002     human_H18.30.002  1.24690399   M       B
+Astro_#human_H19.30.001     human_H19.30.001  0.81956847   M       B
+Astro_#human_H19.30.002     human_H19.30.002  0.81956847   M       B
+Astro_#human_H200.1025       human_H200.1025 -0.03510256   M       B
+Astro_#human_H200.1030       human_H200.1030 -1.42394299   M       B
+Astro_#macaque_Q19.26.011 macaque_Q19.26.011 -0.54790518   F       A
+Astro_#macaque_Q19.26.015 macaque_Q19.26.015 -0.87909020   F       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 12901 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue        padj
+       <numeric>      <numeric> <numeric>   <numeric>   <numeric>
+PRDM16 1059.0890      1.3396733  0.621644 0.009762375  0.04549973
+PEX10    68.0776     -2.3106645  0.914993 0.000819732  0.00699601
+PEX14   293.7848     -0.5717813  0.496052 0.141567195  0.30511149
+PLCH2    12.8697     -0.0802048  1.173650 0.882520617          NA
+SPSB1   113.2844     -1.1319378  1.068846 0.085210076  0.21625159
+...          ...            ...       ...         ...         ...
+ADARB1   223.339    0.337134568  0.597079 4.58991e-01 6.46901e-01
+NRIP1    624.413   -0.000559292  0.323410 9.98267e-01 9.99182e-01
+RCAN1    128.939    0.344838948  0.563163 4.25740e-01 6.19647e-01
+GRIK1    399.744   -0.705107494  0.488349 7.26779e-02 1.94823e-01
+APP     1432.258   -2.333857678  0.476151 1.03075e-07 4.66850e-06
+[1] "Excite_#human-vs-Excite_#macaque"
+[1] 2
+[1] "# -------- CLUST MAT -------- #"
+20 x 10 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 10 column names ‘Excite_#human_H18.30.001’, ‘Excite_#human_H18.30.002’, ‘Excite_#human_H19.30.001’ ... ]]
+                                                                        
+PRDM16    526   858   870   565    5195    815    6381   241   177   178
+PEX10    2158  5513  7071  4554   17009   3015   17264  5337  4141  5319
+PEX14   15699 24018 30887 18670  252431  45565  239573 21754 14073 16734
+PLCH2    3317 10319 14106  9107   58091   9915   38591  1071  1380  2181
+SPSB1     902  1078  1400   728   10741   1564    7251  1709  1376  2267
+SLC2A5    476   872  1461   775    5521   1226    5410   890   705  1276
+PLEKHM2 13818 20718 26311 15085  163403  29377  163066 25103 16364 17920
+NMNAT1   6791  9750 14132  8110   84772  19196   85462  6676  3764  7259
+CCDC27     18    89    85    33     940    194     986   757   628   970
+MMEL1      44   107   174   103     517     78     786   572   658   924
+TMEM51    601   735  1385   461    7873   1204    5095  2211  1599  2084
+FBXO42  29960 34137 52219 30338  457616  97538  522510 29382 19768 19970
+ALDH4A1   815  1127  1623  1082    7917   2571    7698  1109   693   776
+CLCN6    4756  6052  8775  5506  206260  46857  240887  9934  5929  7235
+CELA2B    631  1870  3047  1108   30387   5446   34608   600   736  1514
+RER1     5886 13471 15060  9543  106133  28172  157600  7625  4974  5341
+PANK4    1674  4082  4390  3467   76049  13628   89702 10211  4700  4408
+VPS13D  57495 74475 89442 56782 1154085 234552 1327124 52368 37268 28743
+RBP7      220   439   669   345    2099    671    2360   970   806  1301
+GPR157    306   347   654   276    3577    570    3392   809   583  1020
+0 x 10 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 10 column names ‘Excite_#human_H18.30.001’, ‘Excite_#human_H18.30.002’, ‘Excite_#human_H19.30.001’ ... ]]
+              
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                    cluster_sample_id cluster_id
+Excite_#human_H18.30.001     Excite_#human_H18.30.001     Excite
+Excite_#human_H18.30.002     Excite_#human_H18.30.002     Excite
+Excite_#human_H19.30.001     Excite_#human_H19.30.001     Excite
+Excite_#human_H19.30.002     Excite_#human_H19.30.002     Excite
+Excite_#human_H200.1023       Excite_#human_H200.1023     Excite
+Excite_#human_H200.1025       Excite_#human_H200.1025     Excite
+Excite_#human_H200.1030       Excite_#human_H200.1030     Excite
+Excite_#macaque_Q19.26.010 Excite_#macaque_Q19.26.010     Excite
+Excite_#macaque_Q19.26.011 Excite_#macaque_Q19.26.011     Excite
+Excite_#macaque_Q19.26.015 Excite_#macaque_Q19.26.015     Excite
+                                    sample_id    human_age sex compare
+Excite_#human_H18.30.001     human_H18.30.001  1.061504876   M       B
+Excite_#human_H18.30.002     human_H18.30.002  0.674094337   M       B
+Excite_#human_H19.30.001     human_H19.30.001 -0.003874105   F       B
+Excite_#human_H19.30.002     human_H19.30.002  0.674094337   M       B
+Excite_#human_H200.1023       human_H200.1023  1.642620683   F       B
+Excite_#human_H200.1025       human_H200.1025 -0.100726740   M       B
+Excite_#human_H200.1030       human_H200.1030 -1.359810990   M       B
+Excite_#macaque_Q19.26.010 macaque_Q19.26.010 -1.156420457   F       A
+Excite_#macaque_Q19.26.011 macaque_Q19.26.011 -0.565619386   F       A
+Excite_#macaque_Q19.26.015 macaque_Q19.26.015 -0.865862554   F       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 13087 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue        padj
+       <numeric>      <numeric> <numeric>   <numeric>   <numeric>
+PRDM16   810.463       0.339020  0.451521 3.70869e-01 4.66868e-01
+PEX10   7660.798      -1.371872  0.719365 9.68069e-03 2.20179e-02
+PEX14  36583.057      -0.665275  0.286282 1.19958e-02 2.65319e-02
+PLCH2   8803.318       0.535207  0.543863 2.10952e-01 2.94289e-01
+SPSB1   2430.792      -2.160105  0.463545 2.33201e-07 1.64968e-06
+...          ...            ...       ...         ...         ...
+ADARB1   46366.1   -0.000938103  0.166628    0.995396    0.997164
+NRIP1    71261.7    0.125443126  0.234077    0.573599    0.659639
+RCAN1    23845.0   -0.173114256  0.199776    0.369126    0.465166
+GRIK1    16339.3   -0.372843515  0.269582    0.139478    0.208934
+APP     337704.0    0.106122729  0.194561    0.572622    0.658805
+[1] "Inhibit_#human-vs-Inhibit_#macaque"
+[1] 3
+[1] "# -------- CLUST MAT -------- #"
+20 x 10 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 10 column names ‘Inhibit_#human_H18.30.001’, ‘Inhibit_#human_H18.30.002’, ‘Inhibit_#human_H19.30.001’ ... ]]
+                                                                     
+PRDM16    135   217   269   119   1954   472   2173    68    74    97
+PEX10     920  2126  3452  1416   7605  1041   8277  3120  3664  4698
+PEX14   10589 11129 17947  8213  97676 17581 115392 11403 10121 13164
+PLCH2    4395  4904  6616  3476  28080  3668  25590  3093  2312  3732
+SPSB1     195   296   710   219   5011  1168   3525   710   661   824
+SLC2A5    189   269   541   209   2859   256   3138   264   318   621
+PLEKHM2  6401  7204 11495  4661  59558 11326  68782 10600 10617 12354
+NMNAT1   3461  3351  6537  2637  32573  6744  35529  3233  2345  4804
+CCDC27      5    16    34     6   1078   161    352   290   304   400
+MMEL1      49    37    67    36    152   182    776   214   257   550
+TMEM51   2432  1569  3679  1276  30131  1626  20895  1442  1584  2144
+FBXO42  18137 14987 29237 12495 183310 37506 242972 15205 13875 16419
+ALDH4A1   296   454   726   324   3691   416   5197   600   500   626
+CLCN6    2236  2226  4243  1792 113206 26315 158276  5013  4180  6669
+CELA2B    227   450  1236   202  13409  2737  13096   174   191   611
+RER1     2567  5587  7599  3727  59831 15726  82123  3547  2793  4147
+PANK4     690  1429  1456   911  31338  5527  41600  4464  2832  2596
+VPS13D  30972 32258 47695 25860 427525 72098 487748 23727 20745 20822
+RBP7       55    99   227    65    856   453   1840   440   514   869
+GPR157    227   151   324   100   1056    95   1335   301   226   462
+0 x 10 sparse Matrix of class "dgCMatrix"
+  [[ suppressing 10 column names ‘Inhibit_#human_H18.30.001’, ‘Inhibit_#human_H18.30.002’, ‘Inhibit_#human_H19.30.001’ ... ]]
+              
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                      cluster_sample_id cluster_id
+Inhibit_#human_H18.30.001     Inhibit_#human_H18.30.001    Inhibit
+Inhibit_#human_H18.30.002     Inhibit_#human_H18.30.002    Inhibit
+Inhibit_#human_H19.30.001     Inhibit_#human_H19.30.001    Inhibit
+Inhibit_#human_H19.30.002     Inhibit_#human_H19.30.002    Inhibit
+Inhibit_#human_H200.1023       Inhibit_#human_H200.1023    Inhibit
+Inhibit_#human_H200.1025       Inhibit_#human_H200.1025    Inhibit
+Inhibit_#human_H200.1030       Inhibit_#human_H200.1030    Inhibit
+Inhibit_#macaque_Q19.26.010 Inhibit_#macaque_Q19.26.010    Inhibit
+Inhibit_#macaque_Q19.26.011 Inhibit_#macaque_Q19.26.011    Inhibit
+Inhibit_#macaque_Q19.26.015 Inhibit_#macaque_Q19.26.015    Inhibit
+                                     sample_id    human_age sex compare
+Inhibit_#human_H18.30.001     human_H18.30.001  1.061504876   M       B
+Inhibit_#human_H18.30.002     human_H18.30.002  0.674094337   M       B
+Inhibit_#human_H19.30.001     human_H19.30.001 -0.003874105   F       B
+Inhibit_#human_H19.30.002     human_H19.30.002  0.674094337   M       B
+Inhibit_#human_H200.1023       human_H200.1023  1.642620683   F       B
+Inhibit_#human_H200.1025       human_H200.1025 -0.100726740   M       B
+Inhibit_#human_H200.1030       human_H200.1030 -1.359810990   M       B
+Inhibit_#macaque_Q19.26.010 macaque_Q19.26.010 -1.156420457   F       A
+Inhibit_#macaque_Q19.26.011 macaque_Q19.26.011 -0.565619386   F       A
+Inhibit_#macaque_Q19.26.015 macaque_Q19.26.015 -0.865862554   F       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 13087 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue        padj
+       <numeric>      <numeric> <numeric>   <numeric>   <numeric>
+PRDM16   260.888       0.489283  0.349674 1.08684e-01 0.184217337
+PEX10   4086.120      -1.828377  0.724355 9.98028e-04 0.003674034
+PEX14  19818.443      -0.668883  0.387718 4.26030e-02 0.085692983
+PLCH2   6476.582      -0.524561  0.509253 1.87034e-01 0.284022974
+SPSB1    880.425      -1.423388  0.375990 2.05512e-05 0.000123486
+...          ...            ...       ...         ...         ...
+ADARB1   25952.5     -0.0180567  0.346843   0.9526461    0.966231
+NRIP1    33148.9      0.0397402  0.224267   0.8510594    0.894747
+RCAN1    14964.4      0.3371692  0.247347   0.1428374    0.229319
+GRIK1   774581.4      0.3989953  0.250729   0.0863152    0.152753
+APP     187936.4      0.0277059  0.277827   0.9133509    0.938775
+[1] "Microglia_#human-vs-Microglia_#macaque"
+[1] 4
+[1] "# -------- CLUST MAT -------- #"
+20 x 7 sparse Matrix of class "dgCMatrix"
+        Microglia_#human_H18.30.002 Microglia_#human_H19.30.001
+PRDM16                            .                           8
+PEX10                             9                          43
+PEX14                           235                         958
+PLCH2                             6                           5
+SPSB1                             3                           4
+SLC2A5                          262                        1064
+PLEKHM2                         253                         604
+NMNAT1                           31                         121
+CCDC27                            .                           .
+MMEL1                             .                           .
+TMEM51                           99                         319
+FBXO42                          294                        1272
+ALDH4A1                           .                          14
+CLCN6                            43                         103
+CELA2B                            3                          12
+RER1                             45                         213
+PANK4                            12                           6
+VPS13D                          798                        2585
+RBP7                              6                          10
+GPR157                            .                           8
+        Microglia_#human_H200.1023 Microglia_#human_H200.1025
+PRDM16                         855                          .
+PEX10                            .                          .
+PEX14                         2718                          1
+PLCH2                            6                         41
+SPSB1                           66                          3
+SLC2A5                       12208                         16
+PLEKHM2                       2926                        424
+NMNAT1                          33                        368
+CCDC27                         132                          .
+MMEL1                            4                          1
+TMEM51                        3223                          .
+FBXO42                        7760                         13
+ALDH4A1                          .                          .
+CLCN6                         1268                          .
+CELA2B                           4                          .
+RER1                           257                        208
+PANK4                            2                          .
+VPS13D                        6430                       2721
+RBP7                            24                          1
+GPR157                           7                        320
+        Microglia_#human_H200.1030 Microglia_#macaque_Q19.26.011
+PRDM16                        1171                             .
+PEX10                            .                            59
+PEX14                          790                           398
+PLCH2                            .                             3
+SPSB1                            1                            97
+SLC2A5                        1502                           833
+PLEKHM2                        248                           574
+NMNAT1                         157                            89
+CCDC27                           1                            17
+MMEL1                            .                             4
+TMEM51                         142                           228
+FBXO42                          62                           633
+ALDH4A1                          6                             3
+CLCN6                          159                           282
+CELA2B                          21                             4
+RER1                            93                           125
+PANK4                            .                            33
+VPS13D                         223                          1148
+RBP7                             2                            10
+GPR157                           2                             8
+        Microglia_#macaque_Q19.26.015
+PRDM16                              .
+PEX10                               3
+PEX14                              16
+PLCH2                               .
+SPSB1                               1
+SLC2A5                             49
+PLEKHM2                            20
+NMNAT1                              2
+CCDC27                              .
+MMEL1                               .
+TMEM51                             20
+FBXO42                             29
+ALDH4A1                             .
+CLCN6                              12
+CELA2B                              1
+RER1                                4
+PANK4                               .
+VPS13D                             37
+RBP7                                1
+GPR157                              .
+0 x 7 sparse Matrix of class "dgCMatrix"
+     Microglia_#human_H18.30.002 Microglia_#human_H19.30.001
+     Microglia_#human_H200.1023 Microglia_#human_H200.1025
+     Microglia_#human_H200.1030 Microglia_#macaque_Q19.26.011
+     Microglia_#macaque_Q19.26.015
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                          cluster_sample_id cluster_id
+Microglia_#human_H18.30.002     Microglia_#human_H18.30.002  Microglia
+Microglia_#human_H19.30.001     Microglia_#human_H19.30.001  Microglia
+Microglia_#human_H200.1023       Microglia_#human_H200.1023  Microglia
+Microglia_#human_H200.1025       Microglia_#human_H200.1025  Microglia
+Microglia_#human_H200.1030       Microglia_#human_H200.1030  Microglia
+Microglia_#macaque_Q19.26.011 Microglia_#macaque_Q19.26.011  Microglia
+Microglia_#macaque_Q19.26.015 Microglia_#macaque_Q19.26.015  Microglia
+                                       sample_id  human_age sex compare
+Microglia_#human_H18.30.002     human_H18.30.002  1.3232933   M       B
+Microglia_#human_H19.30.001     human_H19.30.001 -0.1817818   F       B
+Microglia_#human_H200.1023       human_H200.1023  0.7759933   M       B
+Microglia_#human_H200.1025       human_H200.1025  0.7759933   M       B
+Microglia_#human_H200.1030       human_H200.1030 -0.3186068   M       B
+Microglia_#macaque_Q19.26.011 macaque_Q19.26.011 -0.9753668   F       A
+Microglia_#macaque_Q19.26.015 macaque_Q19.26.015 -1.3995244   F       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 12729 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue      padj
+       <numeric>      <numeric> <numeric>   <numeric> <numeric>
+PRDM16  233.9660     11.1684701  6.746054 0.000139518  0.030807
+PEX10    13.4462     -0.0248689  0.441579 0.494633103  0.972153
+PEX14   313.1630      0.0257784  0.349624 0.369861022  0.972153
+PLCH2    17.8260     -0.0674193  0.685737 0.211499098  0.954574
+SPSB1    11.9583     -0.1794207  1.065161 0.051892107  0.683590
+...          ...            ...       ...         ...       ...
+ADARB1  311.9875     0.00906252  0.251509    0.687448  0.972153
+NRIP1  2803.4106    -0.00779660  0.249038    0.727459  0.972153
+RCAN1    54.1855    -0.03211521  0.438675    0.361135  0.972153
+GRIK1   315.8708     0.01064192  0.238421    0.626995  0.972153
+APP    1247.0052    -0.01006406  0.237360    0.644608  0.972153
+[1] "Oligo_#human-vs-Oligo_#macaque"
+[1] 5
+[1] "# -------- CLUST MAT -------- #"
+20 x 9 sparse Matrix of class "dgCMatrix"
+        Oligo_#human_H18.30.002 Oligo_#human_H19.30.001 Oligo_#human_H19.30.002
+PRDM16                       10                      36                      44
+PEX10                        83                     378                     156
+PEX14                      1014                    4597                    2681
+PLCH2                       170                     818                     665
+SPSB1                       188                    1016                     401
+SLC2A5                        4                      27                      18
+PLEKHM2                     602                    1777                     640
+NMNAT1                      141                    1013                     452
+CCDC27                        .                       2                       2
+MMEL1                         .                      10                       .
+TMEM51                        4                      20                       8
+FBXO42                     1290                    7528                    4012
+ALDH4A1                      17                      54                       8
+CLCN6                        81                     511                     248
+CELA2B                        .                      92                      10
+RER1                        342                    1448                    1032
+PANK4                        16                      81                      30
+VPS13D                     2473                   11816                    7303
+RBP7                        127                     411                     308
+GPR157                        2                      11                       .
+        Oligo_#human_H200.1023 Oligo_#human_H200.1025 Oligo_#human_H200.1030
+PRDM16                       .                    136                   1429
+PEX10                        .                      1                   1564
+PEX14                        1                   3021                   9817
+PLCH2                        .                   1028                   5792
+SPSB1                        .                     31                   6486
+SLC2A5                       .                     36                    543
+PLEKHM2                      1                   1247                   3599
+NMNAT1                       .                   1707                   4472
+CCDC27                       .                      5                     88
+MMEL1                        .                      3                      6
+TMEM51                       .                      4                     58
+FBXO42                       1                   3059                  17286
+ALDH4A1                      .                     44                    142
+CLCN6                        .                   3673                   9243
+CELA2B                       .                    216                     55
+RER1                         .                   1022                  10246
+PANK4                        .                      .                   2129
+VPS13D                       3                   8530                  36644
+RBP7                         .                    845                   8870
+GPR157                       .                      6                     94
+        Oligo_#macaque_Q19.26.010 Oligo_#macaque_Q19.26.011
+PRDM16                         22                        12
+PEX10                         565                       323
+PEX14                        4732                      1816
+PLCH2                         105                        42
+SPSB1                        5839                      1929
+SLC2A5                         52                        28
+PLEKHM2                      6458                      2749
+NMNAT1                        794                       296
+CCDC27                         31                        20
+MMEL1                          21                         8
+TMEM51                       1257                      1036
+FBXO42                       6728                      2767
+ALDH4A1                        78                        40
+CLCN6                        1586                       582
+CELA2B                         31                        14
+RER1                         1183                       421
+PANK4                         805                       275
+VPS13D                      10703                      4227
+RBP7                          114                        42
+GPR157                         42                        13
+        Oligo_#macaque_Q19.26.015
+PRDM16                         14
+PEX10                         838
+PEX14                        3376
+PLCH2                          82
+SPSB1                        3774
+SLC2A5                         59
+PLEKHM2                      4852
+NMNAT1                        736
+CCDC27                         69
+MMEL1                          34
+TMEM51                       1468
+FBXO42                       5285
+ALDH4A1                        59
+CLCN6                        1262
+CELA2B                         56
+RER1                         1007
+PANK4                         402
+VPS13D                       6755
+RBP7                          174
+GPR157                         41
+0 x 9 sparse Matrix of class "dgCMatrix"
+     Oligo_#human_H18.30.002 Oligo_#human_H19.30.001 Oligo_#human_H19.30.002
+     Oligo_#human_H200.1023 Oligo_#human_H200.1025 Oligo_#human_H200.1030
+     Oligo_#macaque_Q19.26.010 Oligo_#macaque_Q19.26.011
+     Oligo_#macaque_Q19.26.015
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                                  cluster_sample_id cluster_id
+Oligo_#human_H18.30.002     Oligo_#human_H18.30.002      Oligo
+Oligo_#human_H19.30.001     Oligo_#human_H19.30.001      Oligo
+Oligo_#human_H19.30.002     Oligo_#human_H19.30.002      Oligo
+Oligo_#human_H200.1023       Oligo_#human_H200.1023      Oligo
+Oligo_#human_H200.1025       Oligo_#human_H200.1025      Oligo
+Oligo_#human_H200.1030       Oligo_#human_H200.1030      Oligo
+Oligo_#macaque_Q19.26.010 Oligo_#macaque_Q19.26.010      Oligo
+Oligo_#macaque_Q19.26.011 Oligo_#macaque_Q19.26.011      Oligo
+Oligo_#macaque_Q19.26.015 Oligo_#macaque_Q19.26.015      Oligo
+                                   sample_id  human_age sex compare
+Oligo_#human_H18.30.002     human_H18.30.002  1.4362296   M       B
+Oligo_#human_H19.30.001     human_H19.30.001  0.9889609   M       B
+Oligo_#human_H19.30.002     human_H19.30.002  0.9889609   M       B
+Oligo_#human_H200.1023       human_H200.1023  0.2062406   F       B
+Oligo_#human_H200.1025       human_H200.1025  0.0944234   M       B
+Oligo_#human_H200.1030       human_H200.1030 -1.3592000   M       B
+Oligo_#macaque_Q19.26.010 macaque_Q19.26.010 -1.1243839   F       A
+Oligo_#macaque_Q19.26.011 macaque_Q19.26.011 -0.4422991   F       A
+Oligo_#macaque_Q19.26.015 macaque_Q19.26.015 -0.7889323   F       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 13049 rows and 5 columns
+        baseMean log2FoldChange     lfcSE      pvalue        padj
+       <numeric>      <numeric> <numeric>   <numeric>   <numeric>
+PRDM16   27.5415       2.608670  0.961705 8.02739e-04 4.13786e-03
+PEX10   140.6292      -0.924694  1.071052 2.29586e-01 3.66056e-01
+PEX14  1267.6646      -0.584379  0.303893 4.16045e-02 9.82081e-02
+PLCH2   201.0376       3.463270  0.472167 1.10014e-14 8.51390e-13
+SPSB1   724.6158      -1.816174  0.896504 1.22936e-02 3.72362e-02
+...          ...            ...       ...         ...         ...
+ADARB1   717.754      -1.411955  0.560330 5.15070e-03 1.85907e-02
+NRIP1   1620.435      -0.350068  0.231034 1.16157e-01 2.18535e-01
+RCAN1    872.916       2.167265  0.483547 2.15286e-06 2.83386e-05
+GRIK1   1532.413      -1.984281  0.624767 4.42159e-04 2.54545e-03
+APP    18986.882      -0.122997  0.202208 5.32039e-01 6.67567e-01
+[1] "OPC_#human-vs-OPC_#macaque"
+[1] 6
+[1] "# -------- CLUST MAT -------- #"
+20 x 7 sparse Matrix of class "dgCMatrix"
+        OPC_#human_H19.30.001 OPC_#human_H19.30.002 OPC_#human_H200.1023
+PRDM16                      .                    13                   17
+PEX10                       .                    62                  444
+PEX14                       7                   362                 4555
+PLCH2                       .                    16                   26
+SPSB1                       .                   104                 1962
+SLC2A5                      .                    11                   76
+PLEKHM2                     2                   190                 2634
+NMNAT1                      .                    79                  976
+CCDC27                      .                     .                   13
+MMEL1                       .                     .                    4
+TMEM51                      .                    84                 1614
+FBXO42                      7                   907                 8531
+ALDH4A1                     .                    52                  366
+CLCN6                       .                   107                 5536
+CELA2B                      .                     5                   12
+RER1                        3                   169                  739
+PANK4                       .                    23                 1380
+VPS13D                     17                  1452                13990
+RBP7                        .                     .                   14
+GPR157                      .                     4                   16
+        OPC_#human_H200.1025 OPC_#human_H200.1030 OPC_#macaque_Q19.26.010
+PRDM16                     4                  416                       2
+PEX10                    773                  584                      90
+PEX14                    168                 5134                     538
+PLCH2                      1                  110                       3
+SPSB1                    356                 1284                      75
+SLC2A5                    37                  342                       6
+PLEKHM2                  899                 4427                     403
+NMNAT1                   438                 2545                     234
+CCDC27                     5                  118                      11
+MMEL1                      .                    6                       6
+TMEM51                   401                 2565                     299
+FBXO42                  3588                14508                     903
+ALDH4A1                  121                  956                      31
+CLCN6                   2020                 8108                     230
+CELA2B                     3                   11                       7
+RER1                    1255                 1355                     146
+PANK4                    321                 2016                     135
+VPS13D                  3568                14795                    1424
+RBP7                       4                  100                      17
+GPR157                    13                   84                       6
+        OPC_#macaque_Q19.26.011
+PRDM16                        2
+PEX10                        89
+PEX14                       341
+PLCH2                         8
+SPSB1                        55
+SLC2A5                        5
+PLEKHM2                     409
+NMNAT1                       61
+CCDC27                        6
+MMEL1                         4
+TMEM51                      160
+FBXO42                      629
+ALDH4A1                      15
+CLCN6                       109
+CELA2B                        3
+RER1                         71
+PANK4                        50
+VPS13D                      923
+RBP7                          7
+GPR157                        1
+0 x 7 sparse Matrix of class "dgCMatrix"
+     OPC_#human_H19.30.001 OPC_#human_H19.30.002 OPC_#human_H200.1023
+     OPC_#human_H200.1025 OPC_#human_H200.1030 OPC_#macaque_Q19.26.010
+     OPC_#macaque_Q19.26.011
+[1] FALSE
+[1] "# -------- CLUST METADATA -------- #"
+                              cluster_sample_id cluster_id          sample_id
+OPC_#human_H19.30.001     OPC_#human_H19.30.001        OPC   human_H19.30.001
+OPC_#human_H19.30.002     OPC_#human_H19.30.002        OPC   human_H19.30.002
+OPC_#human_H200.1023       OPC_#human_H200.1023        OPC    human_H200.1023
+OPC_#human_H200.1025       OPC_#human_H200.1025        OPC    human_H200.1025
+OPC_#human_H200.1030       OPC_#human_H200.1030        OPC    human_H200.1030
+OPC_#macaque_Q19.26.010 OPC_#macaque_Q19.26.010        OPC macaque_Q19.26.010
+OPC_#macaque_Q19.26.011 OPC_#macaque_Q19.26.011        OPC macaque_Q19.26.011
+                         human_age sex compare
+OPC_#human_H19.30.001    1.4189760   M       B
+OPC_#human_H19.30.002    0.9857009   M       B
+OPC_#human_H200.1023     0.2274694   F       B
+OPC_#human_H200.1025     0.1191507   M       B
+OPC_#human_H200.1030    -1.2889935   M       B
+OPC_#macaque_Q19.26.010 -1.0615240   F       A
+OPC_#macaque_Q19.26.011 -0.4007795   F       A
+converting counts to integer mode
+[1] "# -------- DESeqDataSetFromMatrix COMPLETE -------- #"
+Saving 7 x 7 in image
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+[1] "# -------- DESEQ COMPLETE -------- #"
+[1] "# -------- RESNAMES DDS -------- #"
+[1] "Intercept"      "human_age"      "compare_B_vs_A"
+[1] "# -------- RES COMPLETE -------- #"
+using 'ashr' for LFC shrinkage. If used in published research, please cite:
+    Stephens, M. (2016) False discovery rates: a new deal. Biostatistics, 18:2.
+    https://doi.org/10.1093/biostatistics/kxw041
+log2 fold change (MMSE): compare B vs A 
+Wald test p-value: compare B vs A 
+DataFrame with 12931 rows and 5 columns
+        baseMean log2FoldChange     lfcSE     pvalue      padj
+       <numeric>      <numeric> <numeric>  <numeric> <numeric>
+PRDM16   7.35890      0.2340961  1.265821  0.5991980  0.800371
+PEX10  101.36492     -0.5272680  0.830273  0.3343711  0.583142
+PEX14  511.44658     -0.8912032  0.715650  0.0952463  0.275136
+PLCH2    7.33296     -0.1552829  1.200472  0.7328026  0.883747
+SPSB1  103.26429     -0.0788647  0.705619  0.8796706  0.952702
+...          ...            ...       ...        ...       ...
+ADARB1   464.545     -0.6398553  0.566117 0.17277532 0.4006997
+NRIP1   1311.299     -0.1481368  0.468491 0.71827489 0.8760779
+RCAN1    628.391     -0.1791165  0.419025 0.63412446 0.8231680
+GRIK1  11293.940      1.1670550  0.477365 0.00546767 0.0389941
+APP     6867.391     -0.0556535  0.325475 0.85478047 0.9434723
+pseudo_bulkAB_YS1.8.R
+SLURM Job ID        : 9954

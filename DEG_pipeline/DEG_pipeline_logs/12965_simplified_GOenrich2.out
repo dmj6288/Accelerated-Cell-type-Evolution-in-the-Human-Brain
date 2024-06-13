@@ -1,0 +1,156 @@
+[1] 6802
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 6805
+[1] 11938
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 11941
+[1] 10812
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 10815
+[1] 3530
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+[1] 3532
+[1] 7464
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 7467
+[1] 5851
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 5854
+$Astro
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:80] "5322" "1901" "2152" "23566" "8682" "7779" "84288" "254268" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Excite
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:312] "54797" "5738" "83479" "56956" "83932" "199920" "55733" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Inhibit
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:284] "51042" "3633" "10451" "83479" "148641" "360023" "113802" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Microglia
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:37] "163882" "23179" "51232" "57181" "23190" "285331" "8545" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Oligo
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:124] "192670" "163782" "6045" "3776" "27245" "22854" "1378" "8853" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$OPC
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:85] "192670" "1298" "22874" "114784" "7107" "255928" "8853" "9687" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...1 enriched terms found
+'data.frame':	1 obs. of  9 variables:
+ $ ID         : chr "GO:0005539"
+ $ Description: chr "glycosaminoglycan binding"
+ $ GeneRatio  : chr "7/77"
+ $ BgRatio    : chr "39/5569"
+ $ pvalue     : num 7.9e-07
+ $ p.adjust   : num 0.000176
+ $ qvalue     : num 0.000176
+ $ geneID     : chr "ALK/SUSD5/SEMA5A/FGF1/SMOC1/ADGRG1/SULF2"
+ $ Count      : int 7
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+[1] 8783
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 8786
+slurmstepd-yi-compute-1: error: *** JOB 12965 ON yi-compute-1 CANCELLED AT 2024-02-05T12:29:39 ***

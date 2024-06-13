@@ -1,0 +1,49 @@
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/pbres/pseudo_bulk_analysis_results_018/Caglayan/Caglayan_df_human_chimp.rds_sce.rdscounts_ls.rds/"
+[1] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Astrocyte_#chimp-vs-Astrocyte_#human_dispersion_plot.png"    
+[4] "Astrocyte_#chimp-vs-Astrocyte_#human_specific_heatmap.png"   
+[5] "Astrocyte_#chimp-vs-Astrocyte_#human_specific_PCAplot.png"   
+[6] "Excite_#chimp-vs-Excite_#human_compare_B_vs_A_all_genes.csv" 
+[1] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Astrocyte_#chimp-vs-Astrocyte_#human_dispersion_plot.png"    
+[4] "Astrocyte_#chimp-vs-Astrocyte_#human_specific_heatmap.png"   
+[5] "Astrocyte_#chimp-vs-Astrocyte_#human_specific_PCAplot.png"   
+Rows: 7486 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 8527 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 7476 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+[1] "Astrocyte_#chimp-vs-Astrocyte_#human_dispersion_plot.png" 
+[2] "Astrocyte_#chimp-vs-Astrocyte_#human_specific_heatmap.png"
+[3] "Astrocyte_#chimp-vs-Astrocyte_#human_specific_PCAplot.png"
+Error in file(con, "rb") : cannot open the connection
+Calls: read_csv ... <Anonymous> -> detect_compression -> readBin -> file
+In addition: Warning messages:
+1: In file(con, "rb") :
+  'raw = FALSE' but '/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/pbres/pseudo_bulk_analysis_results_018/Caglayan/Caglayan_df_human_chimp.rds_sce.rdscounts_ls.rds' is not a regular file
+2: In file(con, "rb") :
+  cannot open file '/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/pbres/pseudo_bulk_analysis_results_018/Caglayan/Caglayan_df_human_chimp.rds_sce.rdscounts_ls.rds': it is a directory
+Execution halted
+DE_genes_calculation_chimp_FC_all_restables.R
+SLURM Job ID        : 15533

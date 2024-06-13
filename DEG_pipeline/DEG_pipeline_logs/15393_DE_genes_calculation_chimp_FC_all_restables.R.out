@@ -1,0 +1,977 @@
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/pbres/pseudo_bulk_analysis_results_018/Ma/Ma_df_human_chimp.rds_sce.rdscounts_ls.rds/"
+[1] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Astro_#chimp-vs-Astro_#human_dispersion_plot.png"            
+[4] "Astro_#chimp-vs-Astro_#human_specific_heatmap.png"           
+[5] "Astro_#chimp-vs-Astro_#human_specific_PCAplot.png"           
+[6] "Excite_#chimp-vs-Excite_#human_compare_B_vs_A_all_genes.csv" 
+[1] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Astro_#chimp-vs-Astro_#human_dispersion_plot.png"            
+[4] "Astro_#chimp-vs-Astro_#human_specific_heatmap.png"           
+[5] "Astro_#chimp-vs-Astro_#human_specific_PCAplot.png"           
+Rows: 10192 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9500 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 10249 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE pvalue  padj
+  <chr>     <dbl>          <dbl> <dbl>  <dbl> <dbl>
+1 PRDM16   4117.         -0.0695 0.209  0.650 0.858
+2 PEX10     129.         -0.244  0.305  0.147 0.411
+3 PEX14     866.         -0.0102 0.193  0.945 0.987
+4 PLCH2      47.2         0.0623 0.495  0.674 0.871
+5 SPSB1      66.5        -0.0116 0.323  0.935 0.983
+6 SLC2A5     75.4         0.0877 0.348  0.544 0.803
+[1] "up_gene_res_table"
+# A tibble: 38 × 6
+   gene     baseMean log2FoldChange lfcSE   pvalue     padj
+   <chr>       <dbl>          <dbl> <dbl>    <dbl>    <dbl>
+ 1 LRIG2       1156.          1.99  0.225 1.45e-19 6.14e-17
+ 2 ADAMTSL4     153.          2.47  0.685 1.31e- 5 4.11e- 4
+ 3 ADGRL2      1116.          8.26  0.799 8.59e-27 8.75e-24
+ 4 EHBP1       6300.          0.459 0.171 1.09e- 3 1.37e- 2
+ 5 ALMS1       1483.          0.513 0.141 2.79e- 5 7.51e- 4
+ 6 RMND5A       849.          0.568 0.187 1.45e- 4 2.85e- 3
+ 7 HGD          240.          5.35  1.03  3.61e- 8 2.61e- 6
+ 8 OXNAD1       982.          0.441 0.203 4.68e- 3 4.04e- 2
+ 9 CACNA2D3   12945.          2.35  0.359 1.80e-11 2.91e- 9
+10 INTU        4948.          1.29  0.329 3.71e- 7 2.09e- 5
+# ℹ 28 more rows
+[1] "Excite_#chimp-vs-Excite_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Excite_#chimp-vs-Excite_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Excite_#chimp-vs-Excite_#human_dispersion_plot.png"            
+[4] "Excite_#chimp-vs-Excite_#human_specific_heatmap.png"           
+[5] "Excite_#chimp-vs-Excite_#human_specific_PCAplot.png"           
+Rows: 12727 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 12805 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 12786 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE    pvalue    padj
+  <chr>     <dbl>          <dbl> <dbl>     <dbl>   <dbl>
+1 PRDM16     354.         0.470  0.602 0.0863    0.223  
+2 PEX10     2003.        -0.101  0.217 0.598     0.763  
+3 PEX14     7971.        -0.321  0.204 0.0782    0.209  
+4 PLCH2     2944.         0.0447 0.370 0.858     0.926  
+5 SPSB1     1361.         0.607  0.479 0.0350    0.119  
+6 SLC2A5     168.        -2.21   0.980 0.0000819 0.00119
+[1] "up_gene_res_table"
+# A tibble: 218 × 6
+   gene    baseMean log2FoldChange lfcSE    pvalue     padj
+   <chr>      <dbl>          <dbl> <dbl>     <dbl>    <dbl>
+ 1 RRAGC      3181.          0.992 0.393 0.000481  0.00477 
+ 2 LMO4      81998.          0.920 0.306 0.000174  0.00216 
+ 3 GPR88      1246.          1.01  0.615 0.00349   0.0214  
+ 4 NENF       2401.          1.32  0.572 0.000258  0.00297 
+ 5 EXOC8      2079.          1.25  0.458 0.0000904 0.00129 
+ 6 FAM43B     1019.          1.03  0.584 0.00245   0.0164  
+ 7 ATP1A1    43722.          1.00  0.327 0.0000899 0.00129 
+ 8 SYT11     34551.          0.762 0.410 0.00695   0.0357  
+ 9 ST3GAL3    1162.          1.45  0.512 0.0000337 0.000580
+10 LRRC47     5412.          0.990 0.328 0.000112  0.00152 
+# ℹ 208 more rows
+[1] "Inhibit_#chimp-vs-Inhibit_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Inhibit_#chimp-vs-Inhibit_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Inhibit_#chimp-vs-Inhibit_#human_dispersion_plot.png"            
+[4] "Inhibit_#chimp-vs-Inhibit_#human_specific_heatmap.png"           
+[5] "Inhibit_#chimp-vs-Inhibit_#human_specific_PCAplot.png"           
+Rows: 12120 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 12160 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 12140 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE pvalue  padj
+  <chr>     <dbl>          <dbl> <dbl>  <dbl> <dbl>
+1 PRDM16     40.2       -0.00481 0.363  0.973 0.989
+2 PEX10     664.        -0.0256  0.207  0.870 0.945
+3 PEX14    2585.        -0.206   0.147  0.107 0.323
+4 PLCH2    1671.         0.174   0.218  0.278 0.546
+5 SPSB1     184.         0.183   0.342  0.269 0.537
+6 SLC2A5     57.1       -0.0918  0.358  0.538 0.765
+[1] "up_gene_res_table"
+# A tibble: 88 × 6
+   gene     baseMean log2FoldChange lfcSE      pvalue      padj
+   <chr>       <dbl>          <dbl> <dbl>       <dbl>     <dbl>
+ 1 RNASEL       387.          0.625 0.340 0.00296     0.0312   
+ 2 LAMB3        340.          0.892 0.532 0.00137     0.0182   
+ 3 EXOC8        593.          0.583 0.318 0.00392     0.0379   
+ 4 SYT11      10891.          0.616 0.200 0.000114    0.00277  
+ 5 MAPKAPK2     467.          0.721 0.310 0.000505    0.00886  
+ 6 EFCAB14     2544.          0.604 0.210 0.000237    0.00498  
+ 7 CADM3       6234.          0.518 0.151 0.0000757   0.00200  
+ 8 CELSR2      2340.          0.979 0.231 0.000000134 0.0000106
+ 9 WRAP73       629.          0.716 0.339 0.000926    0.0137   
+10 CD55        1011.          0.592 0.224 0.000524    0.00909  
+# ℹ 78 more rows
+[1] "Microglia_#chimp-vs-Microglia_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Microglia_#chimp-vs-Microglia_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Microglia_#chimp-vs-Microglia_#human_dispersion_plot.png"            
+[4] "Microglia_#chimp-vs-Microglia_#human_specific_heatmap.png"           
+[5] "Microglia_#chimp-vs-Microglia_#human_specific_PCAplot.png"           
+Rows: 7300 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 7668 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 7902 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene    baseMean log2FoldChange lfcSE       pvalue       padj
+  <chr>      <dbl>          <dbl> <dbl>        <dbl>      <dbl>
+1 PEX10       19.7        -0.154  0.340 0.328        0.660     
+2 PEX14      155.          0.108  0.203 0.444        0.750     
+3 SPSB1       52.7         3.41   0.644 0.0000000388 0.00000354
+4 SLC2A5     954.          0.854  0.318 0.000185     0.00399   
+5 PLEKHM2    227.         -0.0151 0.167 0.906        0.970     
+6 NMNAT1      58.5         0.0415 0.243 0.776        0.919     
+[1] "up_gene_res_table"
+# A tibble: 31 × 6
+   gene    baseMean log2FoldChange lfcSE   pvalue     padj
+   <chr>      <dbl>          <dbl> <dbl>    <dbl>    <dbl>
+ 1 LRIG2      177.           1.75  0.304 2.76e-11 5.03e- 9
+ 2 MPZL1      567.           1.21  0.244 8.18e- 9 9.04e- 7
+ 3 ADGRL2     177.           2.61  2.92  2.71e- 3 3.21e- 2
+ 4 IL12RB2    333.           6.81  0.587 3.10e-32 3.77e-29
+ 5 PRKD3      410.           0.852 0.301 1.24e- 4 2.93e- 3
+ 6 EHBP1     1050.           2.88  0.282 9.04e-25 5.08e-22
+ 7 APPL1      253.           0.688 0.279 5.69e- 4 9.57e- 3
+ 8 FNDC3B     966.           1.01  0.311 1.97e- 5 7.02e- 4
+ 9 CCDC50     560.           1.10  0.211 3.99e- 9 4.86e- 7
+10 PARP15      80.5          1.51  0.525 1.93e- 5 6.90e- 4
+# ℹ 21 more rows
+[1] "Oligo_#chimp-vs-Oligo_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Oligo_#chimp-vs-Oligo_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Oligo_#chimp-vs-Oligo_#human_dispersion_plot.png"            
+[4] "Oligo_#chimp-vs-Oligo_#human_specific_heatmap.png"           
+[5] "Oligo_#chimp-vs-Oligo_#human_specific_PCAplot.png"           
+Rows: 9944 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9626 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9831 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE        pvalue        padj
+  <chr>     <dbl>          <dbl> <dbl>         <dbl>       <dbl>
+1 PRDM16     16.2        -0.0906 0.511 0.580         0.804      
+2 PEX10     272.         -0.0691 0.246 0.645         0.842      
+3 PEX14     863.         -0.0383 0.168 0.769         0.908      
+4 PLCH2     353.         -6.49   1.19  0.00000000307 0.000000166
+5 SPSB1    1779.          0.516  0.390 0.0162        0.0900     
+6 SLC2A5     13.8        -0.0278 0.470 0.858         0.944      
+[1] "up_gene_res_table"
+# A tibble: 56 × 6
+   gene    baseMean log2FoldChange lfcSE   pvalue     padj
+   <chr>      <dbl>          <dbl> <dbl>    <dbl>    <dbl>
+ 1 LRIG2     2436.           2.04  0.274 7.03e-15 9.20e-13
+ 2 RXRG        76.4          3.95  1.18  3.33e- 5 6.61e- 4
+ 3 DNER      9056.           1.04  0.216 3.56e- 8 1.55e- 6
+ 4 TFCP2L1     97.4          2.25  1.79  3.15e- 3 2.60e- 2
+ 5 FAM171B   6530.           3.70  0.559 8.45e-12 6.96e-10
+ 6 EIF2B4     404.           0.671 0.363 2.84e- 3 2.40e- 2
+ 7 ANO10     1509.           0.542 0.212 7.38e- 4 8.45e- 3
+ 8 CD200     1734.           0.691 0.292 6.99e- 4 8.09e- 3
+ 9 P2RY1      118.           3.34  1.66  5.39e- 4 6.56e- 3
+10 SLIT2     8408.           2.06  0.394 8.18e- 9 4.12e- 7
+# ℹ 46 more rows
+[1] "OPC_#chimp-vs-OPC_#human_compare_B_vs_A_all_genes.csv"   
+[2] "OPC_#chimp-vs-OPC_#human_compare_B_vs_A_signif_genes.csv"
+[3] "OPC_#chimp-vs-OPC_#human_dispersion_plot.png"            
+[4] "OPC_#chimp-vs-OPC_#human_specific_heatmap.png"           
+[5] "OPC_#chimp-vs-OPC_#human_specific_PCAplot.png"           
+Rows: 9510 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9027 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9580 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE pvalue  padj
+  <chr>     <dbl>          <dbl> <dbl>  <dbl> <dbl>
+1 PRDM16    30.0         -0.0456 0.340  0.661 0.888
+2 PEX10     79.8         -0.115  0.279  0.339 0.695
+3 PEX14    259.          -0.0893 0.156  0.402 0.745
+4 PLCH2      9.64         0.0178 0.351  0.859 0.961
+5 SPSB1    204.           0.170  0.252  0.184 0.524
+6 SLC2A5    14.9         -0.0664 0.401  0.521 0.817
+[1] "up_gene_res_table"
+# A tibble: 36 × 6
+   gene     baseMean log2FoldChange lfcSE   pvalue     padj
+   <chr>       <dbl>          <dbl> <dbl>    <dbl>    <dbl>
+ 1 LRIG2       424.           1.36  0.185 1.84e-15 7.96e-13
+ 2 PPOX        113.           0.846 0.385 3.95e- 4 9.07e- 3
+ 3 PTH2R       274.           0.909 0.354 1.31e- 4 3.80e- 3
+ 4 ST6GAL2    2703.           2.58  0.177 5.48e-49 5.21e-45
+ 5 TMEM178A    282.           0.849 0.299 7.28e- 5 2.42e- 3
+ 6 CCDC148     248.           1.02  0.295 7.39e- 6 3.78e- 4
+ 7 ABI3BP      171.           4.83  0.849 4.70e-10 7.70e- 8
+ 8 PPP2R2C     250.           1.66  0.696 8.56e- 5 2.71e- 3
+ 9 ANTXR2      225.           1.34  0.535 7.15e- 5 2.41e- 3
+10 SPP1         55.6          2.05  1.12  2.92e- 4 7.25e- 3
+# ℹ 26 more rows
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/pbres/pseudo_bulk_analysis_results_018/Ma/Ma_df_human_chimp.rds_sce.rdscounts_ls.rds/"
+[1] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Astro_#chimp-vs-Astro_#human_dispersion_plot.png"            
+[4] "Astro_#chimp-vs-Astro_#human_specific_heatmap.png"           
+[5] "Astro_#chimp-vs-Astro_#human_specific_PCAplot.png"           
+[6] "Excite_#chimp-vs-Excite_#human_compare_B_vs_A_all_genes.csv" 
+[1] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Astro_#chimp-vs-Astro_#human_dispersion_plot.png"            
+[4] "Astro_#chimp-vs-Astro_#human_specific_heatmap.png"           
+[5] "Astro_#chimp-vs-Astro_#human_specific_PCAplot.png"           
+Rows: 10192 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9500 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 10249 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE pvalue  padj
+  <chr>     <dbl>          <dbl> <dbl>  <dbl> <dbl>
+1 PRDM16   4117.         -0.0695 0.209  0.650 0.858
+2 PEX10     129.         -0.244  0.305  0.147 0.411
+3 PEX14     866.         -0.0102 0.193  0.945 0.987
+4 PLCH2      47.2         0.0623 0.495  0.674 0.871
+5 SPSB1      66.5        -0.0116 0.323  0.935 0.983
+6 SLC2A5     75.4         0.0877 0.348  0.544 0.803
+[1] "up_gene_res_table"
+# A tibble: 65 × 6
+   gene     baseMean log2FoldChange lfcSE   pvalue     padj
+   <chr>       <dbl>          <dbl> <dbl>    <dbl>    <dbl>
+ 1 ATG4C       1545.          0.479 0.174 7.77e- 4 1.06e- 2
+ 2 LRIG2       1156.          1.99  0.225 1.45e-19 6.14e-17
+ 3 PADI2       3398.          1.63  0.899 6.36e- 4 9.08e- 3
+ 4 BROX         397.          0.691 0.352 1.23e- 3 1.50e- 2
+ 5 ADAMTSL4     153.          2.47  0.685 1.31e- 5 4.11e- 4
+ 6 ADGRL2      1116.          8.26  0.799 8.59e-27 8.75e-24
+ 7 NCSTN        303.          0.464 0.332 1.57e- 2 9.66e- 2
+ 8 USP24       2530.          0.376 0.185 1.07e- 2 7.48e- 2
+ 9 COX7A2L      185.          1.37  1.73  1.35e- 2 8.72e- 2
+10 EHBP1       6300.          0.459 0.171 1.09e- 3 1.37e- 2
+# ℹ 55 more rows
+[1] "Excite_#chimp-vs-Excite_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Excite_#chimp-vs-Excite_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Excite_#chimp-vs-Excite_#human_dispersion_plot.png"            
+[4] "Excite_#chimp-vs-Excite_#human_specific_heatmap.png"           
+[5] "Excite_#chimp-vs-Excite_#human_specific_PCAplot.png"           
+Rows: 12727 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 12805 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 12786 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE    pvalue    padj
+  <chr>     <dbl>          <dbl> <dbl>     <dbl>   <dbl>
+1 PRDM16     354.         0.470  0.602 0.0863    0.223  
+2 PEX10     2003.        -0.101  0.217 0.598     0.763  
+3 PEX14     7971.        -0.321  0.204 0.0782    0.209  
+4 PLCH2     2944.         0.0447 0.370 0.858     0.926  
+5 SPSB1     1361.         0.607  0.479 0.0350    0.119  
+6 SLC2A5     168.        -2.21   0.980 0.0000819 0.00119
+[1] "up_gene_res_table"
+# A tibble: 342 × 6
+   gene   baseMean log2FoldChange lfcSE    pvalue    padj
+   <chr>     <dbl>          <dbl> <dbl>     <dbl>   <dbl>
+ 1 RRAGC     3181.          0.992 0.393 0.000481  0.00477
+ 2 YRDC      1209.          0.690 0.370 0.0100    0.0468 
+ 3 RIMS3    20389.          0.951 0.301 0.0000887 0.00128
+ 4 USP1      3350.          0.572 0.251 0.00726   0.0370 
+ 5 LMO4     81998.          0.920 0.306 0.000174  0.00216
+ 6 DHCR24    8381.          0.729 0.298 0.00228   0.0157 
+ 7 GPR88     1246.          1.01  0.615 0.00349   0.0214 
+ 8 NENF      2401.          1.32  0.572 0.000258  0.00297
+ 9 EXOC8     2079.          1.25  0.458 0.0000904 0.00129
+10 FAM43B    1019.          1.03  0.584 0.00245   0.0164 
+# ℹ 332 more rows
+[1] "Inhibit_#chimp-vs-Inhibit_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Inhibit_#chimp-vs-Inhibit_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Inhibit_#chimp-vs-Inhibit_#human_dispersion_plot.png"            
+[4] "Inhibit_#chimp-vs-Inhibit_#human_specific_heatmap.png"           
+[5] "Inhibit_#chimp-vs-Inhibit_#human_specific_PCAplot.png"           
+Rows: 12120 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 12160 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 12140 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE pvalue  padj
+  <chr>     <dbl>          <dbl> <dbl>  <dbl> <dbl>
+1 PRDM16     40.2       -0.00481 0.363  0.973 0.989
+2 PEX10     664.        -0.0256  0.207  0.870 0.945
+3 PEX14    2585.        -0.206   0.147  0.107 0.323
+4 PLCH2    1671.         0.174   0.218  0.278 0.546
+5 SPSB1     184.         0.183   0.342  0.269 0.537
+6 SLC2A5     57.1       -0.0918  0.358  0.538 0.765
+[1] "up_gene_res_table"
+# A tibble: 145 × 6
+   gene     baseMean log2FoldChange lfcSE   pvalue         padj
+   <chr>       <dbl>          <dbl> <dbl>    <dbl>        <dbl>
+ 1 LRIG2       2118.          1.16  0.213 2.02e-10 0.0000000375
+ 2 RNASEL       387.          0.625 0.340 2.96e- 3 0.0312      
+ 3 LAMB3        340.          0.892 0.532 1.37e- 3 0.0182      
+ 4 EXOC8        593.          0.583 0.318 3.92e- 3 0.0379      
+ 5 SYT11      10891.          0.616 0.200 1.14e- 4 0.00277     
+ 6 MAPKAPK2     467.          0.721 0.310 5.05e- 4 0.00886     
+ 7 EFCAB14     2544.          0.604 0.210 2.37e- 4 0.00498     
+ 8 SV2A       14070.          0.687 0.221 6.06e- 5 0.00165     
+ 9 CADM3       6234.          0.518 0.151 7.57e- 5 0.00200     
+10 ROR1        7197.          0.910 0.378 1.71e- 4 0.00386     
+# ℹ 135 more rows
+[1] "Microglia_#chimp-vs-Microglia_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Microglia_#chimp-vs-Microglia_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Microglia_#chimp-vs-Microglia_#human_dispersion_plot.png"            
+[4] "Microglia_#chimp-vs-Microglia_#human_specific_heatmap.png"           
+[5] "Microglia_#chimp-vs-Microglia_#human_specific_PCAplot.png"           
+Rows: 7300 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 7668 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 7902 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene    baseMean log2FoldChange lfcSE       pvalue       padj
+  <chr>      <dbl>          <dbl> <dbl>        <dbl>      <dbl>
+1 PEX10       19.7        -0.154  0.340 0.328        0.660     
+2 PEX14      155.          0.108  0.203 0.444        0.750     
+3 SPSB1       52.7         3.41   0.644 0.0000000388 0.00000354
+4 SLC2A5     954.          0.854  0.318 0.000185     0.00399   
+5 PLEKHM2    227.         -0.0151 0.167 0.906        0.970     
+6 NMNAT1      58.5         0.0415 0.243 0.776        0.919     
+[1] "up_gene_res_table"
+# A tibble: 50 × 6
+   gene     baseMean log2FoldChange lfcSE   pvalue     padj
+   <chr>       <dbl>          <dbl> <dbl>    <dbl>    <dbl>
+ 1 LRIG2       177.           1.75  0.304 2.76e-11 5.03e- 9
+ 2 MPZL1       567.           1.21  0.244 8.18e- 9 9.04e- 7
+ 3 ADAMTSL4     53.5          0.738 0.630 7.71e- 3 6.68e- 2
+ 4 DCAF6       490.           0.616 0.329 3.36e- 3 3.69e- 2
+ 5 ADGRL2      177.           2.61  2.92  2.71e- 3 3.21e- 2
+ 6 SMAP2      1259.           0.439 0.267 1.28e- 2 9.47e- 2
+ 7 IL12RB2     333.           6.81  0.587 3.10e-32 3.77e-29
+ 8 HK2         278.           0.479 0.299 1.13e- 2 8.78e- 2
+ 9 PRKD3       410.           0.852 0.301 1.24e- 4 2.93e- 3
+10 EHBP1      1050.           2.88  0.282 9.04e-25 5.08e-22
+# ℹ 40 more rows
+[1] "Oligo_#chimp-vs-Oligo_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Oligo_#chimp-vs-Oligo_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Oligo_#chimp-vs-Oligo_#human_dispersion_plot.png"            
+[4] "Oligo_#chimp-vs-Oligo_#human_specific_heatmap.png"           
+[5] "Oligo_#chimp-vs-Oligo_#human_specific_PCAplot.png"           
+Rows: 9944 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9626 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9831 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE        pvalue        padj
+  <chr>     <dbl>          <dbl> <dbl>         <dbl>       <dbl>
+1 PRDM16     16.2        -0.0906 0.511 0.580         0.804      
+2 PEX10     272.         -0.0691 0.246 0.645         0.842      
+3 PEX14     863.         -0.0383 0.168 0.769         0.908      
+4 PLCH2     353.         -6.49   1.19  0.00000000307 0.000000166
+5 SPSB1    1779.          0.516  0.390 0.0162        0.0900     
+6 SLC2A5     13.8        -0.0278 0.470 0.858         0.944      
+[1] "up_gene_res_table"
+# A tibble: 99 × 6
+   gene    baseMean log2FoldChange lfcSE   pvalue     padj
+   <chr>      <dbl>          <dbl> <dbl>    <dbl>    <dbl>
+ 1 FOXJ3     4775.           0.838 0.159 4.50e- 9 2.35e- 7
+ 2 LRIG2     2436.           2.04  0.274 7.03e-15 9.20e-13
+ 3 RXRG        76.4          3.95  1.18  3.33e- 5 6.61e- 4
+ 4 HFM1       616.           1.76  0.675 9.75e- 5 1.64e- 3
+ 5 AGTRAP     338.           0.980 0.685 3.35e- 3 2.72e- 2
+ 6 DNER      9056.           1.04  0.216 3.56e- 8 1.55e- 6
+ 7 EPB41L5   1167.           0.699 0.314 1.00e- 3 1.07e- 2
+ 8 LCLAT1    1046.           0.466 0.248 6.78e- 3 4.73e- 2
+ 9 TFCP2L1     97.4          2.25  1.79  3.15e- 3 2.60e- 2
+10 CCNYL1    1103.           0.543 0.445 1.71e- 2 9.37e- 2
+# ℹ 89 more rows
+[1] "OPC_#chimp-vs-OPC_#human_compare_B_vs_A_all_genes.csv"   
+[2] "OPC_#chimp-vs-OPC_#human_compare_B_vs_A_signif_genes.csv"
+[3] "OPC_#chimp-vs-OPC_#human_dispersion_plot.png"            
+[4] "OPC_#chimp-vs-OPC_#human_specific_heatmap.png"           
+[5] "OPC_#chimp-vs-OPC_#human_specific_PCAplot.png"           
+Rows: 9510 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9027 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9580 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE pvalue  padj
+  <chr>     <dbl>          <dbl> <dbl>  <dbl> <dbl>
+1 PRDM16    30.0         -0.0456 0.340  0.661 0.888
+2 PEX10     79.8         -0.115  0.279  0.339 0.695
+3 PEX14    259.          -0.0893 0.156  0.402 0.745
+4 PLCH2      9.64         0.0178 0.351  0.859 0.961
+5 SPSB1    204.           0.170  0.252  0.184 0.524
+6 SLC2A5    14.9         -0.0664 0.401  0.521 0.817
+[1] "up_gene_res_table"
+# A tibble: 58 × 6
+   gene     baseMean log2FoldChange lfcSE   pvalue     padj
+   <chr>       <dbl>          <dbl> <dbl>    <dbl>    <dbl>
+ 1 LRIG2        424.          1.36  0.185 1.84e-15 7.96e-13
+ 2 PPOX         113.          0.846 0.385 3.95e- 4 9.07e- 3
+ 3 SDF4         246.          0.434 0.295 9.44e- 3 9.15e- 2
+ 4 ZNF385B      306.          2.61  2.06  5.26e- 4 1.13e- 2
+ 5 PTH2R        274.          0.909 0.354 1.31e- 4 3.80e- 3
+ 6 PMS1         839.          0.408 0.274 1.06e- 2 9.81e- 2
+ 7 ST6GAL2     2703.          2.58  0.177 5.48e-49 5.21e-45
+ 8 FANCL        806.          0.704 0.187 4.80e- 6 2.63e- 4
+ 9 TMEM178A     282.          0.849 0.299 7.28e- 5 2.42e- 3
+10 ST3GAL5     1151.          0.338 0.186 8.16e- 3 8.41e- 2
+# ℹ 48 more rows
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/pbres/pseudo_bulk_analysis_results_018/Ma/Ma_df_human_chimp.rds_sce.rdscounts_ls.rds/"
+[1] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Astro_#chimp-vs-Astro_#human_dispersion_plot.png"            
+[4] "Astro_#chimp-vs-Astro_#human_specific_heatmap.png"           
+[5] "Astro_#chimp-vs-Astro_#human_specific_PCAplot.png"           
+[6] "Excite_#chimp-vs-Excite_#human_compare_B_vs_A_all_genes.csv" 
+[1] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Astro_#chimp-vs-Astro_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Astro_#chimp-vs-Astro_#human_dispersion_plot.png"            
+[4] "Astro_#chimp-vs-Astro_#human_specific_heatmap.png"           
+[5] "Astro_#chimp-vs-Astro_#human_specific_PCAplot.png"           
+Rows: 10192 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9500 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 10249 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE pvalue  padj
+  <chr>     <dbl>          <dbl> <dbl>  <dbl> <dbl>
+1 PRDM16   4117.         -0.0695 0.209  0.650 0.858
+2 PEX10     129.         -0.244  0.305  0.147 0.411
+3 PEX14     866.         -0.0102 0.193  0.945 0.987
+4 PLCH2      47.2         0.0623 0.495  0.674 0.871
+5 SPSB1      66.5        -0.0116 0.323  0.935 0.983
+6 SLC2A5     75.4         0.0877 0.348  0.544 0.803
+[1] "up_gene_res_table"
+# A tibble: 114 × 6
+   gene     baseMean log2FoldChange lfcSE   pvalue     padj
+   <chr>       <dbl>          <dbl> <dbl>    <dbl>    <dbl>
+ 1 ATG4C       1545.          0.479 0.174 7.77e- 4 1.06e- 2
+ 2 LRIG2       1156.          1.99  0.225 1.45e-19 6.14e-17
+ 3 RHOU         419.          0.630 0.517 8.57e- 3 6.34e- 2
+ 4 TMEM59      1194.          0.430 0.284 1.72e- 2 1.02e- 1
+ 5 PADI2       3398.          1.63  0.899 6.36e- 4 9.08e- 3
+ 6 BROX         397.          0.691 0.352 1.23e- 3 1.50e- 2
+ 7 RCOR3       1890.          0.464 0.179 1.34e- 3 1.60e- 2
+ 8 ADAMTSL4     153.          2.47  0.685 1.31e- 5 4.11e- 4
+ 9 NTNG1       3060.          3.57  0.550 3.73e-11 5.36e- 9
+10 ADAM15       235.          0.392 0.264 2.45e- 2 1.31e- 1
+# ℹ 104 more rows
+[1] "Excite_#chimp-vs-Excite_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Excite_#chimp-vs-Excite_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Excite_#chimp-vs-Excite_#human_dispersion_plot.png"            
+[4] "Excite_#chimp-vs-Excite_#human_specific_heatmap.png"           
+[5] "Excite_#chimp-vs-Excite_#human_specific_PCAplot.png"           
+Rows: 12727 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 12805 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 12786 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE    pvalue    padj
+  <chr>     <dbl>          <dbl> <dbl>     <dbl>   <dbl>
+1 PRDM16     354.         0.470  0.602 0.0863    0.223  
+2 PEX10     2003.        -0.101  0.217 0.598     0.763  
+3 PEX14     7971.        -0.321  0.204 0.0782    0.209  
+4 PLCH2     2944.         0.0447 0.370 0.858     0.926  
+5 SPSB1     1361.         0.607  0.479 0.0350    0.119  
+6 SLC2A5     168.        -2.21   0.980 0.0000819 0.00119
+[1] "up_gene_res_table"
+# A tibble: 547 × 6
+   gene   baseMean log2FoldChange lfcSE    pvalue    padj
+   <chr>     <dbl>          <dbl> <dbl>     <dbl>   <dbl>
+ 1 RER1      5197.          0.514 0.169 0.000999  0.00832
+ 2 RRAGC     3181.          0.992 0.393 0.000481  0.00477
+ 3 YRDC      1209.          0.690 0.370 0.0100    0.0468 
+ 4 RIMS3    20389.          0.951 0.301 0.0000887 0.00128
+ 5 USP1      3350.          0.572 0.251 0.00726   0.0370 
+ 6 LMO4     81998.          0.920 0.306 0.000174  0.00216
+ 7 DHCR24    8381.          0.729 0.298 0.00228   0.0157 
+ 8 GPR88     1246.          1.01  0.615 0.00349   0.0214 
+ 9 NENF      2401.          1.32  0.572 0.000258  0.00297
+10 EXOC8     2079.          1.25  0.458 0.0000904 0.00129
+# ℹ 537 more rows
+[1] "Inhibit_#chimp-vs-Inhibit_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Inhibit_#chimp-vs-Inhibit_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Inhibit_#chimp-vs-Inhibit_#human_dispersion_plot.png"            
+[4] "Inhibit_#chimp-vs-Inhibit_#human_specific_heatmap.png"           
+[5] "Inhibit_#chimp-vs-Inhibit_#human_specific_PCAplot.png"           
+Rows: 12120 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 12160 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 12140 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE pvalue  padj
+  <chr>     <dbl>          <dbl> <dbl>  <dbl> <dbl>
+1 PRDM16     40.2       -0.00481 0.363  0.973 0.989
+2 PEX10     664.        -0.0256  0.207  0.870 0.945
+3 PEX14    2585.        -0.206   0.147  0.107 0.323
+4 PLCH2    1671.         0.174   0.218  0.278 0.546
+5 SPSB1     184.         0.183   0.342  0.269 0.537
+6 SLC2A5     57.1       -0.0918  0.358  0.538 0.765
+[1] "up_gene_res_table"
+# A tibble: 246 × 6
+   gene     baseMean log2FoldChange lfcSE   pvalue         padj
+   <chr>       <dbl>          <dbl> <dbl>    <dbl>        <dbl>
+ 1 LRIG2      2118.           1.16  0.213 2.02e-10 0.0000000375
+ 2 RNASEL      387.           0.625 0.340 2.96e- 3 0.0312      
+ 3 LAMB3       340.           0.892 0.532 1.37e- 3 0.0182      
+ 4 RGSL1       245.           0.750 0.676 6.91e- 3 0.0554      
+ 5 EXOC8       593.           0.583 0.318 3.92e- 3 0.0379      
+ 6 MUL1        572.           0.533 0.239 2.36e- 3 0.0265      
+ 7 SYT11     10891.           0.616 0.200 1.14e- 4 0.00277     
+ 8 FNDC5      1707.           0.516 0.201 1.13e- 3 0.0157      
+ 9 MAPKAPK2    467.           0.721 0.310 5.05e- 4 0.00886     
+10 GJC2         47.9          0.752 0.790 8.35e- 3 0.0628      
+# ℹ 236 more rows
+[1] "Microglia_#chimp-vs-Microglia_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Microglia_#chimp-vs-Microglia_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Microglia_#chimp-vs-Microglia_#human_dispersion_plot.png"            
+[4] "Microglia_#chimp-vs-Microglia_#human_specific_heatmap.png"           
+[5] "Microglia_#chimp-vs-Microglia_#human_specific_PCAplot.png"           
+Rows: 7300 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 7668 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 7902 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene    baseMean log2FoldChange lfcSE       pvalue       padj
+  <chr>      <dbl>          <dbl> <dbl>        <dbl>      <dbl>
+1 PEX10       19.7        -0.154  0.340 0.328        0.660     
+2 PEX14      155.          0.108  0.203 0.444        0.750     
+3 SPSB1       52.7         3.41   0.644 0.0000000388 0.00000354
+4 SLC2A5     954.          0.854  0.318 0.000185     0.00399   
+5 PLEKHM2    227.         -0.0151 0.167 0.906        0.970     
+6 NMNAT1      58.5         0.0415 0.243 0.776        0.919     
+[1] "up_gene_res_table"
+# A tibble: 90 × 6
+   gene     baseMean log2FoldChange lfcSE   pvalue     padj
+   <chr>       <dbl>          <dbl> <dbl>    <dbl>    <dbl>
+ 1 LRIG2       177.           1.75  0.304 2.76e-11 5.03e- 9
+ 2 RCSD1      1076.           0.684 0.286 7.11e- 4 1.15e- 2
+ 3 MPZL1       567.           1.21  0.244 8.18e- 9 9.04e- 7
+ 4 SMYD3      1414.           0.403 0.326 3.26e- 2 1.75e- 1
+ 5 MIER1       263.           0.625 0.311 2.36e- 3 2.92e- 2
+ 6 ADAMTSL4     53.5          0.738 0.630 7.71e- 3 6.68e- 2
+ 7 DCAF6       490.           0.616 0.329 3.36e- 3 3.69e- 2
+ 8 ADGRL2      177.           2.61  2.92  2.71e- 3 3.21e- 2
+ 9 SMAP2      1259.           0.439 0.267 1.28e- 2 9.47e- 2
+10 IL12RB2     333.           6.81  0.587 3.10e-32 3.77e-29
+# ℹ 80 more rows
+[1] "Oligo_#chimp-vs-Oligo_#human_compare_B_vs_A_all_genes.csv"   
+[2] "Oligo_#chimp-vs-Oligo_#human_compare_B_vs_A_signif_genes.csv"
+[3] "Oligo_#chimp-vs-Oligo_#human_dispersion_plot.png"            
+[4] "Oligo_#chimp-vs-Oligo_#human_specific_heatmap.png"           
+[5] "Oligo_#chimp-vs-Oligo_#human_specific_PCAplot.png"           
+Rows: 9944 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9626 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9831 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE        pvalue        padj
+  <chr>     <dbl>          <dbl> <dbl>         <dbl>       <dbl>
+1 PRDM16     16.2        -0.0906 0.511 0.580         0.804      
+2 PEX10     272.         -0.0691 0.246 0.645         0.842      
+3 PEX14     863.         -0.0383 0.168 0.769         0.908      
+4 PLCH2     353.         -6.49   1.19  0.00000000307 0.000000166
+5 SPSB1    1779.          0.516  0.390 0.0162        0.0900     
+6 SLC2A5     13.8        -0.0278 0.470 0.858         0.944      
+[1] "up_gene_res_table"
+# A tibble: 160 × 6
+   gene   baseMean log2FoldChange lfcSE   pvalue     padj
+   <chr>     <dbl>          <dbl> <dbl>    <dbl>    <dbl>
+ 1 FOXJ3    4775.           0.838 0.159 4.50e- 9 2.35e- 7
+ 2 LRIG2    2436.           2.04  0.274 7.03e-15 9.20e-13
+ 3 RXRG       76.4          3.95  1.18  3.33e- 5 6.61e- 4
+ 4 HFM1      616.           1.76  0.675 9.75e- 5 1.64e- 3
+ 5 PPOX      386.           0.623 0.323 2.86e- 3 2.41e- 2
+ 6 LMNA      900.           0.377 0.187 8.50e- 3 5.58e- 2
+ 7 CHTOP    1221.           0.379 0.213 1.42e- 2 8.26e- 2
+ 8 AGTRAP    338.           0.980 0.685 3.35e- 3 2.72e- 2
+ 9 PPM1B    9580.           0.430 0.384 3.43e- 2 1.52e- 1
+10 DNER     9056.           1.04  0.216 3.56e- 8 1.55e- 6
+# ℹ 150 more rows
+[1] "OPC_#chimp-vs-OPC_#human_compare_B_vs_A_all_genes.csv"   
+[2] "OPC_#chimp-vs-OPC_#human_compare_B_vs_A_signif_genes.csv"
+[3] "OPC_#chimp-vs-OPC_#human_dispersion_plot.png"            
+[4] "OPC_#chimp-vs-OPC_#human_specific_heatmap.png"           
+[5] "OPC_#chimp-vs-OPC_#human_specific_PCAplot.png"           
+Rows: 9510 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9027 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9580 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): gene
+dbl (5): baseMean, log2FoldChange, lfcSE, pvalue, padj
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 6 × 6
+  gene   baseMean log2FoldChange lfcSE pvalue  padj
+  <chr>     <dbl>          <dbl> <dbl>  <dbl> <dbl>
+1 PRDM16    30.0         -0.0456 0.340  0.661 0.888
+2 PEX10     79.8         -0.115  0.279  0.339 0.695
+3 PEX14    259.          -0.0893 0.156  0.402 0.745
+4 PLCH2      9.64         0.0178 0.351  0.859 0.961
+5 SPSB1    204.           0.170  0.252  0.184 0.524
+6 SLC2A5    14.9         -0.0664 0.401  0.521 0.817
+[1] "up_gene_res_table"
+# A tibble: 105 × 6
+   gene    baseMean log2FoldChange lfcSE   pvalue     padj
+   <chr>      <dbl>          <dbl> <dbl>    <dbl>    <dbl>
+ 1 SDC3      1068.           0.450 0.403 1.58e- 2 1.28e- 1
+ 2 LRIG2      424.           1.36  0.185 1.84e-15 7.96e-13
+ 3 PPOX       113.           0.846 0.385 3.95e- 4 9.07e- 3
+ 4 MCL1        80.7          0.427 0.389 1.83e- 2 1.40e- 1
+ 5 SLC2A1     114.           0.645 0.623 7.72e- 3 8.10e- 2
+ 6 MSTO1       60.7          0.436 0.473 2.16e- 2 1.56e- 1
+ 7 SDF4       246.           0.434 0.295 9.44e- 3 9.15e- 2
+ 8 LBH        169.           0.580 0.668 1.24e- 2 1.09e- 1
+ 9 ZNF385B    306.           2.61  2.06  5.26e- 4 1.13e- 2
+10 INHA        40.1          1.81  0.702 4.98e- 5 1.79e- 3
+# ℹ 95 more rows
+DE_genes_calculation_chimp_FC_all_restables.R
+SLURM Job ID        : 15393

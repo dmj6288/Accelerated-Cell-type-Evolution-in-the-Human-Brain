@@ -1,0 +1,768 @@
+[1] 6802
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 6803
+[1] 11938
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 11939
+[1] 10812
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 10813
+[1] 3530
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+[1] 3530
+[1] 7464
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 7465
+[1] 5851
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 5852
+$Astro
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:80] "5322" "1901" "2152" "23566" "8682" "7779" "84288" "254268" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Excite
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:312] "54797" "5738" "83479" "56956" "83932" "199920" "55733" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Inhibit
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:284] "51042" "3633" "10451" "83479" "148641" "360023" "113802" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Microglia
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:37] "163882" "23179" "51232" "57181" "23190" "285331" "8545" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Oligo
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:124] "192670" "163782" "6045" "3776" "27245" "22854" "1378" "8853" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$OPC
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:85] "192670" "1298" "22874" "114784" "7107" "255928" "8853" "9687" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...1 enriched terms found
+'data.frame':	1 obs. of  9 variables:
+ $ ID         : chr "GO:0005539"
+ $ Description: chr "glycosaminoglycan binding"
+ $ GeneRatio  : chr "7/77"
+ $ BgRatio    : chr "39/5568"
+ $ pvalue     : num 7.91e-07
+ $ p.adjust   : num 0.000176
+ $ qvalue     : num 0.000176
+ $ geneID     : chr "ALK/SUSD5/SEMA5A/FGF1/SMOC1/ADGRG1/SULF2"
+ $ Count      : int 7
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+[1] 8783
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 8784
+[1] 12569
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 12570
+[1] 11670
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 11671
+[1] 6697
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+[1] 6697
+[1] 8815
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 8816
+[1] 8490
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 8491
+$Astro
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:79] "256435" "2152" "1942" "51253" "84265" "11022" "55108" "10456" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Excite
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:165] "55143" "79906" "83932" "55733" "10420" "7818" "27185" "29899" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Inhibit
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:78] "7818" "6125" "9372" "7678" "55103" "55108" "3756" "2035" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Microglia
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:105] "3608" "965" "84284" "1676" "6746" "1996" "57185" "3068" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Oligo
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:111] "79570" "149297" "27101" "5710" "7389" "64960" "92344" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$OPC
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 MF 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:39] "10806" "23179" "55108" "824" "1301" "83439" "9942" "84561" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...2 enriched terms found
+'data.frame':	2 obs. of  9 variables:
+ $ ID         : chr  "GO:0030020" "GO:0005201"
+ $ Description: chr  "extracellular matrix structural constituent conferring tensile strength" "extracellular matrix structural constituent"
+ $ GeneRatio  : chr  "4/36" "4/36"
+ $ BgRatio    : chr  "21/8049" "67/8049"
+ $ pvalue     : num  1.91e-06 2.11e-04
+ $ p.adjust   : num  0.000285 0.015749
+ $ qvalue     : num  0.00028 0.01547
+ $ geneID     : chr  "COL11A1/COL19A1/COL12A1/COL5A3" "COL11A1/COL19A1/COL12A1/COL5A3"
+ $ Count      : int  4 4
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+[1] 6802
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 6803
+[1] 11938
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 11939
+[1] 10812
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 10813
+[1] 3530
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+[1] 3530
+[1] 7464
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 7465
+[1] 5851
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 5852
+$Astro
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:80] "5322" "1901" "2152" "23566" "8682" "7779" "84288" "254268" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Excite
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:312] "54797" "5738" "83479" "56956" "83932" "199920" "55733" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...2 enriched terms found
+'data.frame':	2 obs. of  9 variables:
+ $ ID         : chr  "GO:1901292" "GO:0046434"
+ $ Description: chr  "nucleoside phosphate catabolic process" "organophosphate catabolic process"
+ $ GeneRatio  : chr  "11/286" "13/286"
+ $ BgRatio    : chr  "62/11015" "122/11015"
+ $ pvalue     : num  4.67e-07 1.62e-05
+ $ p.adjust   : num  0.00136 0.02366
+ $ qvalue     : num  0.00136 0.02366
+ $ geneID     : chr  "UPP2/ENTPD3/OGG1/SMPDL3A/PDE7B/ENTPD4/NEIL2/NUDT5/PDE8A/SARM1/SAMHD1" "UPP2/ENTPD3/OGG1/SMPDL3A/PDE7B/NAPEPLD/ENTPD4/NEIL2/NUDT5/ABHD12B/PDE8A/SARM1/SAMHD1"
+ $ Count      : int  11 13
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Inhibit
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:284] "51042" "3633" "10451" "83479" "148641" "360023" "113802" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Microglia
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:37] "163882" "23179" "51232" "57181" "23190" "285331" "8545" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Oligo
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:124] "192670" "163782" "6045" "3776" "27245" "22854" "1378" "8853" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$OPC
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:85] "192670" "1298" "22874" "114784" "7107" "255928" "8853" "9687" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+[1] 8783
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 8784
+[1] 12569
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 12570
+[1] 11670
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 11671
+[1] 6697
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+[1] 6697
+[1] 8815
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 8816
+[1] 8490
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 8491
+$Astro
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:79] "256435" "2152" "1942" "51253" "84265" "11022" "55108" "10456" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Excite
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:165] "55143" "79906" "83932" "55733" "10420" "7818" "27185" "29899" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Inhibit
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:78] "7818" "6125" "9372" "7678" "55103" "55108" "3756" "2035" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Microglia
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:105] "3608" "965" "84284" "1676" "6746" "1996" "57185" "3068" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Oligo
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:111] "79570" "149297" "27101" "5710" "7389" "64960" "92344" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$OPC
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 BP 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:39] "10806" "23179" "55108" "824" "1301" "83439" "9942" "84561" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+[1] 6802
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 6803
+[1] 11938
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 11939
+[1] 10812
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 10813
+[1] 3530
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+[1] 3530
+[1] 7464
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 7465
+[1] 5851
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 5852
+$Astro
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 CC 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:80] "5322" "1901" "2152" "23566" "8682" "7779" "84288" "254268" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...1 enriched terms found
+'data.frame':	1 obs. of  9 variables:
+ $ ID         : chr "GO:0031226"
+ $ Description: chr "intrinsic component of plasma membrane"
+ $ GeneRatio  : chr "17/78"
+ $ BgRatio    : chr "403/6572"
+ $ pvalue     : num 3.42e-06
+ $ p.adjust   : num 0.00077
+ $ qvalue     : num 0.00067
+ $ geneID     : chr "S1PR1/F3/LPAR3/SLC30A1/ERBB4/PTPRG/MDGA1/LYN/KCNQ3/GRIK4/SLC39A12/NRXN3/IGDCC3/MTSS2/PTPRM/ABHD17A/RYR1"
+ $ Count      : int 17
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Excite
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 CC 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:312] "54797" "5738" "83479" "56956" "83932" "199920" "55733" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Inhibit
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 CC 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:284] "51042" "3633" "10451" "83479" "148641" "360023" "113802" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...5 enriched terms found
+'data.frame':	5 obs. of  9 variables:
+ $ ID         : chr  "GO:0001669" "GO:0016469" "GO:0005743" "GO:0033177" ...
+ $ Description: chr  "acrosomal vesicle" "proton-transporting two-sector ATPase complex" "mitochondrial inner membrane" "proton-transporting two-sector ATPase complex, proton-transporting domain" ...
+ $ GeneRatio  : chr  "9/275" "6/275" "21/275" "4/275" ...
+ $ BgRatio    : chr  "68/10383" "31/10383" "336/10383" "13/10383" ...
+ $ pvalue     : num  7.06e-05 1.38e-04 2.32e-04 2.85e-04 3.77e-04
+ $ p.adjust   : num  0.0289 0.0289 0.0299 0.0299 0.0317
+ $ qvalue     : num  0.0269 0.0269 0.0278 0.0278 0.0295
+ $ geneID     : chr  "TCP1/SPACA9/VDAC2/SLIRP/RAB3A/CALR/PRKACA/PCSK4/CXADR" "ATP5PB/CCDC115/ATP6V0D1/ATP5MC1/ATP5PD/ATP6V1E1" "ATP5PB/AURKAIP1/MRPL35/COQ10B/SLC22A14/SLC25A26/CYP2U1/UQCRQ/STOML2/MRPL11/NDUFS3/TIMM10/SFXN4/CHCHD1/MRPS34/AT"| __truncated__ "ATP5PB/ATP6V0D1/ATP5MC1/ATP5PD" ...
+ $ Count      : int  9 6 21 4 15
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Microglia
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 CC 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:37] "163882" "23179" "51232" "57181" "23190" "285331" "8545" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...6 enriched terms found
+'data.frame':	6 obs. of  9 variables:
+ $ ID         : chr  "GO:0005789" "GO:0098827" "GO:0042175" "GO:0031984" ...
+ $ Description: chr  "endoplasmic reticulum membrane" "endoplasmic reticulum subcompartment" "nuclear outer membrane-endoplasmic reticulum membrane network" "organelle subcompartment" ...
+ $ GeneRatio  : chr  "10/35" "10/35" "10/35" "11/35" ...
+ $ BgRatio    : chr  "257/3428" "259/3428" "264/3428" "355/3428" ...
+ $ pvalue     : num  0.000161 0.000172 0.000202 0.000529 0.001504 ...
+ $ p.adjust   : num  0.0115 0.0115 0.0115 0.0226 0.0471 ...
+ $ qvalue     : num  0.0104 0.0104 0.0104 0.0205 0.0426 ...
+ $ geneID     : chr  "UBXN4/MGLL/MARCHF1/EDA/EXT1/STX17/REEP3/CD4/B2M/PIP4K2B" "UBXN4/MGLL/MARCHF1/EDA/EXT1/STX17/REEP3/CD4/B2M/PIP4K2B" "UBXN4/MGLL/MARCHF1/EDA/EXT1/STX17/REEP3/CD4/B2M/PIP4K2B" "CNST/UBXN4/MGLL/MARCHF1/EDA/EXT1/STX17/REEP3/CD4/B2M/PIP4K2B" ...
+ $ Count      : int  10 10 10 11 4 11
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$Oligo
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 CC 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:124] "192670" "163782" "6045" "3776" "27245" "22854" "1378" "8853" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...4 enriched terms found
+'data.frame':	4 obs. of  9 variables:
+ $ ID         : chr  "GO:0034703" "GO:0034702" "GO:1990351" "GO:1902495"
+ $ Description: chr  "cation channel complex" "ion channel complex" "transporter complex" "transmembrane transporter complex"
+ $ GeneRatio  : chr  "8/118" "8/118" "9/118" "8/118"
+ $ BgRatio    : chr  "80/7206" "103/7206" "133/7206" "118/7206"
+ $ pvalue     : num  4.42e-05 2.65e-04 3.10e-04 6.65e-04
+ $ p.adjust   : num  0.0121 0.0282 0.0282 0.0454
+ $ qvalue     : num  0.012 0.0279 0.0279 0.045
+ $ geneID     : chr  "KCNK2/UNC80/KCNIP1/GRIK4/MICU1/CACNA1C/RYR3/CACNA1A" "KCNK2/UNC80/KCNIP1/GRIK4/MICU1/CACNA1C/RYR3/CACNA1A" "KCNK2/UNC80/ATP10D/KCNIP1/GRIK4/MICU1/CACNA1C/RYR3/CACNA1A" "KCNK2/UNC80/KCNIP1/GRIK4/MICU1/CACNA1C/RYR3/CACNA1A"
+ $ Count      : int  8 8 9 8
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+$OPC
+#
+# over-representation test
+#
+#...@organism 	 Homo sapiens 
+#...@ontology 	 CC 
+#...@keytype 	 ENTREZID 
+#...@gene 	 chr [1:85] "192670" "1298" "22874" "114784" "7107" "255928" "8853" "9687" ...
+#...pvalues adjusted by 'BH' with cutoff <0.05 
+#...0 enriched terms found
+#...Citation
+ T Wu, E Hu, S Xu, M Chen, P Guo, Z Dai, T Feng, L Zhou, W Tang, L Zhan, X Fu, S Liu, X Bo, and G Yu.
+ clusterProfiler 4.0: A universal enrichment tool for interpreting omics data.
+ The Innovation. 2021, 2(3):100141 
+
+
+[1] 8783
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 8784
+slurmstepd-yi-compute-1: error: *** JOB 15823 ON yi-compute-1 CANCELLED AT 2024-06-12T14:43:05 ***

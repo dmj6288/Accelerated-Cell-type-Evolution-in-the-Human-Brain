@@ -1,0 +1,132 @@
+[1] "STRINGR IMPORTED"
+<hash> containing 5 key-value pair(s).
+  Caglayan : Cagleyan_seurat_object.rds
+  Jorstad : Jorstad_seurat_object.rds
+  Kanton : Kanton_seurat_object_ortho.rds
+  Khrameeva : Khrameeva_seurat_object.rds
+  Ma : Ma_seurat_object.rds
+Formal class 'Seurat' [package "SeuratObject"] with 13 slots
+  ..@ assays      :List of 1
+  .. ..$ RNA:Formal class 'Assay' [package "SeuratObject"] with 8 slots
+  .. .. .. ..@ counts       :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  .. .. .. .. .. ..@ i       : int [1:266950264] 0 5 6 9 11 13 18 21 22 23 ...
+  .. .. .. .. .. ..@ p       : int [1:146270] 0 3401 6816 9491 11966 14684 17263 19766 22341 24631 ...
+  .. .. .. .. .. ..@ Dim     : int [1:2] 13791 146269
+  .. .. .. .. .. ..@ Dimnames:List of 2
+  .. .. .. .. .. .. ..$ : chr [1:13791] "PRDM16" "PEX10" "PEX14" "PLCH2" ...
+  .. .. .. .. .. .. ..$ : chr [1:146269] "CCTTCAGCAGTCTTCC_h1" "ATCACTTGTACTTCCC_h1" "ACGGTTATCTGCTTAT_h1" "CCTCACATCACCTCTG_h1" ...
+  .. .. .. .. .. ..@ x       : num [1:266950264] 6 1 2 2 2 1 4 1 1 1 ...
+  .. .. .. .. .. ..@ factors : list()
+  .. .. .. ..@ data         :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  .. .. .. .. .. ..@ i       : int [1:266950264] 0 5 6 9 11 13 18 21 22 23 ...
+  .. .. .. .. .. ..@ p       : int [1:146270] 0 3401 6816 9491 11966 14684 17263 19766 22341 24631 ...
+  .. .. .. .. .. ..@ Dim     : int [1:2] 13791 146269
+  .. .. .. .. .. ..@ Dimnames:List of 2
+  .. .. .. .. .. .. ..$ : chr [1:13791] "PRDM16" "PEX10" "PEX14" "PLCH2" ...
+  .. .. .. .. .. .. ..$ : chr [1:146269] "CCTTCAGCAGTCTTCC_h1" "ATCACTTGTACTTCCC_h1" "ACGGTTATCTGCTTAT_h1" "CCTCACATCACCTCTG_h1" ...
+  .. .. .. .. .. ..@ x       : num [1:266950264] 6 1 2 2 2 1 4 1 1 1 ...
+  .. .. .. .. .. ..@ factors : list()
+  .. .. .. ..@ scale.data   : num[0 , 0 ] 
+  .. .. .. ..@ key          : chr "rna_"
+  .. .. .. ..@ assay.orig   : NULL
+  .. .. .. ..@ var.features : logi(0) 
+  .. .. .. ..@ meta.features:'data.frame':	13791 obs. of  0 variables
+  .. .. .. ..@ misc         : list()
+  ..@ meta.data   :'data.frame':	146269 obs. of  3 variables:
+  .. ..$ orig.ident  : Factor w/ 1 level "SeuratProject": 1 1 1 1 1 1 1 1 1 1 ...
+  .. ..$ nCount_RNA  : num [1:146269] 10993 8397 7712 7749 7110 ...
+  .. ..$ nFeature_RNA: int [1:146269] 3401 3415 2675 2475 2718 2579 2503 2575 2290 2400 ...
+  ..@ active.assay: chr "RNA"
+  ..@ active.ident: Factor w/ 1 level "SeuratProject": 1 1 1 1 1 1 1 1 1 1 ...
+  .. ..- attr(*, "names")= chr [1:146269] "CCTTCAGCAGTCTTCC_h1" "ATCACTTGTACTTCCC_h1" "ACGGTTATCTGCTTAT_h1" "CCTCACATCACCTCTG_h1" ...
+  ..@ graphs      : list()
+  ..@ neighbors   : list()
+  ..@ reductions  : list()
+  ..@ images      : list()
+  ..@ project.name: chr "SeuratProject"
+  ..@ misc        : list()
+  ..@ version     :Classes 'package_version', 'numeric_version'  hidden list of 1
+  .. ..$ : int [1:3] 4 1 3
+  ..@ commands    : list()
+  ..@ tools       : list()
+NULL
+[1] "df_chimp_macak.rds" "df_human_chimp.rds" "df_human_macak.rds"
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/mdata/mdata_003/Caglayan/df_chimp_macak.rds"
+[1] TRUE
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/sces/sce_folder_018/Caglayan_df_chimp_macak.rds_sce.rds"
+[1] "df_chimp_macak.rds" "df_human_chimp.rds" "df_human_macak.rds"
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/mdata/mdata_003/Caglayan/df_human_chimp.rds"
+[1] TRUE
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/sces/sce_folder_018/Caglayan_df_human_chimp.rds_sce.rds"
+[1] "df_chimp_macak.rds" "df_human_chimp.rds" "df_human_macak.rds"
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/mdata/mdata_003/Caglayan/df_human_macak.rds"
+[1] TRUE
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/sces/sce_folder_018/Caglayan_df_human_macak.rds_sce.rds"
+Formal class 'Seurat' [package "SeuratObject"] with 13 slots
+  ..@ assays      :List of 1
+  .. ..$ RNA:Formal class 'Assay' [package "SeuratObject"] with 8 slots
+  .. .. .. ..@ counts       :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  .. .. .. .. .. ..@ i       : int [1:1341199088] 1 2 7 11 13 17 28 32 34 35 ...
+  .. .. .. .. .. ..@ p       : int [1:343899] 0 4591 9069 13871 18653 22959 27759 31907 36369 40971 ...
+  .. .. .. .. .. ..@ Dim     : int [1:2] 13088 343898
+  .. .. .. .. .. ..@ Dimnames:List of 2
+  .. .. .. .. .. .. ..$ : chr [1:13088] "PRDM16" "PEX10" "PEX14" "PLCH2" ...
+  .. .. .. .. .. .. ..$ : chr [1:343898] "AAACCCAAGCGACTAG-19L8TX_200107_01_A09H" "AAACCCACACTGTCCT-19L8TX_200107_01_A09H" "AAACCCAGTCGCGTCA-19L8TX_200107_01_A09H" "AAACGAAAGACTCATC-19L8TX_200107_01_A09H" ...
+  .. .. .. .. .. ..@ x       : num [1:1341199088] 1 1 1 2 1 1 1 1 1 1 ...
+  .. .. .. .. .. ..@ factors : list()
+  .. .. .. ..@ data         :Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+  .. .. .. .. .. ..@ i       : int [1:1341199088] 1 2 7 11 13 17 28 32 34 35 ...
+  .. .. .. .. .. ..@ p       : int [1:343899] 0 4591 9069 13871 18653 22959 27759 31907 36369 40971 ...
+  .. .. .. .. .. ..@ Dim     : int [1:2] 13088 343898
+  .. .. .. .. .. ..@ Dimnames:List of 2
+  .. .. .. .. .. .. ..$ : chr [1:13088] "PRDM16" "PEX10" "PEX14" "PLCH2" ...
+  .. .. .. .. .. .. ..$ : chr [1:343898] "AAACCCAAGCGACTAG-19L8TX_200107_01_A09H" "AAACCCACACTGTCCT-19L8TX_200107_01_A09H" "AAACCCAGTCGCGTCA-19L8TX_200107_01_A09H" "AAACGAAAGACTCATC-19L8TX_200107_01_A09H" ...
+  .. .. .. .. .. ..@ x       : num [1:1341199088] 1 1 1 2 1 1 1 1 1 1 ...
+  .. .. .. .. .. ..@ factors : list()
+  .. .. .. ..@ scale.data   : num[0 , 0 ] 
+  .. .. .. ..@ key          : chr "rna_"
+  .. .. .. ..@ assay.orig   : NULL
+  .. .. .. ..@ var.features : logi(0) 
+  .. .. .. ..@ meta.features:'data.frame':	13088 obs. of  0 variables
+  .. .. .. ..@ misc         : list()
+  ..@ meta.data   :'data.frame':	343898 obs. of  3 variables:
+  .. ..$ orig.ident  : Factor w/ 1 level "SeuratProject": 1 1 1 1 1 1 1 1 1 1 ...
+  .. ..$ nCount_RNA  : num [1:343898] 16870 16904 16713 16580 17063 ...
+  .. ..$ nFeature_RNA: int [1:343898] 4591 4478 4802 4782 4306 4800 4148 4462 4602 3861 ...
+  ..@ active.assay: chr "RNA"
+  ..@ active.ident: Factor w/ 1 level "SeuratProject": 1 1 1 1 1 1 1 1 1 1 ...
+  .. ..- attr(*, "names")= chr [1:343898] "AAACCCAAGCGACTAG-19L8TX_200107_01_A09H" "AAACCCACACTGTCCT-19L8TX_200107_01_A09H" "AAACCCAGTCGCGTCA-19L8TX_200107_01_A09H" "AAACGAAAGACTCATC-19L8TX_200107_01_A09H" ...
+  ..@ graphs      : list()
+  ..@ neighbors   : list()
+  ..@ reductions  : list()
+  ..@ images      : list()
+  ..@ project.name: chr "SeuratProject"
+  ..@ misc        : list()
+  ..@ version     :Classes 'package_version', 'numeric_version'  hidden list of 1
+  .. ..$ : int [1:3] 4 1 3
+  ..@ commands    : list()
+  ..@ tools       : list()
+NULL
+[1] "df_chimp_macak.rds" "df_human_chimp.rds" "df_human_macak.rds"
+[4] "Exec.txt"           "trial.R"           
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/mdata/mdata_003/Jorstad/df_chimp_macak.rds"
+[1] TRUE
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/sces/sce_folder_018/Jorstad_df_chimp_macak.rds_sce.rds"
+[1] "df_chimp_macak.rds" "df_human_chimp.rds" "df_human_macak.rds"
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/mdata/mdata_003/Jorstad/df_human_chimp.rds"
+[1] TRUE
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/sces/sce_folder_018/Jorstad_df_human_chimp.rds_sce.rds"
+[1] "df_chimp_macak.rds" "df_human_chimp.rds" "df_human_macak.rds"
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/mdata/mdata_003/Jorstad/df_human_macak.rds"
+[1] TRUE
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/sces/sce_folder_018/Jorstad_df_human_macak.rds_sce.rds"
+[1] "df_chimp_macak.rds" "df_human_chimp.rds" "df_human_macak.rds"
+[1] "/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/mdata/mdata_003/Jorstad/Exec.txt"
+Error in gzfile(file, "rb") : cannot open the connection
+Calls: readRDS -> gzfile
+In addition: Warning message:
+In gzfile(file, "rb") :
+  cannot open compressed file '/home/local/ADS/dennis00/Yi_Lab/Lab_WorkDir/Dennis/Evolution/mdata/mdata_003/Jorstad/Exec.txt', probable reason 'No such file or directory'
+Execution halted
+sgmeta_full_covariates_YS1.5.R
+SLURM Job ID        : 9932

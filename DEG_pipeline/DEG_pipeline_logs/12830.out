@@ -1,0 +1,9 @@
+[1] 6802
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:1 mapping between keys and columns
+'select()' returned 1:many mapping between keys and columns
+[1] 6805
+Error: object 'chimp_combined_regulated_GO_cell_type' not found
+Execution halted
+GO_term_combined3.R
+SLURM Job ID        : 12830
