@@ -4,7 +4,7 @@ title: "Figure 4B, C visualization data generator file
 
 ```{r}
 
-source("../../Baseline/Figure 4B Baseline.R")
+source("../../Baseline/Figure S11 Baseline - data generator all subtypes.R")
 
 ```
 

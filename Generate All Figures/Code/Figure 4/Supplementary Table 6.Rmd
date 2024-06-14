@@ -1,0 +1,179 @@
+---
+title: "Figure 4B, C visualization data generator file
+---
+
+```{r}
+
+source("../../Baseline/Supplementary Table 6.R")
+
+```
+
+
+```{r}
+
+
+cell_type_list_avg   <- list()
+cell_type_list_combo <- list()
+
+for (cellname in names(cell_names_of_interest)){
+  
+  human_final_df_combination_table_list           <- list()
+  human_final_subtype_df_combination_table_list   <- list()
+  human_final_df_lineplot_combination_table_list  <- list()
+
+
+  major_type_combined_list <- list()
+  
+  for (study in studies[2]){
+
+    # MAJOR TYPES
+    
+    human_down_regulated_genes_major_types                <- readRDS(paste0(majortype_folder_name, study, "/", study, FDR, "_original_human_DRGenes.rds"))
+    
+    human_up_regulated_genes_major_types                  <- readRDS(paste0(majortype_folder_name, study, "/", study, FDR, "_original_human_URGenes.rds"))
+    
+    
+    for (name in names(human_down_regulated_genes_major_types)) {
+      major_type_combined_list[[name]] <- unique(c(human_down_regulated_genes_major_types[[name]], 
+                                                   human_up_regulated_genes_major_types[[name]]))
+    }
+    
+    major_cell_type_list_union                            <- Reduce(union, major_type_combined_list)
+    
+    human_major_DEG_Venn                                  <- Venn(major_type_combined_list)
+    human_major_DEG_Venn_table                            <- as.data.frame(process_region_data(human_major_DEG_Venn))
+    
+    human_major_cell_specific_genes                       <- human_major_DEG_Venn_table[human_major_DEG_Venn_table$name == cellname, ]$item[[1]]
+    
+    human_major_cells_shared_genes                        <- setdiff(major_type_combined_list[[cellname]], human_major_cell_specific_genes)
+    
+    # MAJOR TYPES COMPLETE
+    
+    # SUB TYPES
+    
+    human_down_genes_sub_types                               <- readRDS(paste0(subtype_folder_name, study, "/", study, FDR, "_original_human_DRGenes.rds"))
+    human_up_genes_sub_types                                 <- readRDS(paste0(subtype_folder_name, study, "/", study, FDR, "_original_human_URGenes.rds"))
+    
+    
+    combination_sharedness_list  <- list()
+    
+    human_final_df_combination_table           <- rep(NA, 6)
+    human_final_subtype_df_combination_table   <- rep(NA, 2)
+    
+    human_final_df_lineplot_combination_vector <- c()
+    
+    gene_lists_combo      <- list()
+    combinations          <- combination_list[[cellname]]
+    
+    for (current_combination in names(combinations)){
+      
+      print(current_combination)
+      
+      human_down_genes_sub_types_of_intereset                  <- human_down_genes_sub_types[combinations[[current_combination]]]
+      human_up_genes_sub_types_of_intereset                    <- human_up_genes_sub_types[combinations[[current_combination]]]
+      
+      sub_type_combined_list       <- list()
+      
+      for (name in names(human_down_genes_sub_types_of_intereset)) {
+        
+        sub_type_combined_list[[name]] <- unique(c(human_down_genes_sub_types_of_intereset[[name]], 
+                                                   human_up_genes_sub_types_of_intereset[[name]]))
+      
+      }
+      
+      human_genes_of_sub_types_of_intereset_union              <- Reduce(union, sub_type_combined_list)
+    
+      human_genes_of_sub_types_of_intereset_venn               <- Venn(sub_type_combined_list)
+      human_genes_of_sub_types_of_intereset_venn_table         <- as.data.frame(process_region_data(human_genes_of_sub_types_of_intereset_venn))
+      
+      human_sub_type_cell_specific_genes                       <- Reduce(union, human_genes_of_sub_types_of_intereset_venn_table[human_genes_of_sub_types_of_intereset_venn_table$name %in% combinations[[current_combination]], ]$item)
+      
+      human_sub_type_cells_shared_genes                        <- setdiff(human_genes_of_sub_types_of_intereset_union, human_sub_type_cell_specific_genes)
+      
+      human_shared_gene_list <- list(human_major_cell_specific_genes, 
+                                     human_major_cells_shared_genes,
+                                     human_sub_type_cell_specific_genes, 
+                                     human_sub_type_cells_shared_genes)
+      
+      names(human_shared_gene_list) <- c("Major Type, Cell-specific", "Major Type, Shared", "Sub Type, Cell-specific", "Sub Type, Shared")
+      
+  
+      gene_lists_combo[[current_combination]] <- human_shared_gene_list
+      
+    }
+
+
+  }
+  
+  cell_type_list_combo[[cellname]] <- gene_lists_combo
+  
+}
+
+
+```
+
+```{r}
+
+combo_number_cell_type_list <- list()
+
+for (cell in names(cell_type_list_combo)){
+
+  combo_number_df <- c()
+    
+  for (current_combination in names(combination_list[[cell]])){
+   
+    bool_gene_lists                <- list_to_matrix(cell_type_list_combo[[cell]][[current_combination]])
+    comb_gene_lists                <- make_comb_mat(bool_gene_lists, mode = "intersect")
+    
+    comb_size <- attr(comb_gene_lists, "comb_size")
+    
+    combo_number_df <- cbind(combo_number_df, comb_size)
+
+    
+  }
+  
+  combo_number_df <- as.data.frame(combo_number_df)
+  colnames(combo_number_df) <- names(combination_list[[cell]])
+  
+  combo_number_cell_type_list[[cell]] <- combo_number_df
+
+}
+```
+
+```{r}
+
+# Calculate row-wise averages for each group of columns
+a <- combo_number_cell_type_list[["Excite"]] %>%
+  rowwise() %>%
+  mutate(
+    Length_2_Avg = mean(c_across(starts_with("Serial_") & ends_with("_Length_2"))),
+    Length_3_Avg = mean(c_across(starts_with("Serial_") & ends_with("_Length_3"))),
+    Length_4_Avg = mean(c_across(starts_with("Serial_") & ends_with("_Length_4")))
+  ) %>%
+  ungroup() %>%
+  select(Length_2_Avg, Length_3_Avg, Length_4_Avg) %>%
+  print()
+
+b<- combo_number_cell_type_list[["Inhibit"]] %>%
+  rowwise() %>%
+  mutate(
+    Length_2_Avg = mean(c_across(starts_with("Serial_") & ends_with("_Length_2"))),
+    Length_3_Avg = mean(c_across(starts_with("Serial_") & ends_with("_Length_3")))
+  ) %>%
+  ungroup() %>%
+  select(Length_2_Avg, Length_3_Avg) %>%
+  print()
+
+```
+
+```{r}
+print(a[7, ] - a[3, ] - a[1, ])
+print(a[8, ] - a[2, ] - a[4, ])
+```
+
+
+```{r}
+print(b[7, ] - b[3, ] - b[1, ])
+print(b[8, ] - b[2, ] - b[4, ])
+```
+
